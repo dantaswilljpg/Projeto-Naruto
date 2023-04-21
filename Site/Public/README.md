@@ -1,4 +1,4 @@
-Site Individual - Naruto
+Site Individual - Naruto- -
 
 
 Este site é sobre o anime de naruto, um anime japonês que integrou grande parte da minha vida, o anime foi um dos pilares para a trajetória dos animes no Brasil.Bom escolhi este tema para aborda sobre mim e apresentar sobre meu anime favorito e para treinar minhas habilidades de programação front-end e tanto back-end.
@@ -22,11 +22,11 @@ Site construido para o primeiro semestre de 2023 da faculdade SPTECH
 
 #
 
-- 📌 Em progresso.
+-📌 Em progresso.
 
 
-- 🛠 Site Totalmente feito em HTML, CSS e JS puro.
+-🛠 Site Totalmente feito em HTML, CSS e JS puro.
 
 
 
-- 🔗sem link no momento
+🔗- sem link no momento

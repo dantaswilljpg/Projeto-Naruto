@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="./js/funcoes.js"></script>
+    <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login_cadastro.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="banner-login-cadas">
+        <section class="navbar-login">
+            <div class="header-login">
+                <div class="logo-login">
+                    <img src="assets/imgs/logo naruto.png" href="index.html" class="logo naruto">
+                </div>
+                <div class="ul-lista-login">
+                    <ul>
+                        <li><a href="index.html">inicial</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="cadastro.html">Cadastro</a></li>
+                        <li><a href="curiosidade.html">Curiosidade</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+            <div class="cartão-login">
+                <div class="card-login">
+                    <div class="formulario-login">
+                        <img src="assets/imgs/logo naruto.png"></a>
+                        <span>Email:</span>
+                        <input id="email_input" type="text" placeholder="E-mail"><br>
+                        <span>Senha:</span>
+                        <input id="senha_input" type="password" placeholder="***********" ><br>
+                        <button onclick="entrar()">Logar</button>
+                        <span>Ainda não tem uma conta? <a href="cadastro.html">Clique Aqui</a></span>
+                    </div>
+                    <div id="div_aguardar" class="loading-div-login">
+                        <img src="assets/aguarde-orange.gif" id="loading-gif">
+                    </div>
+                    <div id="div_erros_login">
+                    </div>
+                    <div class="alerta_erro">
+                        <div class="card_erro" id="cardErro">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <footer class="login">
+        <span>Feito por Will Gustavo Dantas - 2023 &copy;</span>
+    </footer>
+</body>
+</html>

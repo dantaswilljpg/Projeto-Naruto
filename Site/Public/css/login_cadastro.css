@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+
+
+
+.banner-login-cadas {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url(../assets/imgs/preto-e-laranja.png);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 104%;
+  background-position: -4vw top;
+  background-size: 104%;
+  background-position: -4vw top;
+}
+
+
+
+/*INICIO NAVBAR LOGIN*/
+.navbar-login {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    transition: 0.6s;
+    z-index: 3;
+    background-color: #0000FF;
+  }
+  
+  
+  .logo-login {
+    width: 5vw;
+  }
+  
+  
+  
+  .navbar-login ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .ul-lista-login {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .ul-lista-login ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .header-login {
+    display: flex;
+    width: 95vw;
+    align-items: center;
+    justify-content: space-around
+  
+  }
+  
+  .navbar-login ul li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-login ul li a:hover {
+    color: #FF4500;
+  
+  }
+  
+/* FIM NAVBAR LOGIN*/
+
+
+
+
+
+  /*INICIO SECTION FORM LOGIN*/
+  .cartão-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 70vh;
+  }
+  
+  .cartão-login .card-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 29vw;
+    height: 58.5vh;
+    border-radius: 20px;
+    background-color:#0000FF;
+    padding: 35px;
+    margin-top: 280px;
+  }
+  
+  .card-login h4 {
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1.5rem;
+  }
+  
+  .formulario-login {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formulario-login img {
+    width: 10vw;
+    height: 12vh;
+    margin-left: 65px;
+  }
+  
+  .formulario-login span {
+    font-family: 'Sedgwick Ave Display';
+    font-size: 0.65rem;
+    text-align: center;
+    color:#FF4500
+  }
+  
+  .formulario-login input {
+    margin-bottom: 2px;
+    font-size: 0.8rem;
+    padding: 2px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
+  }
+  
+  
+  .formulario-login button {
+    font-family: 'Sedgwick Ave Display';
+    border: 0;
+    border-radius: 5px;
+    font-size: 22px;
+    padding: 5px 5px;
+    color: #fff;
+    background-color:#FF4500;
+    width:90px;
+    color:#fff;
+    align-self: center;
+  }
+  
+  .formulario-login a {
+    color:#FF4500;
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+  
+  
+  .formulario-login a:hover {
+    color: #fff;
+    text-align: center;
+    align-items: center;
+  
+  }
+  
+  .loading-div-login {
+    width: 20px;
+    margin: auto;
+    display: none;
+    text-align:center;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: center;
+  }
+  
+  .loading-div-login img {
+    width: 8vw;
+    height: 10vh;
+  }
+  
+  /*FIM SECTION FORM LOGIN*/
+
+
+
+
+
