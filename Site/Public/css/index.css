@@ -9,15 +9,17 @@
     font-size: 1.5rem;
 }
 
+
+
 .banner {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 98.5vw;
     /*vh-altura e vw-largura(unidade usada por conta que o banner estava numa boa resolução)*/
-    background-image: url(../assets/imgs/banner-land\ page-naruto.jpg);
-    height: 150vh;
+    background-image: url(../assets/imgs/banner-land-page.jpg);
+    height: 120vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -27,47 +29,48 @@
     background-position: -4vw;
 }
 
-
+/*
 .banner-curio {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-image: url(../assets/imgs/banner-curiosidade.jpg);
-    height: 120vh;
+    background-image: url(../assets/imgs/banner-land-page.gif);
+    height:100vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
-    /* Definição do banner para  posicionar*/
-    background-size: 104%;
-    /*definir as dimensões do banner*/
+    background-size: 104%;/
     background-position: -4vw;
+    
 }
+*/
+
 
 .navbar {
     display: flex;
     position: fixed;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 99vw;
     transition: 0.6s;
     /*Alterando posição da navbar*/
     z-index: 3;
     /*Sobreposição de elementos da navbar*/
-    background-color: #0000FF;
+      background: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
 }
 
 
-.logo {
-    width: 13vw;
+.logo-naruto {
+    width: 11vw;
 }
 
 
 
 .navbar ul li {
     list-style: none;
-    display: inline-block;
 }
 
 .ul-lista {
@@ -95,7 +98,7 @@
     justify-content: center;
     align-items: center;
     color:#fff;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 }
 
 .navbar ul li a:hover {
@@ -109,37 +112,61 @@
 /*SECTION SOBRE MIM*/
 
 .perfil h1 {
+    display: flex;
+    justify-content: center;
     font-size: 2.5rem;
     text-align: center;
-
+    color:#fff;
 }
 
 
 .sobre-perfil h2{
     font-size: 1.5rem;
     text-align: center;
+    color: #fff;
 }
 
 
-.sobre-perfil img {
+
+.banner-perfil{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.7) url(../assets/imgs/background2.jpg);
+    background-blend-mode: darken;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+
+}
+
+
+.img-perfil img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20vw;
-    height: 30vh;
+    width: 15vw;
+    height: 35vh;
     border-radius: 15%;
-    border: solid 10px #FF4500;
-    margin-left: 520px;
+    border: solid 5px #FF4500;
+    margin-left: 545px;
 }
 
 
 
 .sobre-perfil p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
     text-align: center;
-    justify-content: center;
     font-size: 1rem;
-    color: #1C1C1C;
+    color: #fff;
 }
+
 
 /*FIM DA SECTION SOBRE MIM*/
 
@@ -151,14 +178,30 @@
 .intro-anime {
     width: 400px;
     text-align: justify;
-    color: #151515;
+    color:#fff;
     font-size: 1.8rem;
+}
+
+.banner-intro{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.2) url(../assets/imgs/naruto-panels-background.jpg);
+    background-blend-mode: darken;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
 }
 
 .intro h2{
     text-align: center;
     font-size: 3.1rem;
-    color: #151515;
+    color:#fff;
     align-items: center;
 }
 
@@ -166,7 +209,7 @@
 section h2 {
     text-align: center;
     font-size: 6.2rem;
-    color: #151515;
+    color:#fff;
     align-items: center;
 }
 
@@ -178,16 +221,18 @@ section.intro .anime-intro {
 }
 
 
-.intro-anime img {
-    width: 20vw;
-    height: 40vh;
+.img-logo img {
+    width: 27vw;
+    height: 32vh;
+    justify-content: space-between;
 }
 
 .intro-anime p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
     text-align: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #1C1C1C;
+    font-size: 0.9rem;
+    color:#fff;
 }
 
 /*FIM DA SECTION DE INTRO DO ANIME*/
@@ -203,13 +248,35 @@ section.valores .animeValores {
 }
 
 
+
 .valores h2 {
     text-align: center;
     font-size: 2.4rem;
-    color: #151515;
     align-items: center;
     justify-content: center;
+    color:#fff;
+    margin-bottom: 20px;
 }
+
+
+.banner-valor{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    /*width: 100vw;*/
+    background: rgba(0, 0, 0, 0.6) url(../assets/imgs/background2.jpg);
+    background-blend-mode: darken;
+    height:100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
 
 
 .animeValores .animeValor {
@@ -231,6 +298,7 @@ section.valores .animeValores {
 .animeValor h3 {
     font-size: 1.5rem;
     text-align: justify;
+    color:#fff;
 }
 
 
@@ -243,10 +311,11 @@ section.valores .animeValores {
 }
 
 .animeValor p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
     text-align: center;
-    justify-content: space-evenly;
     font-size: 1rem;
-    color: black;
+    color:#fff;
 }
 
 /*FIM SECTION MEUS VALORES*/
@@ -256,44 +325,69 @@ section.valores .animeValores {
 
 /*INICIO SECTION FRASES MARCANTES DE ALGUNS PERSONAGENS*/
 
-section.Personagem .animePerso {
+
+section.personagem .animePersonagem {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-
-.Personagem h2 {
+.personagem h2 {
     text-align: center;
-    font-size: 2.4rem;
-    color: #151515;
+    font-size: 2.2rem;
+    color:#fff;
     margin-left: 100px;
+    margin-bottom: 25px;
 }
 
 
-.animePerso .animePersonagem {
+
+.banner-falas{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.6) url(../assets/imgs/background3.jpg);
+    background-blend-mode: darken;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+
+
+.animePersonagem .animePerso {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+
+
+
 .img-falas img {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 18vw;
     border-radius: 15%;
-    border: solid 5px #FF4500;
-    margin-left: 45px;
-    justify-content: space-between;
+    border: solid 10px #FF4500;
 }
 
-.animePersonagem h3 {
-    font-size: 0.8rem;
+.animePerso h3 {
+    font-size: 1.5rem;
     text-align: justify;
+    color:#fff;
 }
 
 
-.animePersonagem .traco {
+.animePerso .traco {
     width: 50%;
     height: 5px;
     border-radius: 10px;
@@ -301,11 +395,12 @@ section.Personagem .animePerso {
     background-color: #FF4500;
 }
 
-.animePersonagem p {
+.animePerso  p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
     text-align: center;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: black;
+    font-size: 1rem;
+    color:#fff;
 }
 
 /*FIM SECTION FRASES MARCANTES DE ALGUNS PERSONAGENS*/
@@ -319,27 +414,33 @@ section.historia .animeHistorias {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 40px;
+}
+
+
+.banner-hist{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.4) url(../assets/imgs/naruto-panels-background.jpg);
+    background-blend-mode: darken;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
 }
 
 
 
 
-.titulo h2 {
+.Personagem h2 {
     font-size: 1.2;
     text-align: center;
     color: #151515;
-}
-
-
-
-
-.animeHistorias .box {
-    display: flex;
-    width: 20vw;
-    align-items: justify;
-    justify-content: left;
-    gap: 3px;
+    color:#fff;
 }
 
 
@@ -348,6 +449,7 @@ section.historia .animeHistorias {
 .animeHist h3 {
     font-size: 1.7rem;
     text-align: center;
+    color:#fff;
 } 
 
 
@@ -355,22 +457,38 @@ section.historia .animeHistorias {
 .img-his img {
     align-items: center;
     justify-content: center;
-    width: 22vw;
+    width: 18vw;
     text-align: center;
     border-radius: 15%;
-    border: solid 10px #FF4500;
-    box-shadow: 1vw 1vh 1vw #FF4500;
-    margin-left: 475px;
+}
+
+
+.img-hist img {
+    align-items: center;
+    justify-content: center;
+    width: 18vw;
+    text-align: center;
+    border-radius: 15%;
+    margin-left: 515px;
+}
+
+
+.text-hist {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 
 
-
-
 .animeHist p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
     text-align: center;
-    font-size: 1rem;
-
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+    color:#fff;
 }
 
 /* FIM DA SECTION HISTORIA DOS PERSONAGENS*/

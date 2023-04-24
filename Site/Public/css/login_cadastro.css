@@ -1,191 +1,384 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sedgwick Ave Display';
+  font-size: 1.5rem;
+}
 
 
+/*BANNERS LOGIN E CADASTRO*/
 
-
-.banner-login-cadas {
+.banner-cadas {
   display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  background-image: url(../assets/imgs/preto-e-laranja.png);
+  /* width: 100vw;*/
+  background: rgba(0, 0, 0, 0.6) url(../assets/imgs/background3.jpg);
+  background-blend-mode: darken;
   background-size: cover;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: 104%;
-  background-position: -4vw top;
-  background-size: 104%;
-  background-position: -4vw top;
+  height: 120vh;
 }
+
+
+.banner-login {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100vw;*/
+  background: rgba(0, 0, 0, 0.6) url(../assets/imgs/background2.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  height: 120vh;
+}
+
+/*FIM BANNERS LOGIN E CADASTRO*/
+
+
 
 
 
 /*INICIO NAVBAR LOGIN*/
 .navbar-login {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    transition: 0.6s;
-    z-index: 3;
-    background-color: #0000FF;
-  }
-  
-  
-  .logo-login {
-    width: 5vw;
-  }
-  
-  
-  
-  .navbar-login ul li {
-    list-style: none;
-    display: inline-block;
-  }
-  
-  .ul-lista-login {
-    width: 50vw;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .ul-lista-login ul{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  
-  .header-login {
-    display: flex;
-    width: 95vw;
-    align-items: center;
-    justify-content: space-around
-  
-  }
-  
-  .navbar-login ul li a {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
-    font-size: 1.2rem;
-  }
-  
-  .navbar-login ul li a:hover {
-    color: #FF4500;
-  
-  }
-  
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  transition: 0.6s;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+}
+
+
+.logo-login {
+  width: 5vw;
+}
+
+
+
+.navbar-login ul li {
+  list-style: none;
+
+}
+
+.ul-lista-login {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ul-lista-login ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.header-login {
+  display: flex;
+  width: 95vw;
+  align-items: center;
+  justify-content: space-around
+}
+
+.navbar-login ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 0.9rem;
+}
+
+.navbar-login ul li a:hover {
+  color: #FF4500;
+
+}
+
 /* FIM NAVBAR LOGIN*/
 
 
+/*INICIO FORM LOGIN*/
+
+
+.cartao-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 90vh;
+}
+
+.cartao-login .card-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 27vw;
+  height: 70.5vh;
+  border-radius: 20px;
+  background-color: #FFF;
+  box-shadow: 1vw 1vh #FF4500;
+  margin-top: 175px;
+}
+
+
+.alerta_erro-login #mensagem_erro {
+  font-size: 0.65rem;
+  text-align: center;
+  color: #8B0000;
+}
+
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-login img {
+  width: 10vw;
+  height: 12vh;
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+
+.formulario-login span {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #FF4500;
+}
+
+.formulario-login input {
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  flex-direction: column;
+}
+
+.formulario-login button {
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 1px 2px;
+  color: #fff;
+  background-color: #FF4500;
+  width: 124px;
+  align-self: center;
+  margin-bottom: 10px;
+  box-shadow: 1vw #0000FF;
+}
+
+.formulario-login button :hover {
+  color: #8B0000
+}
+
+
+.formulario-login a {
+  color: #FF4500;
+  font-size: 0.80rem;
+  padding: 10px;
+}
+
+
+.formulario-login a:hover {
+  color: #0000FF;
+
+}
+
+
+.loading-div-login {
+  width: 10px;
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-div-login img {
+  height: 38px;
+  width: 35px;
+}
+
+
+/*FIM FORM LOGIN */
 
 
 
-  /*INICIO SECTION FORM LOGIN*/
-  .cartão-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90vw;
-    height: 70vh;
-  }
-  
-  .cartão-login .card-login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    width: 29vw;
-    height: 58.5vh;
-    border-radius: 20px;
-    background-color:#0000FF;
-    padding: 35px;
-    margin-top: 280px;
-  }
-  
-  .card-login h4 {
-    font-family: 'Sedgwick Ave Display';
-    font-size: 1.5rem;
-  }
-  
-  .formulario-login {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formulario-login img {
-    width: 10vw;
-    height: 12vh;
-    margin-left: 65px;
-  }
-  
-  .formulario-login span {
-    font-family: 'Sedgwick Ave Display';
-    font-size: 0.65rem;
-    text-align: center;
-    color:#FF4500
-  }
-  
-  .formulario-login input {
-    margin-bottom: 2px;
-    font-size: 0.8rem;
-    padding: 2px;
-    text-align: center;
-    border-radius: 10px;
-    margin: 0;
-  }
-  
-  
-  .formulario-login button {
-    font-family: 'Sedgwick Ave Display';
-    border: 0;
-    border-radius: 5px;
-    font-size: 22px;
-    padding: 5px 5px;
-    color: #fff;
-    background-color:#FF4500;
-    width:90px;
-    color:#fff;
-    align-self: center;
-  }
-  
-  .formulario-login a {
-    color:#FF4500;
-    font-size: 0.7rem;
-    padding: 10px;
-  }
-  
-  
-  .formulario-login a:hover {
-    color: #fff;
-    text-align: center;
-    align-items: center;
-  
-  }
-  
-  .loading-div-login {
-    width: 20px;
-    margin: auto;
-    display: none;
-    text-align:center;
-    align-items: center;
-    border-radius: 20px;
-    justify-content: center;
-  }
-  
-  .loading-div-login img {
-    width: 8vw;
-    height: 10vh;
-  }
-  
-  /*FIM SECTION FORM LOGIN*/
 
 
 
 
+/*INICIO NAVBAR LOGIN*/
+.navbar-cadas {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  transition: 0.6s;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+}
 
+
+.logo-naruto {
+  width: 10vw;
+}
+
+
+
+.navbar-cadas ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.ul-lista-cadas {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ul-lista-cadas ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.nav-cadas {
+  display: flex;
+  width: 95vw;
+  align-items: center;
+  justify-content: space-around
+}
+
+.navbar-cadas ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 0.9rem;
+}
+
+.navbar-cadas ul li a:hover {
+  color: #FF4500;
+
+}
+
+/* FIM NAVBAR CADASTRO*/
+
+
+
+/* INICIO FORM CADASTRO */
+
+.cartao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  height: 90vh;
+}
+
+.cartao-cadas .card-cadas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 29vw;
+  height: 75.5vh;
+  border-radius: 20px;
+  background-color: #FFF;
+  margin-top: 135px;
+  box-shadow: 1vw 1vh #FF4500;
+}
+
+
+.alerta_erro_cadastro #mensagem_erro {
+  font-size: 0.65rem;
+  text-align: center;
+  color: #8B0000;
+}
+
+.formulario-cadas {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.formulario-cadas img {
+  width: 10vw;
+  height: 12vh;
+  margin-left: 75px;
+}
+
+.formulario-cadas span {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #FF4500;
+}
+
+.formulario-cadas input {
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.formulario-cadas button {
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 1px 2px;
+  color: #fff;
+  background-color: #FF4500;
+  width: 124px;
+  align-self: center;
+  margin-bottom: 10px;
+  box-shadow: 1vw #0000FF;
+}
+
+.formulario-cadas button :hover {
+  color: #8B0000
+}
+
+
+.formulario-cadas a {
+  color: #FF4500;
+  font-size: 0.80rem;
+  padding: 10px;
+}
+
+
+.formulario-cadas a:hover {
+  color: #0000FF;
+
+}
+
+
+.select-perso {
+  width: 20vw;
+  border: 2px solid #FF4500;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.loading-div-cadas {
+  width: 10px;
+  margin: auto;
+  display: none;
+  justify-content: center;
+  align-self: center;
+}
+
+.loading-div-cadas img {
+  width: 75px;
+  height: 55px;
+}
+
+
+/*FIM  DO FORM CADASTRO */

@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <script src="./js/funcoes.js"></script>
     <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
     <link rel="stylesheet" href="css/login_cadastro.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="./js/funcoes.js"></script>
 </head>
 
 <body>
-    <div class="banner-login">
-        <section class="navbar-login">
-            <div class="header-login">
-                <div class="logo-login">
+    <div class="banner-cadas">
+        <div class="navbar-cadas">
+            <div class="nav-cadas">
+                <div class="logo-cadas">
                     <img src="assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
                 </div>
-                <div class="ul-lista-login">
+                <div class="ul-lista-cadas">
                     <ul>
                         <li><a href="index.html">inicial</a></li>
                         <li><a href="login.html">Login</a></li>
@@ -30,25 +29,35 @@
                     </ul>
                 </div>
             </div>
-        </section>
-        <div class="cartao-login">
-            <div class="card-login">
-                <div class="formulario-login">
+        </div>
+        <div class="cartao-cadas">
+            <div class="card-cadas">
+                <div class="formulario-cadas">
                     <img src="assets/imgs/logo naruto.png"></a>
+                    <span>Usuario:</span>
+                    <input id="nome_input" type="text" placeholder="insira seu nome">
                     <span>Email:</span>
                     <input id="email_input" type="text" placeholder="E-mail">
                     <span>Senha:</span>
                     <input id="senha_input" type="password" placeholder="***********">
-                    <button onclick="entrar()">Logar</button>
-                    <span>Ainda não tem uma conta? <a href="cadastro.html">Clique Aqui</a></span>
+                    <span>Personagem Favorito</span>
+                    <div class="select">
+                        <select class="select-perso">
+                            <option value="1">Uchiha Madara</option>
+                            <option value="2">Uchiha Sasuke</option>
+                            <option value="3">Uchiha Obito</option>
+                            <option value selected="4">Uzumaki Naruto</option>
+                        </select>
+                    </div>
+                    <button onclick="cadastrar()">Cadastrar</button>
                 </div>
-                <div id="div_aguardar" class="loading-div-login">
+                <div id="div_aguardar" class="loading-div-cadas">
                     <img src="assets/aguarde-naruto.gif" id="loading-gif">
                 </div>
-                <div id="div_erros_login">
-                </div>
-                <div class="alerta_erro-login">
+                <div class="alerta_erro">
+                <div class="alerta_erro_cadastro">
                     <span id="mensagem_erro"></span>
+                </div>
                 </div>
             </div>
         </div>
@@ -59,43 +68,56 @@
 </body>
 
 </html>
-
 <script>
 
+    function cadastrar() {
 
-    function entrar() {
+        //Recupere o valor da nova input pelo nome do id
 
+        var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
-
-
-        if ( emailVar == "" || senhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "") {
             mensagem_erro.innerHTML = "Todos os campos estão nulos!!";
+            nome_input.value = '';
+            nome_input.style.border = '7px solid red';
             email_input.value = '';
             email_input.style.border = '7px solid red';
             senha_input.value = '';
             senha_input.style.border = '7px solid red';
+                // deixa a borda vermelha
         }
 
-        else if (emailVar == "" || emailVar.length <= 3) {
-            mensagem_erro.innerHTML = "Verifique se o e-mail foi digitado corretamente";
+        else if (nomeVar == "" || !isNaN(nomeVar) || nomeVar.length <= 2) {
+            mensagem_erro.innerHTML = "Verifique se o nome tem  12 digitos";
+            nome_input.value = '';
+            nome_input.style.border = '7px solid red';
+
+
+            finalizarAguardar();
+            return false;
+
+        } else if (emailVar == "" || !isNaN(emailVar) || emailVar.length <= 3) {
+            mensagem_erro.innerHTML = "Verifique se o e-mail contém @";
             email_input.value = '';
             email_input.style.border = '7px solid red';
+       
 
 
 
             finalizarAguardar();
             return false;
+
         } else if (senhaVar == "" || senhaVar.length < 8) {
-            mensagem_erro.innerHTML = "Verifique se a senha foi digitado corretamente";
+            mensagem_erro.innerHTML = "Digite uma senha que tenha no mínimo 7 dígitos"
             senha_input.value = '';
             senha_input.style.border = '7px solid red';
-            // deixa a borda vermelha
+        
 
-
+            finalizarAguardar();
+         
         }
-
     }
 
 </script>

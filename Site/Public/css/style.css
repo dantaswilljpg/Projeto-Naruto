@@ -1,19 +1,19 @@
 
 /*INICIO SCROLLBAR*/
 ::-webkit-scrollbar {
-    background-color:#fff;
+    background-color:#fff;  /* cor do fundo do scroll */
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 9px;
-    background-color:#FF4500 ;
+    background-color:#FF4500 ;  /* cor da barra do scroll */
 }
 /*FIM SCROLLBAR*/
 
 
 
-/* COMEÇO FOOTER INDEX E CURIOSIDADE */
+/* COMEÇO FOOTER */
 footer {
     width: 100%;
     display: flex;
@@ -29,24 +29,8 @@ footer span  {
     color:#fff;
     text-align: center;
 }
-/* FIM FOOTER INDEX E CURIOSIDADE */
+/* FIM FOOTER*/
 
 
   
-  /* INICIO FOOTER LOGIN */
-  .login {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color:#FF4500 ;
-    padding: 2.1%;
-    /* color: white; */
-  }
-  
-  .login span {
-    font-size: 0.7rem;
-    font-weight: 300;
-    color:#fff;
-    text-align: center;
-  }
-  /* FIM FOOTER LOGIN*/
+

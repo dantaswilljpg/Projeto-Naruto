@@ -1,15 +1,16 @@
- -- DROP DATABASE naruto;
+-- DROP DATABASE naruto;
 CREATE DATABASE naruto;
 USE naruto;
 
-CREATE TABLE usuario (
+CREATE TABLE Usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
-    nomeUsuario VARCHAR(100) NOT NULL,
+    nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha VARCHAR(100) NOT NULL
+    senha VARCHAR(100) NOT NULL,
+    personagem VARCHAR(10)
 );
 
-CREATE TABLE pontuacao (
+CREATE TABLE Pontuacao (
 	idPontuacao INT PRIMARY KEY AUTO_INCREMENT,
     fkUsuario INT, 
     FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario),
@@ -17,22 +18,16 @@ CREATE TABLE pontuacao (
     perPont FLOAT
 );
 
-CREATE TABLE Quiz(
-idQuiz INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE Personagem(
+idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
+nomePersonagem VARCHAR(45),
 fkUsuario INT,
-FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario)
-);
-
-CREATE TABLE Resposta(
-idResposta INT PRIMARY KEY AUTO_INCREMENT,
-nomeRespostas FLOAT,
-fkQuiz INT,
-FOREIGN KEY(fkQuiz) REFERENCES Resposta (idResposta)
+FOREIGN KEY(fkUsuario) REFERENCES Personagem (idPersonagem)
 );
 
 
 
-select * from Usuario;
+
+SELECT * FROM Usuario;
 SELECT * FROM  Pontuacao;
-SELECT * FROM Quiz;
-SELECT * FROM Resposta;
+SELECT * FROM Personagem;
