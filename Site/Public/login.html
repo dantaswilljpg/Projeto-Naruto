@@ -26,7 +26,7 @@
                         <li><a href="index.html">inicial</a></li>
                         <li><a href="login.html">Login</a></li>
                         <li><a href="cadastro.html">Cadastro</a></li>
-                        <li><a href="curiosidade.html">Curiosidade</a></li>
+                        <li><a href="curiosidades.html">Curiosidade</a></li>
                     </ul>
                 </div>
             </div>
@@ -73,15 +73,17 @@
         if ( emailVar == "" || senhaVar == "") {
             mensagem_erro.innerHTML = "Todos os campos estão nulos!!";
             email_input.value = '';
-            email_input.style.border = '7px solid red';
+            email_input.style.border = '4px solid red';
             senha_input.value = '';
-            senha_input.style.border = '7px solid red';
+            senha_input.style.border = '4px solid red';
         }
+
+
 
         else if (emailVar == "" || emailVar.length <= 3) {
             mensagem_erro.innerHTML = "Verifique se o e-mail foi digitado corretamente";
             email_input.value = '';
-            email_input.style.border = '7px solid red';
+            email_input.style.border = '4px solid red';
 
 
 
@@ -90,7 +92,7 @@
         } else if (senhaVar == "" || senhaVar.length < 8) {
             mensagem_erro.innerHTML = "Verifique se a senha foi digitado corretamente";
             senha_input.value = '';
-            senha_input.style.border = '7px solid red';
+            senha_input.style.border = '4px solid red';
             // deixa a borda vermelha
 
 

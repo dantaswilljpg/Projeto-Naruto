@@ -19,7 +19,7 @@
     width: 98.5vw;
     /*vh-altura e vw-largura(unidade usada por conta que o banner estava numa boa resolução)*/
     background-image: url(../assets/imgs/banner-land-page.jpg);
-    height: 120vh;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -29,23 +29,6 @@
     background-position: -4vw;
 }
 
-/*
-.banner-curio {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-image: url(../assets/imgs/banner-land-page.gif);
-    height:100vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;/
-    background-position: -4vw;
-    
-}
-*/
 
 
 .navbar {
@@ -58,7 +41,7 @@
     /*Alterando posição da navbar*/
     z-index: 3;
     /*Sobreposição de elementos da navbar*/
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.4);
   background-blend-mode: darken;
 }
 
@@ -68,10 +51,6 @@
 }
 
 
-
-.navbar ul li {
-    list-style: none;
-}
 
 .ul-lista {
     width: 50vw;
@@ -83,6 +62,10 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+}
+
+.navbar ul li {
+    list-style: none;
 }
 
 .header {
@@ -134,9 +117,9 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.7) url(../assets/imgs/background2.jpg);
+    background: rgba(0, 0, 0, 0.7) url(../assets/imgs/card-sobre\ mim.jpg);
     background-blend-mode: darken;
-    height:100vh;
+    height:125vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -188,9 +171,9 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.2) url(../assets/imgs/naruto-panels-background.jpg);
+    background: rgba(0, 0, 0, 0.7) url(../assets/imgs/banner-sobre.jpg);
     background-blend-mode: darken;
-    height:100vh;
+    height:130vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -255,7 +238,7 @@ section.valores .animeValores {
     align-items: center;
     justify-content: center;
     color:#fff;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
 
 
@@ -265,9 +248,9 @@ section.valores .animeValores {
     flex-direction: column;
     align-items: center;
     /*width: 100vw;*/
-    background: rgba(0, 0, 0, 0.6) url(../assets/imgs/background2.jpg);
+    background: rgba(0, 0, 0, 0.6) url(../assets/imgs/banner-valores.jpg);
     background-blend-mode: darken;
-    height:100vh;
+    height:130vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-size: 104%;
@@ -337,7 +320,7 @@ section.personagem .animePersonagem {
     font-size: 2.2rem;
     color:#fff;
     margin-left: 100px;
-    margin-bottom: 25px;
+    margin-bottom: 70px;
 }
 
 
@@ -348,9 +331,9 @@ section.personagem .animePersonagem {
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.6) url(../assets/imgs/background3.jpg);
+    background: rgba(0, 0, 0, 0.6) url(../assets/imgs/banner-falas.jpg);
     background-blend-mode: darken;
-    height:100vh;
+    height:140vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -401,6 +384,7 @@ section.personagem .animePersonagem {
     text-align: center;
     font-size: 1rem;
     color:#fff;
+    margin-bottom: 15px;
 }
 
 /*FIM SECTION FRASES MARCANTES DE ALGUNS PERSONAGENS*/
@@ -417,15 +401,81 @@ section.historia .animeHistorias {
 }
 
 
-.banner-hist{
+.banner-naruto{
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.4) url(../assets/imgs/naruto-panels-background.jpg);
+    background: rgba(0, 0, 0, 0.7) url(../assets/imgs/banner-naruto.jpg);
+    background-blend-mode: darken;
+    height:120vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+
+.banner-sasuke{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-sasuke.jpg);
     background-blend-mode: darken;
     height:100vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+.banner-kakashi{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-kakashi.jpg);
+    background-blend-mode: darken;
+    height:130vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+.banner-itachi{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-itachi.jpg);
+    background-blend-mode: darken;
+    height:130vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+.banner-madara{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-madara.jpg);
+    background-blend-mode: darken;
+    height:110vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -436,12 +486,22 @@ section.historia .animeHistorias {
 
 
 
-.Personagem h2 {
-    font-size: 1.2;
-    text-align: center;
-    color: #151515;
-    color:#fff;
+.banner-obito{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-obito.jpg);
+    background-blend-mode: darken;
+    height:130vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
 }
+
 
 
 
@@ -450,6 +510,7 @@ section.historia .animeHistorias {
     font-size: 1.7rem;
     text-align: center;
     color:#fff;
+    margin-bottom: 40px;
 } 
 
 
@@ -460,6 +521,7 @@ section.historia .animeHistorias {
     width: 18vw;
     text-align: center;
     border-radius: 15%;
+    margin-bottom: 20px;
 }
 
 
@@ -470,15 +532,9 @@ section.historia .animeHistorias {
     text-align: center;
     border-radius: 15%;
     margin-left: 515px;
-}
-
-
-.text-hist {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
     margin-bottom: 20px;
 }
+
 
 
 
@@ -490,5 +546,159 @@ section.historia .animeHistorias {
     margin-bottom: 30px;
     color:#fff;
 }
+
+/* FIM DA SECTION HISTORIA DOS PERSONAGENS*/
+
+
+
+
+
+/* INICIO SECTION  CURIOSIDADE */
+
+section.Curiosidade .animeCuriosidades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.Curiosidade h2{
+    font-size: 2rem;
+    text-align: center;
+    color:#fff;
+    margin-bottom: 20px;
+}
+
+
+
+.banner-rivais{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-rivais.jpg);
+    background-blend-mode: darken;
+    height:110vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+.banner-lendas{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-hashiramaa\ e\ madar.jpg);
+    background-blend-mode: darken;
+    height:130vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+
+.banner-akatsuki{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-akatsuki.jpg);
+    background-blend-mode: darken;
+    height:130vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+.banner-chunnin{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-exame\ chunnin.jpg);
+    background-blend-mode: darken;
+    height:140vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+
+.banner-konoha{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-invasão.jpg);
+    background-blend-mode: darken;
+    height:128vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+.banner-resgate{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-resgate.jpg);
+    background-blend-mode: darken;
+    height:125vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+
+.img-curio img {
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 45vh;
+    text-align: center; 
+    margin-left: 445px;
+    border-radius: 7px;
+    box-shadow: 1vw 1vh #ff4500;
+    border: 2px solid #ff4500;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+.anime-curio p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.65rem;
+    color:#fff;
+}
+
 
 /* FIM DA SECTION HISTORIA DOS PERSONAGENS*/
