@@ -19,7 +19,7 @@
     width: 98.5vw;
     /*vh-altura e vw-largura(unidade usada por conta que o banner estava numa boa resolução)*/
     background-image: url(../assets/imgs/banner-land-page.jpg);
-    height: 100vh;
+    height: 155vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -250,7 +250,7 @@ section.valores .animeValores {
     /*width: 100vw;*/
     background: rgba(0, 0, 0, 0.6) url(../assets/imgs/banner-valores.jpg);
     background-blend-mode: darken;
-    height:130vh;
+    height:150vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-size: 104%;
@@ -333,7 +333,7 @@ section.personagem .animePersonagem {
    /* width: 100vw;*/
     background: rgba(0, 0, 0, 0.6) url(../assets/imgs/banner-falas.jpg);
     background-blend-mode: darken;
-    height:140vh;
+    height:155vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -409,7 +409,7 @@ section.historia .animeHistorias {
    /* width: 100vw;*/
     background: rgba(0, 0, 0, 0.7) url(../assets/imgs/banner-naruto.jpg);
     background-blend-mode: darken;
-    height:130vh;
+    height:150vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -427,7 +427,7 @@ section.historia .animeHistorias {
    /* width: 100vw;*/
     background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-sasuke.jpg);
     background-blend-mode: darken;
-    height:130vh;
+    height:150vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -443,7 +443,7 @@ section.historia .animeHistorias {
    /* width: 100vw;*/
     background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-kakashi.jpg);
     background-blend-mode: darken;
-    height:130vh;
+    height:150vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -459,7 +459,7 @@ section.historia .animeHistorias {
    /* width: 100vw;*/
     background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-itachi.jpg);
     background-blend-mode: darken;
-    height:130vh;
+    height:150vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;
@@ -494,7 +494,7 @@ section.historia .animeHistorias {
    /* width: 100vw;*/
     background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-obito.jpg);
     background-blend-mode: darken;
-    height:130vh;
+    height:140vh;
     background-repeat: no-repeat;
     background-size: 104%;
     background-position: -4vw;

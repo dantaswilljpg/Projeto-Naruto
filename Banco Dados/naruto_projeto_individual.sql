@@ -1,14 +1,16 @@
--- DROP DATABASE naruto;
-CREATE DATABASE naruto;
-USE naruto;
+DROP DATABASE naruto_projeto_individual;
+CREATE DATABASE naruto_projeto_individual;
+USE naruto_projeto_individual;
 
 CREATE TABLE Usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(100) NOT NULL,
-    personagem VARCHAR(10)
+   fkpersonagem int ,
+   foreign key(fkpersonagem) references personagem(idPersonagem)
 );
+
 
 CREATE TABLE Pontuacao (
 	idPontuacao INT PRIMARY KEY AUTO_INCREMENT,
@@ -20,13 +22,14 @@ CREATE TABLE Pontuacao (
 
 CREATE TABLE Personagem(
 idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
-nomePersonagem VARCHAR(45),
-fkUsuario INT,
-FOREIGN KEY(fkUsuario) REFERENCES Personagem (idPersonagem)
+nomePersonagem VARCHAR(45)
 );
 
-
-
+INSERT INTO Personagem VALUES
+(NULL,'Uchiha Madara'),
+(NULL,'Uchiha Sasuke'),
+(NULL,'Uchiha Obito'),
+(NULL,'Uzumaki Naruto');
 
 SELECT * FROM Usuario;
 SELECT * FROM  Pontuacao;

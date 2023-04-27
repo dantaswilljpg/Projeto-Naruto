@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/login_cadastro.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
                     <input id="senha_input" type="password" placeholder="***********">
                     <span>Personagem Favorito</span>
                     <div class="select">
-                        <select class="select-perso">
+                        <select id="personagem_naruto" class="personagem_naruto">
                             <option value="1">Uchiha Madara</option>
                             <option value="2">Uchiha Sasuke</option>
                             <option value="3">Uchiha Obito</option>
@@ -52,13 +53,7 @@
                     <button onclick="cadastrar()">Cadastrar</button>
                     <span>Já tem uma conta? <a href="login.html">Clique Aqui</a></span>
                 </div>
-                <div id="div_aguardar" class="loading-div-cadas">
-                    <img src="assets/aguarde-naruto.gif" id="loading-gif">
-                </div>
-                <div class="alerta_erro">
-                    <div class="alerta_erro_cadastro">
-                        <span id="mensagem_erro"></span>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -71,38 +66,80 @@
 </html>
 <script>
 
-    function cadastrar() {
+function cadastrar() {
+        //aguardar();
 
         //Recupere o valor da nova input pelo nome do id
-
+        // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
+        var personagemVar = personagem_naruto.value;
+        
 
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || personagemVar=="") {
+            //cardErro.style.display = "block"
+            swal ( "Ops" ,  "Preencha todos os campos" ,  "error" )
 
-        if (nomeVar == "" || nomeVar.length <= 8) {
-            mensagem_erro.innerHTML = "Verifique se o nome tem  8 digitos";
-            nome_input.value = '';
-            nome_input.style.border = '4px solid red';
-
-
-
-        } else if (emailVar == "" || emailVar.length <= 3) {
-            mensagem_erro.innerHTML = "E-mail está vazio, preencha esse campo";
-            email_input.value = '';
-            email_input.style.border = '4px solid red';
-
-
-
-
-        } else if (senhaVar == "" || senhaVar.length <= 8) {
-            mensagem_erro.innerHTML = "Digite uma senha que tenha no mínimo 8 dígitos"
-            senha_input.value = '';
-            senha_input.style.border = '4px solid red';
-
-
+            finalizarAguardar();
+            return false;
         }
+        else if(nomeVar.length <3){
+            swal ( "Ops" ,  "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres" ,  "warning" )
+        }
+        else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length < 7 ){
+            swal ( "Ops" ,  "O e-mail cadastrado é inválido. Por favor, insira um e-mail válido." ,  "warning" )
+        }
+        else if(senhaVar.length <8){
+            swal ( "Ops" ,  "A senha inserida é muito curta. Por favor,insira uma senha com pelo menos 8 caracteres." ,  "warning" )
+        }
+        else {
+            setInterval('oi', 5000)
+        
 
-    }
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                personagemServer: personagemVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                //cardErro.style.display = "block";
+
+                swal("Bom trabalho!", "Cadastro realizado com sucesso redirecionando a tela de login...!", "success");
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                swal ( "Ops" ,  "Mais de um usuário com o mesmo login e senha!" ,  "error" )
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }  
+}
+
+    //function sumirMensagem() {
+        //cardErro.style.display = "none"
+    //}
 
 </script>

@@ -42,13 +42,6 @@
                     <button onclick="entrar()">Logar</button>
                     <span>Ainda não tem uma conta? <a href="cadastro.html">Clique Aqui</a></span>
                 </div>
-                <div id="div_aguardar" class="loading-div-login">
-                    <img src="assets/aguarde-naruto.gif" id="loading-gif">
-                </div>
-                <div id="div_erros_login">
-                </div>
-                <div class="alerta_erro-login">
-                    <span id="mensagem_erro"></span>
                 </div>
             </div>
         </div>
@@ -62,32 +55,73 @@
 
 <script>
 
-
-    function entrar() {
+function entrar() {
+        //aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
-
-
-        if (emailVar == "" || emailVar.length <= 3) {
-            mensagem_erro.innerHTML = "Verifique se o e-mail foi digitado corretamente";
-            email_input.value = '';
-            email_input.style.border = '4px solid red';
-
-
-
-
-        } else if (senhaVar == "" || senhaVar.length < 8) {
-            mensagem_erro.innerHTML = "Verifique se a senha foi digitado corretamente";
-            senha_input.value = '';
-            senha_input.style.border = '4px solid red';
-            // deixa a borda vermelha
-
-
+        if (emailVar == "" || senhaVar == "") {
+            // cardErro.style.display = "block"
+            swal ( "Ops" ,  "Preencha os campos para logar!" ,  "error" )
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval('...', 5000)
         }
 
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "quiz.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                swal ( "Ops" ,  "Email e/ou senha inválido(s)" ,  "error" )
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
 
+    //function sumirMensagem() {
+      //  cardErro.style.display = "none"
+   // }
 
 </script>

@@ -1,0 +1,83 @@
+
+.banner-ponts {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(../assets/imgs/naruto-panels-background.jpg);
+    background-size: cover;
+    height: 150vh;
+    background-repeat: no-repeat;
+  }
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  font-family: 'Sedgwick Ave Display';
+    font-size: 1.5rem;
+
+}
+
+
+ 
+.pontos span{
+    font-size: 5.8rem;
+    color:#fff;
+}
+
+.pontuacao {
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pontuacao .pontos {
+    padding: 2vh 2vw 4vh 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#0000FF;
+    border-radius: 20px;
+    margin-left: 750px;
+    border: 20px solid #000;
+   
+}
+
+
+.pontuacao  .pont-total {
+    width: 70vw;
+    height: 50vh;
+    padding: 4vh 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FF4500;
+    border-radius: 15px;
+    border: 20px solid #000;
+   
+}
+
+
+.pontuacao li {
+    font-size: 2rem;
+    font-weight: 400;
+    justify-content: space-between;
+}
+
+
+li {
+    border-bottom: 8px solid #000;
+}
+
+li {
+    padding: 0.5vh;
+}
+
+th{
+    padding: 0.5vh;
+    margin-left: 150px;
+}
