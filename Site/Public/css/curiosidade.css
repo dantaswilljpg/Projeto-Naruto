@@ -1,0 +1,144 @@
+section.Curiosidade .animeCuriosidades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.Curiosidade h2{
+    font-size: 2rem;
+    text-align: center;
+    color:#fff;
+    margin-bottom: 20px;
+}
+
+
+
+.banner-rivais{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-rivais.jpg);
+    background-blend-mode: darken;
+    height:110vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+.banner-lendas{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-hashiramaa\ e\ madar.jpg);
+    background-blend-mode: darken;
+    height:130vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+
+.banner-akatsuki{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-akatsuki.jpg);
+    background-blend-mode: darken;
+    height:130vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+.banner-chunnin{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-exame\ chunnin.jpg);
+    background-blend-mode: darken;
+    height:140vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+
+.banner-konoha{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-invasão.jpg);
+    background-blend-mode: darken;
+    height:128vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+.banner-resgate{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-resgate.jpg);
+    background-blend-mode: darken;
+    height:125vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw;
+    background-size: 104%;
+    background-position: -4vw;
+}
+
+
+
+.img-curio img {
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 45vh;
+    text-align: center; 
+    margin-left: 445px;
+    border-radius: 7px;
+    box-shadow: 1vw 1vh #ff4500;
+    border: 2px solid #ff4500;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+.anime-curio p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.65rem;
+    color:#fff;
+}

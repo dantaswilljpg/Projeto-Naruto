@@ -50,20 +50,21 @@
                         </select>
                     </div>
                     <button onclick="cadastrar()">Cadastrar</button>
+                    <span>Já tem uma conta? <a href="login.html">Clique Aqui</a></span>
                 </div>
                 <div id="div_aguardar" class="loading-div-cadas">
                     <img src="assets/aguarde-naruto.gif" id="loading-gif">
                 </div>
                 <div class="alerta_erro">
-                <div class="alerta_erro_cadastro">
-                    <span id="mensagem_erro"></span>
-                </div>
+                    <div class="alerta_erro_cadastro">
+                        <span id="mensagem_erro"></span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <footer>
-        <span>Feito por Will Gustavo Dantas - 2023 &copy;</span>
+        <span>Feito por Will Gustavo Dantas - 2023</span>
     </footer>
 </body>
 
@@ -78,46 +79,30 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "") {
-            mensagem_erro.innerHTML = "Todos os campos estão nulos!!";
-            nome_input.value = '';
-            nome_input.style.border = '4px solid red';
-            email_input.value = '';
-            email_input.style.border = '4px solid red';
-            senha_input.value = '';
-            senha_input.style.border = '4px solid red';
-                // deixa a borda vermelha
-        }
 
-        else if (nomeVar == "" || nomeVar.length <= 2) {
-            mensagem_erro.innerHTML = "Verifique se o nome tem  12 digitos";
+        if (nomeVar == "" || nomeVar.length <= 8) {
+            mensagem_erro.innerHTML = "Verifique se o nome tem  8 digitos";
             nome_input.value = '';
             nome_input.style.border = '4px solid red';
 
 
-            finalizarAguardar();
-            return false;
 
         } else if (emailVar == "" || emailVar.length <= 3) {
-            mensagem_erro.innerHTML = "Verifique se o e-mail contém @";
+            mensagem_erro.innerHTML = "E-mail está vazio, preencha esse campo";
             email_input.value = '';
             email_input.style.border = '4px solid red';
-       
 
 
 
-            finalizarAguardar();
-            return false;
 
-        } else if (senhaVar == "" || senhaVar.length < 8) {
-            mensagem_erro.innerHTML = "Digite uma senha que tenha no mínimo 7 dígitos"
+        } else if (senhaVar == "" || senhaVar.length <= 8) {
+            mensagem_erro.innerHTML = "Digite uma senha que tenha no mínimo 8 dígitos"
             senha_input.value = '';
             senha_input.style.border = '4px solid red';
-        
 
-            finalizarAguardar();
-         
+
         }
+
     }
 
 </script>
