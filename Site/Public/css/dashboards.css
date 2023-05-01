@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1.5rem;
+}
+
+
+
+
+#dashboard-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 15%;
+    height: 100vh;
+    color: #FFf;
+    background: radial-gradient(57.36% 57.36% at 50% 42.64%, #151515 0%, #0C0C0C 100%);
+    gap: 2vh;
+    padding: 0.6rem;
+    top: 0;
+    left: 0;
+}
+
+nav img {
+    max-width: 10vw;
+}
+
+.texto-user {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    padding: 5vh 0;
+}
+
+.bem-vindo h3 {
+    font-size:1.1rem;
+    color: #FF4500;
+}
+
+.bem-vindo span {
+    font-size:1.1rem;
+    color: #FF4500;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 55vh;
+    gap: 5vh;
+    padding-left: 1vw;
+}
+
+.nav-list a {
+    width: 13vw;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: #fff;
+    font-size: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0.8rem;
+}
+
+.nav-list a:hover {
+background-color: #ff4500;
+}
+
+.lista {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0.3rem;
+}
+
+
+
+.lista span {
+    font-size: 1.1vw;
+}
+
+.icone-nav {
+    max-width: 2.5vw;
+}
+
+
+
+#content {
+    flex-direction: column;
+    width: 85%;
+    background: linear-gradient( to bottom, #f57344, #FF4500);
+    gap: 10vh;
+    margin: 15vh 0 0 15%;
+}
+
+#content span {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 55vh;
+}
+
+
+.grafico {
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.grafico h2 {
+    color: #FFF;
+    font-size: 45px;
+    font-weight: 400;
+    padding: 10px 0 10px 1.3vw;
+    margin: 2vh 0 3vh 0;
+    margin-bottom: 20px;
+}
+
+.chart-grafico {
+    list-style-type: none;
+    margin: 10px 0;
+    gap: 3vw;
+    padding: 0;
+    
+    /* 
+      deixa todos os itens da lista
+      na horizontal e todos com a
+      mesma largura
+    */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+.slide{
+    background-color: #151515;
+    border: 5px solid #FFf;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+canvas {
+    height: auto;
+    width: 42vw;
+    padding: 10px 1vw 10px 3vw;
+}

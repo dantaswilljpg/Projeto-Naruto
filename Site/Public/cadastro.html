@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <script src="./js/funcoes.js"></script>
-    <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/imgs/naruto-sign.png" type="image/x-icon">
     <link rel="stylesheet" href="css/login_cadastro.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
+     <!-- Sweet alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
     <div class="banner-cadas">
-        <div class="navbar-cadas">
+        <nav class="navbar-cadas">
             <div class="nav-cadas">
                 <div class="logo-cadas">
                     <img src="assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
@@ -24,13 +25,12 @@
                 <div class="ul-lista-cadas">
                     <ul>
                         <li><a href="index.html">inicial</a></li>
+                        <li><a href="curiosidades.html">História</a></li>
                         <li><a href="login.html">Login</a></li>
-                        <li><a href="cadastro.html">Cadastro</a></li>
-                        <li><a href="curiosidades.html">Curiosidade</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
         <div class="cartao-cadas">
             <div class="card-cadas">
                 <div class="formulario-cadas">
@@ -38,16 +38,16 @@
                     <span>Usuario:</span>
                     <input id="nome_input" type="text" placeholder="insira seu nome">
                     <span>Email:</span>
-                    <input id="email_input" type="text" placeholder="E-mail">
+                    <input id="email_input" type="text" placeholder="Insira seu E-mail">
                     <span>Senha:</span>
                     <input id="senha_input" type="password" placeholder="***********">
-                    <span>Personagem Favorito</span>
+                    <span>Personagem Favorito:</span>
                     <div class="select">
                         <select id="personagem_naruto" class="personagem_naruto">
                             <option value="1">Uchiha Madara</option>
                             <option value="2">Uchiha Sasuke</option>
                             <option value="3">Uchiha Obito</option>
-                            <option value selected="4">Uzumaki Naruto</option>
+                            <option value="4">Uzumaki Naruto</option>
                         </select>
                     </div>
                     <button onclick="cadastrar()">Cadastrar</button>
@@ -87,7 +87,7 @@ function cadastrar() {
         else if(nomeVar.length <3){
             swal ( "Ops" ,  "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres" ,  "warning" )
         }
-        else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length < 7 ){
+        else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length <7 ){
             swal ( "Ops" ,  "O e-mail cadastrado é inválido. Por favor, insira um e-mail válido." ,  "warning" )
         }
         else if(senhaVar.length <8){

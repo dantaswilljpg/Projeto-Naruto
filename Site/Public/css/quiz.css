@@ -1,6 +1,14 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1.5rem;
+}
 
 .banner-quiz{
     display: flex;
@@ -8,7 +16,7 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-    background: url(../assets/imgs/naruto-panels-background.jpg);
+  background: linear-gradient( to bottom, #f57344, #FF4500);
     height:530vh;
 }
 
@@ -61,7 +69,7 @@ nav img {
     font-size: 70rem;
 }
 
-.nav-quiz {
+.nav{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -72,7 +80,7 @@ nav img {
     padding-left: 1vw;
 }
 
-.nav-quiz a {
+.nav a {
     width: 10vw;
     justify-content: center;
     align-items: center;
@@ -84,7 +92,7 @@ nav img {
     padding: 1.5rem;
 }
 
-.nav-quiz a:hover {
+.nav a:hover {
     background-color: #FF4500;
 }
 
@@ -105,8 +113,8 @@ li span {
     font-size: 1.1vw;
 }
 
-.icone-navbar {
-    max-width: 2vw;
+.icone-nav {
+    max-width: 2.5vw;
 }
 
 
@@ -135,27 +143,27 @@ nav button:hover {
 }
 
 .bem-vindo span {
-    font-size:4rem;
+    font-size:3rem;
     color: #FF4500;
 }
 
-.bem-vindo h1 {
+.text h1 {
     font-size: 6.5rem;
     color: #fff;
-    margin-left: 500px;
+    margin-left: 800px;
     border: 30px solid #000;
     background-color: #FF4500;
 }
 
 .questoes h2{
-    font-size: 3.7rem;
+    font-size: 4.7rem;
 }
 
 
 .img-quiz img {
     display: flex;
-    width: 46vw;
-    height: 50vh;
+    width: 40vw;
+    height: 45vh;
     border-radius: 40px;
     justify-content: center;
     align-items: center;
@@ -193,17 +201,17 @@ nav button:hover {
     flex-direction: column;
     border-radius: 20px;
     box-shadow: 8px 10px 12px;
-    margin-left: 600px;
+    
 }
 
 .quiz .card {
-    padding: 8vh 4vw;
+    padding: 3vh 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #FF4500;
     border-radius: 15px;
-    margin-left: 500px;
+    margin-left: 800px;
     border: 20px solid #000;
 }
 

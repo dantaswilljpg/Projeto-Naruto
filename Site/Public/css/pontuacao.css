@@ -1,11 +1,12 @@
 
+
 .banner-ponts {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-image: url(../assets/imgs/naruto-panels-background.jpg);
+    background: linear-gradient( to bottom, #f57344, #FF4500);
     background-size: cover;
     height: 150vh;
     background-repeat: no-repeat;
@@ -18,6 +19,11 @@
     box-sizing: border-box;  font-family: 'Sedgwick Ave Display';
     font-size: 1.5rem;
 
+}
+
+.bem-vindo h1{
+    font-size: 1rem;
+    color: #FF4500;
 }
 
 
@@ -58,7 +64,7 @@
     background-color: #FF4500;
     border-radius: 15px;
     border: 20px solid #000;
-   
+  
 }
 
 

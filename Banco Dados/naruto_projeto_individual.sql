@@ -31,6 +31,12 @@ INSERT INTO Personagem VALUES
 (NULL,'Uchiha Obito'),
 (NULL,'Uzumaki Naruto');
 
+
 SELECT * FROM Usuario;
 SELECT * FROM  Pontuacao;
 SELECT * FROM Personagem;
+
+SELECT * FROM Usuario  JOIN Personagem ON  fkPersonagem=idUsuario
+WHERE usuario.nome="Dantas Will";
+
+SELECT * FROM Usuario JOIN Personagem ON fkPersonagem=idUsuario;

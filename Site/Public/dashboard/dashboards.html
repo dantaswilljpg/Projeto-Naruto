@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/imgs/naruto-sign.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/dashboards.css">
+    <link rel="stylesheet" href="../css/style-dash.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div id="dashboard-container">
+        <nav class="nav" id="nav-dash">
+            <img src="../assets/imgs/logo naruto.png" alt="Logo Naruto">
+            <div class="bem-vindo">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+            <ul class="nav-list">
+                <li class="lista"><a href="../index.html">
+                    <img class="icone-nav" src="../assets/imgs/tsunade.png"
+                            alt="Tsunade"><span>Inicio</span></a></li>
+
+                <li class="lista"><a href="../pontuacao.html">
+                    <img class="icone-nav" src="../assets/imgs/sakura.png" alt="Sakura">
+                        <span>Pontuação</span></a>
+
+                        <li class="lista"><a href="../quiz.html">
+                            <img class="icone-nav" src="../assets/imgs/hinata.png" alt="Hinata">
+                            <span>Quiz</span></a>
+        </nav>
+        <div id="content">
+            <div class="grafico">
+                <h2>Personagens favoritos</h2>
+                <ul class="chart-grafico">
+                    <li class="slide">
+                        <canvas id="myChart1"></canvas>
+                    </li>
+                    <li class="slide">
+                        <canvas id="myChart2"></canvas>
+                    </li>
+                </ul>
+            </div>
+            <div class="grafico">
+                <h2>Média do quiz</h2>
+                <ul class="chart-grafico">
+                    <li class="slide">
+                        <canvas id="myChart3"></canvas>
+                    </li>
+                    <li class="slide">
+                        <canvas id="myChart4"></canvas>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    const ctx1 = document.getElementById('myChart1');
+    const ctx2 = document.getElementById('myChart2');
+    const ctx3 = document.getElementById('myChart3');
+    const ctx4 = document.getElementById('myChart4');
+
+
+    //Gráfico 1 - Personagens favoritos-barra
+    new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['Naruto Uzumaki', 'Sasuke Uchiha', 'Madara Uchiha', 'Obito Uchiha'],
+            datasets: [{
+                label: 'Quantidade de votos:',
+                backgroundColor: [
+                    '#ff4500',
+                    '#DAA520',
+                    '#FF0000',
+                    '#0000FF'
+                ],
+                borderColor: '##0000FF',
+                borderWidth: 3,
+                data: [40, 32, 38,45],
+                hoverOffset: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+
+    });
+
+    //Gráfico 1 - Personagens favoritos- linha
+    new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['Naruto Uzumaki', 'Sasuke Uchiha', 'Madara Uchiha', 'Obito Uchiha'],
+            datasets: [{
+                label: 'Quantidade de votos',
+                backgroundColor: [
+                     '#ff4500',
+                    '#DAA520',
+                    '#FF0000',
+                    '#0000FF'
+                ],
+                borderColor: '##0000FF',
+                borderWidth: 1,
+                data: [40, 32, 38,45],
+                hoverOffset: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+
+    });
+
+    //Gráfico 2 - Pontuação dos usuarios- barra
+    new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['10%', '20%', '30%', '40%','50%', '60%', '70%','80%', '90%','100%'],
+            datasets: [{
+                label: 'Média de pontuação de cada jogador',
+                backgroundColor: ['#ff4500'],
+                borderColor: '##0000FF',
+                data: [24, 25, 28, 30, 32, 34,36,38,40,42],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    })
+
+     //Gráfico 2 - Pontuação dos usuarios-linha
+     new Chart(ctx4, {
+        type: 'line',
+        data: {
+            labels: ['10%', '20%', '30%', '40%','50%', '60%', '70%','80%', '90%','100%'],
+            datasets: [{
+                label: 'Média de pontuação de cada jogador',
+                backgroundColor: ['#ff4500'],
+                borderColor: ['#ff4500'],
+                data: [24, 25, 28, 32, 34, 36,38,40,42,44],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    })
+</script>

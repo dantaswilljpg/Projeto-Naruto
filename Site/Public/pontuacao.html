@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
+     <link rel="shortcut icon" href="assets/imgs/naruto-sign.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/quiz.css">
     <link rel="stylesheet" href="css/pontuacao.css">
@@ -13,31 +13,31 @@
 </head>
 
 <body>
-    <div class="banner-ponts">
-    <section id="navbar-container">
-        <nav class="navbar" id="nav-quiz">
-            <img src="assets/imgs/logo naruto.png" alt="Logo Naruto">
-            <div class="bem-vindo">
-            <h1>Bem-vindo!</h1>
-        </div>
-             <span id="anime_usuario"></span>
-            <ul class="nav-quiz">
-                <li class="quiz-atual"><a href="index.html">
-                        <img class="icone-navbar" src="assets/imgs/icone-anime.png" alt="Geral" >
-                        <span>Geral</span></a>
-                </li>
-                <li class="quiz-atual"><a href="dashboard/dashboard.html">
-                        <img class="icone-navbar" src="assets/imgs/kakashi-hatake.png" alt="dashboard">
-                        <span>Personagens</san></a>
-                </li>
-                <li class="quiz-atual"><a href="quiz.html">
-                    <img class="icone-navbar" src="assets/imgs/sharingan.png" alt="dashboard">
-                    <span>Quiz</san></a>
+    <body>
+        <div class="banner-ponts">
+        <nav id="navbar-container">
+            <nav class="navbar" id="nav">
+                <img src="assets/imgs/logo naruto.png" alt="Logo Naruto">
+                <div class="bem-vindo">
+                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                </div>
+                 <span id="anime_usuario"></span>
+                <ul class="nav">
+                    <li class="lista"><a href="index.html">
+                            <img class="icone-nav" src="assets/imgs/icone-ninja.png" alt="Geral" >
+                            <span>Inicio</span></a>
                     </li>
+                    <li class="lista"><a href="dashboard/dashboards.html">
+                            <img class="icone-nav" src="assets/imgs/sasuke-uchiha.png" alt="dashboard">
+                            <span>Personagens</san></a>
+                    </li>
+                    <li class="lista"><a href="quiz.html">
+                        <img class="icone-nav" src="assets/imgs/gaara-areia.png" alt="dashboard">
+                        <span>Quiz</span></san></a>
+                </li>
                 </ul>
-                <a href="login.html"><button>SAIR</button></a>
+            </nav>
         </nav>
-    </section>
         <div class="pontuacao">
             <div class="pontos">
                 <span>Pontuação geral</span>
@@ -52,4 +52,8 @@
                 </div>
             </div>
     </body>
-    </html>c
+    </html>
+
+    <script>
+        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    </script>

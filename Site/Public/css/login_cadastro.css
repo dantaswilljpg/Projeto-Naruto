@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   /* width: 100vw;*/
-  background: rgba(0, 0, 0, 0.6) url(../assets/imgs/banner-cadastro.jpg);
+  background: rgba(0, 0, 0, 0.7) url(../assets/imgs/banner-cadastro.jpg);
   background-blend-mode: darken;
   background-size: cover;
   height: 120vh;
@@ -28,7 +28,7 @@
   flex-direction: column;
   align-items: center;
   /* width: 100vw;*/
-  background: rgba(0, 0, 0, 0.6) url(../assets/imgs/banner-login.jpg);
+  background: rgba(0, 0, 0, 0.7) url(../assets/imgs/banner-login.jpg);
   background-blend-mode: darken;
   background-size: cover;
   height: 120vh;
@@ -49,8 +49,7 @@
   width: 100vw;
   transition: 0.6s;
   z-index: 3;
-  background: rgba(0, 0, 0, 0.6);
-  background-blend-mode: darken;
+  background: linear-gradient( to bottom, #f57344, #FF4500);
 }
 
 
@@ -94,7 +93,7 @@
 }
 
 .navbar-login ul li a:hover {
-  color: #FF4500;
+  color: #0000FF;
 
 }
 
@@ -127,11 +126,6 @@
 }
 
 
-.alerta_erro-login #mensagem_erro {
-  font-size: 0.65rem;
-  text-align: center;
-  color: #8B0000;
-}
 
 .formulario-login {
   display: flex;
@@ -147,9 +141,9 @@
 
 .formulario-login span {
   font-size: 0.85rem;
-  text-align: center;
-  color: #FF4500;
+  color: #000;
 }
+
 
 .formulario-login input {
   font-size: 0.7rem;
@@ -157,6 +151,7 @@
   border-radius: 10px;
   margin-bottom: 18px;
   flex-direction: column;
+  border: 2px solid #FF4500;
 }
 
 .formulario-login button {
@@ -190,23 +185,8 @@
 }
 
 
-.loading-div-login {
-  width: 10px;
-  margin: auto;
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.loading-div-login img {
-  height: 38px;
-  width: 35px;
-}
-
 
 /*FIM FORM LOGIN */
-
-
 
 
 
@@ -221,8 +201,7 @@
   width: 100vw;
   transition: 0.6s;
   z-index: 3;
-  background: rgba(0, 0, 0, 0.6);
-  background-blend-mode: darken;
+  background: linear-gradient( to bottom, #f57344, #FF4500);
 }
 
 
@@ -266,7 +245,7 @@
 }
 
 .navbar-cadas ul li a:hover {
-  color: #FF4500;
+  color: #0000FF;
 
 }
 
@@ -294,16 +273,12 @@
   height: 75.5vh;
   border-radius: 20px;
   background-color: #FFF;
-  margin-top: 135px;
+  margin-top: 185px;
   box-shadow: 1vw 1vh #FF4500;
 }
 
 
-.alerta_erro_cadastro #mensagem_erro {
-  font-size: 0.65rem;
-  text-align: center;
-  color: #8B0000;
-}
+
 
 .formulario-cadas {
   display: flex;
@@ -319,15 +294,18 @@
 
 .formulario-cadas span {
   font-size: 0.85rem;
-  text-align: center;
-  color: #FF4500;
+  color: #000;
 }
+
+
 
 .formulario-cadas input {
   font-size: 0.7rem;
   text-align: center;
   border-radius: 10px;
   flex-direction: column;
+  border: 2px solid #FF4500;
+  margin-bottom: 10px;
 }
 
 
@@ -356,31 +334,19 @@
 
 
 .formulario-cadas a:hover {
-  color: #0000FF
-;
+  color: #0000FF;
+  
 
 }
 
 .personagem_naruto {
   width: 20vw;
   border: 2px solid #FF4500;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  border-radius: px;
+  margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
-
-.loading-div-cadas {
-  width: 10px;
-  margin: auto;
-  display: none;
-  justify-content: center;
-  align-self: center;
-}
-
-.loading-div-cadas img {
-  width: 75px;
-  height: 55px;
-}
 
 
 /*FIM  DO FORM CADASTRO */
