@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naruto-Projeto Individual</title>
-    <link rel="shortcut icon" href="assets/imgs/naruto-sign.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
 </head>
 
 <body>
@@ -19,73 +20,89 @@
             </div>
             <div class="ul-lista">
                 <ul>
-                    <li><a href="index.html">inicial</a></li>
-                    <li><a href="curiosidades.html">História</a></li>
+                    <li><a href="index.html#anime">Contexto</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
                     <li><a href="login.html">Login</a></li>
                     <li><a href="cadastro.html">Cadastro</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="banner-header">
+    <div class="banner">
+
     </div>
-    <section class="perfil">
-        <div class="banner-perfil">
-            <div class="titulo">
-                <h1>Sobre mim</h2><br>
-                    <div class="sobre-perfil">
-                        <div class="img-perfil">
-                            <img src="assets/imgs/img-card-perfil.jfif" alt="Icone Naruto">
-                        </div>
-                        <div class="traco"></div>
-                        <h2>Will Gustavo Dantas Adolpho</h2><br>
-                        <p>Olá, Bem vindo ao meu site sobre o anime de naruto,onde eu vou falar sobre os meus
-                            valores
-                            pessoais, falas marcantes de alguns personagens do anime, história de cada personagem, uma
-                            página apenas para curiosidades e os melhores arcos do anime, referente a mim, eu me
-                            considero uma pessoa
-                            extremamente cuidadosa com as pessoas ao meu redor, principalmente minha fámilia e meus
-                            amigos
-                            em questão, que sãos os meus maiores valores, que foram os que sempre estiverem comigo nos
-                            piores e melhores momentos, priorizo sempre o bem estar deles certas vezes até mais que o
-                            meu própio bem estar, eles são minha base para tudo, foram os que me ajudaram a chegar onde
-                            estou hoje, em momentos de dificuldade, eles sempre foram meu ombro para eu nunca cair e
-                            mudar meu caminho!
-                        </p>
+    <div class="anime" id="anime">
+        <div class="card-principal">
+            <div class="card-context">
+                <h2>Contexto</h2>
+                <div class="card-temat-temp">
+                    <div class="card-anime">
+                        <h3>➔Tématica</h3>
+                        <img src="assets/imgs/kakashi-hatake.png">
+                        <ul>
+                            <li>Motivações</li>
+                            <li>Fámilia</li>
+                            <li>Laços</li>
+                        </ul>
                     </div>
-            </div>
-        </div>
-        </div>
-        </div>
-    </section>
-    <section class="intro">
-        <div class="banner-intro">
-            <div class="titulo">
-                <h2>Sobre naruto</h2>
-                <div class="anime-intro">
-                    <div class="intro-anime">
-                        <!-- Atualizando imagem da intro -->
-                        <div class="img-logo">
-                            <img src="assets/imgs/logo naruto.png" alt="Logo-Intro">
-                        </div>
+                    <div class="card-anime">
+                        <h3>➔Temporadas</h3>
+                        <img src="assets/imgs/sasuke-uchiha.png">
+                        <ul>
+                            <li>9 Temporadas</li>
+                            <li>220 Episódios</li>
+                            <li>11 filmes</li>
+                        </ul>
                     </div>
-                    <div class="intro-anime">
-                        <p> Naruto teve vida longa no mundo das mangas, começou em 1999, Desde então, Kishimoto criou um
-                            universo completo.
-                            o anime conta com 220 episódios e
-                            gira em torno das aventuras vividas por Naruto Uzumaki, um jovem órfão habitante da Aldeia
-                            da Folha que sonha em se tornar o quinto Hokage, o maior guerreiro e governante da vila.
-                        </p>
+                    <div class="card-anime">
+                        <h3>➔Valores do anime</h3>
+                        <img src="assets/imgs/icone-ninja.png">
+                        <span>
+                            <li>Laços de amizades</li>
+                            <li>Fámilia</li>
+                            <li>Nunca desistir</li>
+                        </span>
+                    </div>
+                    <div class="card-anime">
+                        <h3>➔gênero</h3>
+                        <img src="assets/imgs/itachi-uchiha.png">
+                        <span>
+                            <li>Ação</li>
+                            <li>Anime</li>
+                            <li>Aventura</li>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="sobre-naruto">
+            <div class="info-naruto">
+                <img src="assets/imgs/gif-sobre.gif">
+                <div class="informacoes" id="sobre">
+                    <h2>Sobre Naruto Clássico</h2>
+                    <span>
+                        Naruto teve vida longa no mundo dos mángas, começou em 1999, Desde então, Kishimoto criou um
+                        universo completo.
+                        o anime conta com 220 episódios e
+                        gira em torno das aventuras vividas por Naruto Uzumaki, um jovem órfão habitante da Aldeia
+                        da Folha que sonha em se tornar o quinto Hokage, o maior guerreiro e governante da vila.</span>
+                    <span>
+                        No Brasil, o anime chegou a TV em 2007, primeiro pelo canal por assinatura Cartoon Network e,
+                        depois, na TV aberta, como uma das atrações do matinal Bom Dia & Cia, do SBT.
+                    </span>
+
+                    <button onclick="saibamais()">Saiba mais</button>
+                    </span>
+                </div>
+            </div>
         </div>
-    </section>
-    <section class="valores">
+    </div>
+    </div>
+    </div>
+    <div class="valores" id="valores">
         <div class="banner-valor">
             <h2>Meus Valores</h2>
-            <!-- Atualizando imagem dos valores -->
             <div class="animeValores">
                 <div class="animeValor">
                     <div class="img-valor">
@@ -93,16 +110,15 @@
                     </div>
                     <h3>Disciplina</h3>
                     <div class="traco"></div>
-                    <p>Foco em ser disciplinado, para alcançar os objetivos rapidos, sem disciplina não vem
-                        resultados.</p>
+                    <p>"Foco em ser disciplinado, para alcançar os objetivos o mais rapído possível".</p>
                 </div>
                 <div class="animeValor">
                     <div class="img-valor">
-                        <img src="assets/imgs/card-hist-gaara-deserto.jpg" alt="Icone Gaara Adolescente ">
+                        <img src="assets/imgs/card-valores-rock.jpg" alt="Icone roock Adolescente ">
                     </div>
                     <h3>Determinação</h3>
                     <div class="traco"></div>
-                    <p>Se manter determinado,buscar melhorar sempre e jamais desistir de si próprio</p>
+                    <p>"Se manter determinado e jamais desistir de si mesmo"</p>
                 </div>
                 <div class="animeValor">
                     <div class="img-valor">
@@ -110,285 +126,134 @@
                     </div>
                     <h3>Honestidade</h3>
                     <div class="traco"></div>
-                    <p>Seja transparente,nunca tema a verdade por mais difícil que seja, ela nós fortalece.</p>
+                    <p>"Seja transparente, nunca tema a verdade por mais difícil que seja.</p>
                 </div>
             </div>
         </div>
-        </div>
-    </section>
+    </div>
+    <div class="personagem" id="personagem">
+        <h2>Falas marcantes</h2>
+        <div class="animePersonagem">
+            <div class="animePerso">
+                <div class="img-falas">
+                    <img src="assets/imgs/card-falas-naruto.jpg" alt="Icone Naruto Uzumaki">
 
-    <section class="personagem">
-        <div class="banner-falas">
-            <h2>Falas marcantes</h2>
-            <!-- Atualizando imagem dos personagens -->
-            <div class="animePersonagem">
-                <div class="animePerso">
-                    <div class="img-falas">
-                        <img src="assets/imgs/card-falas-naruto.jpg" alt="Icone Naruto Uzumaki">
-
-                    </div>
-                    <h3>Naruto Uzumaki</h3>
-                    <div class="traco"></div>
-                    <p>"Lar é onde tem alguém sempre pensando em você.'</p>
                 </div>
-
-                <div class="animePerso">
-                    <div class="img-falas">
-                        <img src="assets/imgs/card-falas-sasuke.jpg" alt="Icone Sasuke Uchiha">
-                    </div>
-                    <h3>Sasuke Uchiha</h3>
-                    <div class="traco"></div>
-                    <p> "Vou restaurar meu clã, e matar um certo alguém."</p>
-                </div>
-                <div class="perso-falas">
-                    <div class="animePerso">
-                        <div class="img-falas">
-                            <img src="assets/imgs/card-falas-neji.jpg" alt="Icone Madara Uchiha">
-                        </div>
-                        <h3>Neji Hyuuga</h3>
-                        <div class="traco"></div>
-                        <p>"Um fracassado, sempre será um fracassado"</p>
-                    </div>
-                </div>
-            </div><br>
-            <div class="animePersonagem">
-                <div class="animePerso">
-                    <div class="img-falas">
-                        <img src="assets/imgs/card-falas-gaara.jpg" alt="Icone Gaara">
-
-                    </div>
-                    <h3>Gaara</h3>
-                    <div class="traco"></div>
-                    <p>"Embora não sangre... essa parte aqui dói muito."</p>
-                </div>
-
-                <div class="animePerso">
-                    <div class="img-falas">
-                        <img src="assets/imgs/card-falas-kakashi.jpg" alt="Icone kakashi hatake">
-                    </div>
-                    <h3>Kakashi Hatake</h3>
-                    <div class="traco"></div>
-                    <p>"Desde que você não desista, vai sempre existir salvação."</p>
-                </div>
-                <div class="perso-falas">
-                    <div class="animePerso">
-                        <div class="img-falas">
-                            <img src="assets/imgs/card-falas-rock.jpg" alt="Rock Lee">
-                        </div>
-                        <h3>Rock Lee</h3>
-                        <div class="traco"></div>
-                        <p>"O trabalho duro vence o dom natural"</p>
-                    </div>
-                </div>
+                <h3>Naruto Uzumaki</h3>
+                <div class="traco"></div>
+                <p>"Lar é onde tem alguém sempre pensando em você.'</p>
             </div>
-        </div>
-    </section>
 
-    <section class="personagem">
-        <div class="banner-naruto">
-            <h2>Historia dos personagens</h2>
-            <div class="animeHistorias">
-                <div class="animeHist">
-                    <div class="img-hist">
-                        <img src="assets/imgs/card-hist-naruto.jpg" alt="Icone Naruto">
-                    </div>
-                    <h3>Naruto Uzumaki</h3>
-                    <div class="text-hist">
-                        <p>Naruto Uzumaki é um garoto que vive na Aldeia da Folha, a vila ninja no País do Fogo.
-                            Ainda bebê,
-                            Naruto teve aprisionado em seu corpo a Raposa de Nove Caudas pelo Quarto
-                            Hokage, com finalidade de salvar a Aldeia. Naruto não
-                            conseguia fazer amizades, devido ao espírito da raposa de nove caudas, a aldeia toda se
-                            afastou de naruto,muito por conta da destruição que a bijuu causou na aldeia, matando
-                            familiares dos ninjas da folha, destruindo konoha e por ter matado o quarto hogake, então
-                            ele cresceu
-                            sem amizades, sem país,sem irmãos, naruto cresceu sem saber quem erão seus pais, por conta
-                            que o terceiro hokage hiruzen, proibiu a vila da folha de falar para o garoto sobre seus
-                            pais e sobre a raposa de nove caudas estar selada dentro de si.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="banner-sasuke">
-            <div class="animeHist">
-                <h2>Historia dos personagens</h2>
-                <div class="img-hist">
-                    <img src="assets/imgs/card-hist-sasuke.jpg" alt="Icone Sasuke">
+            <div class="animePerso">
+                <div class="img-falas">
+                    <img src="assets/imgs/card-falas-sasuke.jpg" alt="Icone Sasuke Uchiha">
                 </div>
                 <h3>Sasuke Uchiha</h3>
-                <div class="text-hist">
-                    <p>Sasuke é o filho mais novo de Fugaku e Mikoto Uchiha, além de ser o último sobrevivente do clã em
-                        Konoha quando a série começa. Após o trágico massacre de sua família quando ele era uma criança
-                        pequena, o garoto se tornou frio e distante, tendo como seu único objetivo vingança contra
-                        aquele que matou todo o seu clã.
-
-                        Em Naruto, ele se forma na Academia como o melhor aluno de sua classe, sendo colocado no Time 7
-                        ao lado de Naruto e Sakura, sob a liderança do sensei Kakashi. A equipe acabou se tornando mais
-                        importante para o Uchiha do que ele gostaria, formando laços que permaneceriam mesmo após ele se
-                        voltar contra eles. Juntos, o trio de personagens principais enfrentaram Zabuza e Haku em sua
-                        missão de proteger Tazuna, além de passarem pelo Exame Chunin.
-
-                        Com o tempo, ver seu rival o alcançar fez com que Sasuke se sentisse deixado para trás, cada vez
-                        mais distante de seu objetivo. Isso o levou a abandonar a Vila da Folha com o Quarteto do Som,
-                        gerando uma missão de busca que resultou em embates de Kiba, Neji, Choji, Shikamaru, Lee e dos
-                        irmãos da Areia contra Tayuya, Kidomaru, Sakon, Jirobo e Kimimaro. A batalha final, no entanto,
-                        é protagonizada pelo próprio Sasuke, que enfrenta Naruto no Vale do Fim.</p>
+                <div class="traco"></div>
+                <p> "Vou restaurar meu clã, e matar um certo alguém."</p>
+            </div>
+            <div class="perso-falas">
+                <div class="animePerso">
+                    <div class="img-falas">
+                        <img src="assets/imgs/card-falas-neji.jpg" alt="Icone Neji Hyugaa">
+                    </div>
+                    <h3>Neji Hyuuga</h3>
+                    <div class="traco"></div>
+                    <p>"Um fracassado, sempre será um fracassado"</p>
                 </div>
             </div>
-        </div>
-        <div class="animeHist">
-            <div class="banner-kakashi">
-                <h2>Historia dos personagens</h2>
-                <div class="img-his">
-                    <img src="assets/imgs/card-hist-kakashi.jpg" alt="Icone Kakashi">
+        </div><br>
+        <div class="animePersonagem">
+            <div class="animePerso">
+                <div class="img-falas">
+                    <img src="assets/imgs/card-falas-gaara.jpg" alt="Icone Gaara">
+
+                </div>
+                <h3>Gaara</h3>
+                <div class="traco"></div>
+                <p>"Embora não sangre... essa parte aqui dói muito."</p>
+            </div>
+
+            <div class="animePerso">
+                <div class="img-falas">
+                    <img src="assets/imgs/card-falas-kakashi.jpg" alt="Icone kakashi hatake">
                 </div>
                 <h3>Kakashi Hatake</h3>
-                <div class="text-hist">
-                    <p>Kakashi Hatake é conhecido por sua incrível competência como ninja, se tornando genin aos 5 anos,
-                        jounin apenas com 12 anos durante a 3º Guerra Ninja e entrando para o Esquadrão Especial da ANBU
-                        ainda aos 13 anos, se tornando a pessoa mais jovem a se tornar capitão da ANBU.
-
-
-                        Na vida pessoal Kakashi passou por momentos difíceis desde muito novo, quando perdeu sua mãe e
-                        poucos anos depois perdendo também o seu pai – conhecido como A Presa Branca da Folha, que
-                        cometeu suicídio devido a depressão que desenvolveu após optar salvar seus amigos à concluir sua
-                        missão. Todos viraram as costas para Sakumo e por isso vemos o seu triste fim.
-
-                        Mas essas não foram as únicas perdas no passado de Kakashi. Como jounin, foi designado à uma
-                        missão com sua equipe: Obito e Rim. Obito acaba “morrendo” durante a missão e Rim acaba sendo
-                        morta por Kakashi de forma acidental pouco tempo depois. Alguns anos depois foi a vez de Minato,
-                        o sensei de Kakashi e Quarto Hokage perder sua vida.
-
-                        Mesmo com tantos traumas ainda na infância, Kakashi não se deixou abalar e sempre optou por
-                        proteger a Vila Oculta da Folha, mesmo que isso custasse a sua vida..
-                    </p>
+                <div class="traco"></div>
+                <p>"Desde que você não desista, vai sempre existir salvação."</p>
+            </div>
+            <div class="perso-falas">
+                <div class="animePerso">
+                    <div class="img-falas">
+                        <img src="assets/imgs/card-valores-rock.jpg" alt="icone Rock Lee">
+                    </div>
+                    <h3>Rock Lee</h3>
+                    <div class="traco"></div>
+                    <p>"O trabalho duro vence o dom natural"</p>
                 </div>
             </div>
         </div>
-        </div>
-        <div class="animeHist">
-            <div class="banner-jiraya">
-                <h2>Historia dos personagens</h2>
-                <div class="img-his">
-                    <img src="assets/imgs/card-hist-jiraya.jpg" alt="Icone Neji">
-                </div>
-                <h3>Jiraya Sama</h3>
-                <div class="text-hist">
-                    <p>Quando era jovem, Jiraiya se tornou aluno de Hiruzen Sarutobi(Terceiro Hogake) e teve como colegas de equipe
-                        Tsunade e Orochimaru. Justamente por terem sido treinados pelo ninja que se tornou o terceiro
-                        Hokage e aprendido com eles técnicas avançadas, eles se tornaram sannin, título dado para ninjas
-                        que são considerados lendários.
-
-
-                        Após se tornar adulto, Jiraiya ficou responsável por ser o mestre de uma equipe de Konoha, a
-                        Vila Oculta da Folha, acabou virando mestre de Minato Namikaze, eventualmente se tornou o quarto Hokage da vila e morreu ao impedir o
-                        ataque de raposa de nove caudas, selando a besta no corpo do então recém-nascido Naruto.
-
-
-
-                        Ainda decidido a fazer Orochimaru mudar de ideia, Jiraiya decidiu acompanhar seus passos de
-                        perto, bem como os movimentos feitos pela Akatsuki, o que o deixou bem distante da Vila da Folha
-                        por algum tempo.
-
-                        Jiraiya acabou se tornando o grande mestre de Naruto e lhe ensinou diversas
-                        técnicas importantes, sendo o Rasengan a mais importante delas. Pouco tempo mais tarde, Konoha
-                        lhe ofereceu o posto de Hokage após a morte de Hiruzen. Ele recusou o convite, mas decidiu ir
-                        atrás de Tsunade, por considerá-la uma pessoa mais apropriada para o cargo.
-
-                        Após Sasuke fugir, Jiraiya levou Naruto para fora de Konoha, onde o treinou por dois anos e meio
-                    </p>
-                </div>
+    </div>
+    </div>
+    <div class="sobre-mim">
+        <div class="box-sobre">
+            <img src="assets/imgs/img-card-perfil.jfif">
+            <div class="bio" id="sobre">
+                <h2>Will Dantas</h2>
+                <span>
+                    Bom, me chamo Will Dantas, tenho 19 anos. referente a minha pessoa, sou extremamente compromissado
+                    a todos meus comprimissos pessoais e profissional, tanto amizades,
+                    família e faculdade.</span>
+                <span>
+                    <h1>Sobre site</h1>
+                    Bem vindo ao meu site sobre o anime de Naruto clássico, onde eu vou
+                    falar sobre os meus
+                    valores pessoais, falas marcantes de cada personagem, arcos do anime,historia dos personagens,
+                    e também terá com um gráfico referente aos personagens preferidos de cada usúario, um quiz com 7
+                    perguntas para ver seu nível de conhecimento sobre o anime
+                </span>
             </div>
         </div>
-        <div class="animeHist">
-            <div class="banner-itachi">
-                <h2>Historia dos personagens</h2>
-                <div class="img-his">
-                    <img src="assets/imgs/card-hist-itachi.jpg" alt="Icone Kakashi">
-                </div>
-                <h3>Itachi Uchiha</h3>
-                <div class="text-hist">
-                    <p>Itachi nasceu em um dos maiores e mais prestigiados clãs de Konoha, se tornando um prodígio muito
-                        antes de atingir a idade adulta. Se formou na Academia Ninja com apenas sete anos de idade,
-                        sendo o melhor de sua turma. Passou no exame chuunin três anos após sua graduação e pouco tempo
-                        depois entrou para o grupo de caçadores especiais Anbu, se tornando líder deles com apenas 13
-                        anos de idade.Itachi Uchiha foi um prodígio do clã Uchiha da Aldeia da folha. Ele se
-                        tornou um criminoso internacional depois de assassinar seu clã inteiro, poupando apenas a vida
-                        de seu irmão mais novo, Sasuke. Ele se juntou a organização criminosa Akatsuki, onde ele entrou
-                        em frequentes conflitos com Konoha e seus ninjas, incluindo Sasuke, que procurou vingar sua
-                        família.
-                    </p>
-                </div>
+    </div>
+    <div class="sobre-quiz">
+        <div class="box-quiz">
+            <img src="assets/imgs/gif-naruto.gif">
+            <div class="bio" id="sobre">
+                <h2>Quiz</h2>
+                <span>
+                    Venha fazer o quiz do meu projeto individual, onde coloquei perguntas sobre o anime durante sua
+                    fase clássica,
+                    vamos ver o quanto você sabe sobre o anime após ter visto as informações do meu site, vamos
+                    lá.</span>
+                <span>
+                    Meu quiz contará com 7 perguntas, onde no final você véra em uma tabela sua pontuação e
+                    percentual e por fim terá um gráfico dos personagens favoritos de cada
+                    usuario que cadastro no meu site.
+
+                    <button onclick="quiz()">Quiz</button>
+                </span>
             </div>
         </div>
-        </div>
-        <div class="animeHist">
-            <div class="banner-gaara">
-                <h2>Historia dos personagens</h2>
-                <div class="img-his">
-                    <img src="assets/imgs/card-hist-gaara-deserto.jpg" alt="Icone Gaara">
-                </div>
-                <h3>Gaara do deserto</h3>
-                <div class="text-hist">
-                    <p> Gaara é o terceiro e mais novo filho do Kazekage Rasa e sua esposa Karura, sendo o irmão mais
-                        novo de Temari e Kankuro. Logo em seu nascimento, seu pai faz com que Chiyo selasse o Shukaku
-                        dentro de seu próprio filho, tendo a intenção de usá-lo como uma arma de sua vila no futuro,
-                        como naruto gaara támbem quando pequeno acabava machucando moradores da vila, mesmo sem
-                        intenção.
-                        Isso porque, todos os moradores o temiam e zombavam dele por ser um
-                        receptáculo para o Shukaku, sua primeira participação foi no arco do exame Chunnin, encontrando
-                        os membros do time 7-Naruto,Sasuke e Sakura, se mostrando um adversário qualificado e perigoso,
-                        porém um garoto com sede de sangue, gaara durante a terceira fase do exame, tem uma das melhores
-                        batalhas do anime em geral, rock lee vs gaara</p>
-                </div>
-            </div>
-        </div>
-        <div class="animeHist">
-            <div class="banner-neji">
-                <h2>Historia dos personagens</h2>
-                <div class="img-his">
-                    <img src="assets/imgs/card-hist-neji.jpg" alt="Icone Neji">
-                </div>
-                <h3>Neji Hyuuga</h3>
-                <div class="text-hist">
-                    <p>Neji Hyūga é um membro do clã Hyūga e um shinobi da vila da folha. Embora
-                        tenha sido um prodígio mesmo pelos padrões dos Hyūga, Neji era um membro da casa secundária; por
-                        isso, não importa quão habilidoso tornou-se, ele estaria sempre a serviço da casa principal
-                        Hyūga, um fato que convenceu-o de que o destino era predeterminado, quando criança neji era um
-                        garoto alegre e risonho, porém até o incidente do seu pai, o pai de Neji quis morre para salvar
-                        a família principal, porém Neji entendeu errado e começou a ter ódio da familia principal por
-                        conta do ocorrido, Neji já era um prodígio desde de cedo, obtendo técnicas que só a familia
-                        principal conseguia adquirir, porém o quanto crescia Neji ficou rancoroso e frio, entretando
-                        durante sua luta durante o exame Chuunin depois de ferir sua prima Hyuuga Hinata
-                        nas preliminares, fazendo ela quase morrer. Uzumaki Naruto que faz ele mudar ao perder a luta.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="animeHist">
-            <div class="banner-orochimaru">
-                <h2>Historia dos personagens</h2>
-                <div class="img-his">
-                    <img src="assets/imgs/card-hist-orochimaru.jpg" alt="Icone Orochimaru">
-                </div>
-                <h3>Orochimaru</h3>
-                <div class="text-hist">
-                    <p>Principal vilão da série clássica de naruto, Orochimaru tentou destruir a Aldeia da folha durante
-                        a última etapa do Exame Chunnin de Naruto Clássico, durante a luta entre Orochimaru e o Terceiro
-                        Hokage, ele reviveu o Primeiro Hokage e Segundo Hokage,Porém, o Terceiro Hokage acabou usando o
-                        Shiki Fujin como último recurso para eliminar de uma vez por todas o mal que Orochimaru
-                        representava. Ao sacrificar sua própria alma, ele foi capaz de destruir os corpos do Primeiro e
-                        Segundo Hokage, e fazer com que Orochimaru perdesse o movimento dos braços</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        <footer>
-            <span>Feito por Will Gustavo Dantas - 2023</span>
-        </footer>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <span>Feito por Will Gustavo Dantas - 2023 &copy;</span>
+    </footer>
+    </div>
+
 </body>
 
 </html>
+<script>
+
+    function saibamais() {
+        location.href = "historia.html";
+        console.log('historia')
+    }
+
+    function quiz() {
+        location.href = "cadastro.html";
+        console.log('cadastrar')
+    }
+</script>

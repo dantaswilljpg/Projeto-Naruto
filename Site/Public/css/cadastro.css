@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sedgwick Ave Display';
+  font-size: 1.5rem;
+}
+
+
+
+
+
+/*BANNER*/
+.banner-cadas {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100vw;*/
+  background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-cadas.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  height: 118vh;
+}
+
+
+
+
+/*FORM*/
+.formulario {
+  display: flex;
+  margin-top: 50px;
+}
+
+.formulario h1 {
+  color: white;
+  text-shadow:
+    -1px -1px 0px #000000,
+    -1px 1px 0px #000000,
+    1px -1px 0px #000000,
+    1px 0px 0px #000000;
+  margin-top: 80px;
+}
+
+.formulario .container {
+  gap: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+  text-align: center;
+  margin-right: 150px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  text-align: center;
+
+}
+
+.form input {
+  width: 35vw;
+  height: 7vh;
+  font-size: 1rem;
+  border: 2px solid #FF4500;
+  border-radius: 50px;
+  background-color: transparent;
+  margin-right: 300px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.form input:hover {
+  color: #FF4500;
+}
+
+.form span {
+  margin-right: 600px;
+}
+
+select .favorito {
+  width: 40px;
+  height: 80px;
+}
+
+.personagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-left: 500px;
+
+}
+
+.personagem #img_personagem {
+
+  background-size: cover;
+  width: 24vw;
+  height: 50vh;
+  border: 8px solid #0000f0;
+  border-radius: 5px;
+  margin-top: -450px;
+
+}
+
+.naruto {
+  background-image: url(../assets/imgs/foto-cadastro-naruto.jpg);
+}
+
+.sasuke {
+  background-image: url(../assets/imgs/foto-cadastro-sasuke.jpg);
+}
+
+.kakashi {
+  background-image: url(../assets/imgs/foto-cadastro-kakashi.jpg);
+}
+
+.itachi {
+  background-image: url(../assets/imgs/foto-cadastro-itachi.jpg);
+}
+
+.gaara {
+  background-image: url(../assets/imgs/foto-cadastro-gaara.jpg)
+}
+
+.neji {
+  background-image: url(../assets/imgs/foto-cadastro-neji.jpg);
+}
+
+.jiraya {
+  background-image: url(../assets/imgs/foto-cadastro-jiraya.jpg);
+}
+
+
+
+
+.personagem #personagem_naruto {
+  width: 100%;
+  height: 30%;
+  border: 5px solid #0000f0;
+  border-radius: 50px;
+  padding-left: 2%;
+  font-weight: 50;
+  font-size: 50px;
+  color: #FF4500;
+  background-color: transparent;
+}
+
+
+
+.personagem h1 {
+  margin-top: -1px;
+}
+
+.formulario button {
+  border-radius: 20px;
+  font-size: 25px;
+  padding: 1px 2px;
+  color: #fff;
+  background-color: transparent;
+  border: 8px solid #FF4500;
+  width: 28vw;
+  height: 8vh;
+  align-self: center;
+  margin-left: 150px;
+  margin-top: -150px;
+}
+
+.formulario button:hover {
+  background-color: #FF4500;
+}

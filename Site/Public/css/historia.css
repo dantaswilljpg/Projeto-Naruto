@@ -1,0 +1,139 @@
+.banner-historia {
+  /* width: 100vw;*/
+  height: 120vh;
+  /* As unidades vh e vw significam viewport, sendo a primeira para altura e a segunda para largura. Isso significa que elas utilizam o tamanho total da viewport, tamanho total do layout do pc*/
+  margin-top: 10vh;
+  background-image: url(../assets/imgs/banner-arcos-personagens.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 0px 10px black;
+
+}
+
+
+.historia .card-esquerda {
+  display: flex;
+  justify-content: center;
+}
+
+.sinopse {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.sinopse .titulo-arco {
+  font-size: 33px;
+  font-family: 'Sedgwick Ave Display';
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sinopse span {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+}
+
+.card-arcos {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-right: 50px;
+  text-align: justify;
+}
+
+
+.card-arcos .traco {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  margin-block: 10px;
+  background-color: #0000FF;
+}
+
+
+
+.card-arcos h1 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+
+
+.card-arcos img {
+  height: 200px;
+  width: 400px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px #0f0f0f;
+}
+
+
+
+.linha-vertical {
+  height: 5830px;
+  box-sizing: border-box;
+  border-left: 5px solid #ff4500;
+
+}
+
+.sinopse {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.sinopse .nome-personagem {
+  font-size: 33px;
+  font-family: 'Sedgwick Ave Display';
+  margin-bottom: 20px;
+  margin-top: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.card-personagem {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+
+.card-personagem h1 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+
+.card-personagem .traco {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  margin-block: 10px;
+  background-color: #0000FF;
+}
+
+
+.card-personagem img {
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  box-shadow: 5px 5px 5px #0f0f0f;
+  align-self: center;
+}

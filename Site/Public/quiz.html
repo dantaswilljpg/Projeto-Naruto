@@ -5,173 +5,387 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/imgs/naruto-sign.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/quiz.css">
-    <title>Quiz</title>
+    <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel=" stylesheet" href="css/sidebar.css">
+    <link rel=" stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="../app.js"></script>
+    <!-- Sweet alert -->
 </head>
 
 <body>
     <div class="banner-quiz">
-    <nav id="navbar-container">
-        <nav class="navbar" id="nav">
-            <img src="assets/imgs/logo naruto.png" alt="Logo Naruto">
-            <div class="bem-vindo">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-            </div>
-             <span id="anime_usuario"></span>
-            <ul class="nav">
-                <li class="lista"><a href="index.html">
-                        <img class="icone-nav" src="assets/imgs/icone-ninja.png" alt="Geral" >
-                        <span>Geral</span></a>
-                </li>
-                <li class="lista"><a href="dashboard/dashboards.html">
-                        <img class="icone-nav" src="assets/imgs/sasuke-uchiha.png" alt="dashboard">
-                        <span>Personagens</san></a>
-                </li>
-                <li class="lista"><a href="pontuacao.html">
-                    <img class="icone-nav" src="assets/imgs/gaara-areia.png" alt="dashboard">
-                    <span>Pontuações</san></a>
-            </li>
-            </ul>
-            <a href="login.html"><button>SAIR</button></a>
-        </nav>
-    </nav>
-        <section class="quiz">
-            <div class="text">
-                <h1>Quiz!</h1>
-                <div class="card">
-                    <div class="questoes">
-                        <h2> 1- Quem venceu a batalha final no vale do fim?</h2>
-                        <div class="img-quiz">
-                        <img src="assets/imgs/card-quiz-vale do fim.jpg" alt="Icone madara e hashirama">
-                        </div>
-                        <div class="resp">
-                            <div class="opção">
-                                <input type="radio" name="opções" value="Naruto Uzumaki">
-                                <span>A)  Naruto Uzumaki </span>
-                            </div>
-                            <div class="opção">
-                                <input type="radio" name="opções" value= "Sasuke Uchiha">
-                                <span>B)  Sasuke Uchiha </span>
-                            </div>
-                            <div class="opção">
-                                <input type="radio" name="opções" value="Itachi Uchiha ">
-                                <span>C)  Itachi Uchiha </span>
-                            </div>
-                            <div class="opção">
-                                <input type="radio" name="opções" value="Kakashi Hatake">
-                                <span>D)  Kakashi Hatake </span>
-                            </div>
-                        </div>
-                        <div class="questoes2">
-                         <h2>2-Como Zabuza Momochi era conhecido??</h2><br><br>
-                        </div>
-                         <div class="img-quiz">
-                        <img src="assets/imgs/card-quiz-zabuza.jpg" alt="Icone Naruto e sasuke"><br><br>
-                    </div>
-                        <div class="resp">
-                            <div class="opção">
-                                <input type="radio" name="opções" value=" Demônio da Névoa Oculta">
-                                <span>A)  Demônio da Névoa Oculta </span>
-                            </div>
-                            <div class="opção">
-                                <input type="radio" name="opções" value="Demônio da Névoa Ocult">
-                                <span>B)  Demônio da Névoa Oculta </span>
-                            </div>
-                            <div class="opção">
-                                <input type="radio" name="opções" value="Demônio da Névoa Sangrente">
-                                <span>C)  Demônio da Névoa Sangrente </span>
-                            </div>
-                            <div class="opção">
-                                <input type="radio" name="opções" value=" Demônio da Névoa Sombria">
-                                <span>D)  Demônio da Névoa Sombria </span>
-                            </div>
-                        </div>    
-                    </div>
-                <div class="questoes">
-                    <h2>3-Quem era o lider da vila do som e responsável pelo ataque a Konoha? </h2>
+        <nav id="navbar-container">
+            <nav class="navbar" id="nav">
+                <img src="assets/imgs/logo naruto.png" alt="Logo Naruto">
+                <div class="bem-vindo">
+                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
                 </div>
-                    <br><br>
-                    <div class="img-quiz">
-                    <img src="assets/imgs/card-quiz-orochimaru.jpg" alt="Icone Orochimaru">
-                </div>
-                    <div class="resp">
-                        <div class="opção">
-                            <input type="radio" name="opções" value="Orochimaru">
-                            <span>A)  Orochimaru</span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value="Itachi Uchiha">
-                            <span>B)  Itachi Uchiha</span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value="Neji Hyugaa">
-                            <span>C)  Neji Hyugaa</span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value="Gaara Deserto">
-                            <span>D)  Gaara do deserto</span>
-                        </div>
-                    </div>
-                    <div class="questoes">
-                    <h2>4- Quanto episódios tem Naruto Clássico?</h2><br><br>
-                    </div>
-                    <div class="img-quiz">
-                    <img src="assets/imgs/card-quiz-episodios.jpg" alt="Icone Naruto Classico"
-                </div>
-                    <div class="resp">
-                        <div class="opção">
-                            <input type="radio" name="opções" value="  220 episódios">
-                            <span>A)  220 episódios </span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value="  250 episódios">
-                            <span>B)   250 episódios </span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value=" 240 episódios">
-                            <span>C)  240 episódios</span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value="230 episódios">
-                            <span>D)  230 episódios</span>
-                        </div>
-                    </div>
-                    <div class="questoes">
-                    <h2>5- Quem foi o responsável pela morte do 3° Hokage?</h2><br><br>
-                    </div>
-                    <div class="img-quiz">
-                    <img src="assets/imgs/card-quiz-hiruzen.jpg" alt="Icone hiruzen">
-                    </div>
-                    <div class="resp">
-                        <div class="opção">
-                            <input type="radio" name="opções" value="Itachi Uchiha">
-                            <span>A) Itachi Uchiha</span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value="Kakashi Hatake">
-                            <span>B) Kakashi Hatake </span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value="Orochimaru">
-                            <span>C) Orochimaru </span>
-                        </div>
-                        <div class="opção">
-                            <input type="radio" name="opções" value="Akatsuki">
-                            <span>D) Akatsuki </span>
-                        </div>
-                    </div>                   
-                    <a href="pontuacao.html"><button><span>Finalizar Quiz</span></button></a>
-                </div>
-            </div>
-        </div>
-    </div>
+                <span id="anime_usuario"></span>
+                <ul class="nav">
+                    <li class="lista"><a href="../index.html">
+                            <img class="icone-nav" src="../assets/imgs/icone-ninja.png" alt="Geral">
+                            <span>Geral</span></a>
+                    </li>
+                    <li class="lista"><a href="dashboard/dashboards.html">
+                            <img class="icone-nav" src="assets/imgs/sasuke-uchiha.png" alt="dashboard">
+                            <span>Gráfico</san></a>
+                    </li>
+                    <li class="lista"><a href="pontuacao.html">
+                            <img class="icone-nav" src="assets/imgs/gaara-areia.png" alt="dashboard">
+                            <span>Pontuações</san></a>
+                    </li>
+                </ul>
+                <img style="height: 55px; cursor: pointer;" src="assets/imgs/exit.png" alt="logout"
+                    onclick="limparSessao()">
+                <a href="login.html"><button>SAIR</button></a>
+            </nav>
 
-</body> 
+
+            <div class="quiz">
+                <div class="list-naruto">
+                    <span class="titulo">Quiz Naruto Clássico.</span>
+                    <div class="card">
+                        <div class="questoes" id="questao1">
+                            <h1>1- Quem venceu a batalha final no vale do fim ?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" nome="opcao1" value="Naruto Uzumaki">
+                                    <span class="text">a) Naruto Uzumaki</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" nome="opcao1" value="Sasuke Uchiha">
+                                    <span class="text">b)Sasuke Uchiha</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" nome="opcao1" value="Itachi Uchiha">
+                                    <span class="text">c) Itachi Uchiha </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" nome="opcao1" value="Gaara">
+                                    <span class="text">d) Gaara </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao2" style="display: none;">
+                            <h1>2- Quem derrotou Haku no arco do pais das ondas?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao2" value="Naruto Uzumaki">
+                                    <span class="text">a) Naruto Uzumaki</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao2" value="Sasuke Uchiha">
+                                    <span class="text">b) Sasuke Uchiha</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao2" value="Sakura Haruno">
+                                    <span class="text">c) Sakura Haruno</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao2" value="Kakahi Hatake">
+                                    <span class="text">d) Kakahi Hatake</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao3" style="display: none;">
+                            <h1>3-Qual é o nome do espírito dentro do naruto?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao3" value="Raposa de nove caudas">
+                                    <span class="text">a) Raposa de nove caudas</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao3" value="Shukaku">
+                                    <span class="text"> b) Shukaku</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao3" value="matatabi">
+                                    <span class="text">c) matatabi</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao3" value="Isobu">
+                                    <span class="text">d) Isobu </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao4" style="display: none;">
+                            <h1>4- Quantos episódios tem Naruto clássico?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao4" value="220 episódios">
+                                    <span class="text">a) 220 episódios</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao4" value="230 episódios">
+                                    <span class="text">b) 230 episódios</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao4" value="250 episódios">
+                                    <span class="text">c) 250 episódios</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao4" value="229 episódios">
+                                    <span class="text">d) 229 episódios</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao5" style="display: none;">
+                            <h1>5- Nome do jutsu que hiruzen usou para impedir que orochimaru use jutsu?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao5" value="Selo ceifeiro da morte">
+                                    <span class="text">a) Selo ceifeiro da morte</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao5" value="Selo ceifero da vida">
+                                    <span class="text">b) Selo ceifero da vida</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao5" value="Selo ceifeiro do inferno">
+                                    <span class="text">c) Selo ceifeiro do inferno</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao5" value="Selo ceifeiro da vontade">
+                                    <span class="text">d) Selo ceifeiro da vontade</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao6" style="display: none;">
+                            <h1>6- Qual foi o 1 jutsu que naruto aprendeu no anime?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao6" value="Jutsu clone das sombras">
+                                    <span class="text">a) Jutsu clone das sombras</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao6" value="Jutsu multiclone das sombras">
+                                    <span class="text">b) Jutsu multiclone das sombras</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao6" value="Rasengan">
+                                    <span class="text">c) Rasengan</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao6" value="Odaama Rasengan">
+                                    <span class="text">d) Odaama Rasengan</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao7" style="display: none;">
+                            <h1>7- Nome do pai do sasuke?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao7" value="Fugaku Uchiha">
+                                    <span class="text">a) Fugaku Uchiha</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao7" value="Sakumo Uchiha">
+                                    <span class="text">b) Sakumo Uchiha</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao7" value="Hatake Uchiha">
+                                    <span class="text">c) Hatake Uchiha</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao7" value="Fugaku Namikaze">
+                                    <span class="text">d) Fugaku Namikaze</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao8" style="display: none;">
+                            <h1>8- Nome do pai do Naruto?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao8" value="Fugaku Uchiha">
+                                    <span class="text">a) Fugaku Uchiha</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao8" value="Sakumo Uchiha">
+                                    <span class="text">b) Sakumo Uchiha</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao8" value="Hatake Uchiha">
+                                    <span class="text">c) Hatake Uchiha</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao8" value="Minato Namikaze">
+                                    <span class="text">d) Minato Namikaze</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex;">
+                            <button class="botao" id="anterior" onclick="AntQuestao()">Questão Anterior</button>
+                            <button class="botao" id="proxima" onclick="ProxQuestao()">Próxima Questão</button>
+                            <button class="botao" id="finalizar" onclick="FinalizarQuiz()">Finalizar Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
 
 </html>
-
+S
 <script>
+    document.getElementById('anterior').style.display = 'none';
+    document.getElementById('finalizar').style.display = 'none';
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var Usuario = 0;
+    var anterior = 0;
+    var proxima = 0;
+    var pontos = 0;
+    var percentual = 0;
+    var img1 = 'assets/imgs/gif-apaixonado.gif';
+    var img2 = "assets/imgs/gif-apaixonado.gif"
+    var msg = '';
+    var radios = [];
+    var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo ceifeiro da morte", "Jutsu multiclone das sombras", "Fugaku Uchiha", "Minato Namikaze"];
+    var idUsuario = sessionStorage.ID_USUARIO;
+    console.log(sessionStorage.ID_USUARIO)
+
+
+    Swal.fire({
+        imageUrl: 'assets/imgs/gif-quiz.gif',
+        imageWidth: 3000,
+        title: 'Bem-vindo ao Quiz de Naruto Clássico, boa sorte😄...!',
+        html: 'Feito por: Will Dantas - 1ADS A',
+    })
+
+    function AntQuestao() {
+        anterior--;
+        proxima = anterior
+
+        if (anterior == 6) {
+            question8.style.display = "none";
+            question7.style.display = "flex";
+            document.getElementById('proxima').style.display = 'block';
+            document.getElementById('finalizar').style.display = 'none';
+        } else if (anterior == 5) {
+            questao7.style.display = "none";
+            questao6.style.display = "flex";
+        } else if (anterior == 4) {
+            questao6.style.display = "none";
+            questao5.style.display = "flex";
+        } else if (anterior == 3) {
+            questao5.style.display = "none";
+            questao4.style.display = "flex";
+        } else if (anterior == 2) {
+            questao4.style.display = "none";
+            questao3.style.display = "flex";
+        } else if (anterior == 1) {
+            questao3.style.display = "none";
+            questao2.style.display = "flex";
+        } else if (anterior == 0) {
+            questao2.style.display = "none";
+            questao1.style.display = "flex";
+            document.getElementById('anterior').style.display = 'none';
+        }
+    }
+
+    function ProxQuestao() {
+        proxima++;
+        anterior = proxima
+        if (proxima == 1) {
+            questao1.style.display = "none";
+            questao2.style.display = "flex";
+            document.getElementById('anterior').style.display = 'block';
+        } else if (proxima == 2) {
+            questao2.style.display = "none";
+            questao3.style.display = "flex";
+        } else if (proxima == 3) {
+            questao3.style.display = "none";
+            questao4.style.display = "flex";
+        } else if (proxima == 4) {
+            questao4.style.display = "none";
+            questao5.style.display = "flex";
+        } else if (proxima == 5) {
+            questao5.style.display = "none";
+            questao6.style.display = "flex";
+        } else if (proxima == 6) {
+            questao6.style.display = "none";
+            questao7.style.display = "flex";
+        } else if (proxima == 7) {
+            questao7.style.display = "none";
+            questao8.style.display = "flex";
+            document.getElementById('proxima').style.display = 'none';
+            document.getElementById('finalizar').style.display = 'block';
+        }
+    }
+
+    function FinalizarQuiz() {
+        radios = document.querySelectorAll("input[type='radio']:checked");
+        if (radios.length < respostascorretas.length) {
+            Swal.fire({
+                imageUrl: 'assets/imgs/gif-naruto.gif',
+                imageWidth: 3000,
+                title: 'Responda todas questões 😠...!',
+
+            });
+        } else {
+            Usuario = 0;
+            for (var index = 0; index < radios.length; index++) {
+                if (respostascorretas.indexOf(radios[index].value) >= 0) {
+                    Usuario++;
+                }
+            }
+            pontos = Usuario * 10;
+            percentual = Usuario / respostascorretas.length * 100;
+
+            if (Usuario == 0 || Usuario <= 3) {
+                imageUrl = 'assets/imgs/quiz-triste.gif';
+                msg = ` <span class="text"> 
+                            Poderia ter sido melhor <b>${idUsuario}</b> 😔😔, sua pontuação foi de
+                            <b>${pontos}</b> pontos, que equivale à <b>${Percentual.toFixed(2)}%</b> do Quiz
+                        </span>`;
+            } else {
+                imageUrl = 'assets/imgs/gif-apaixonado.gif';
+                msg = ` <span class="text">
+                            PARÁBENS  <b>${idUsuario}</b> 🥳🥳, você é FÃ NÚMERO 1 DE NARUTO e sua pontuação foi de
+                            <b>${pontos}</b> pontos, que equivale à<b> ${percentual.toFixed(2)}%</b> do Quiz
+                        </span>`;
+            }
+            fetch("/usuarios/cadastrarPontuacao", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.j
+                    idUsuarioServer: idUsuario,
+                    pontosServer: pontos,
+                    percentualServer: percentual.toFixed(2)
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    Swal.fire({
+
+                        imageUrl: 'assets/imgs/gif-quiz.gif',
+                        imageWidth: 3000,
+                        title: 'Quiz finalizado',
+                        html: msg,
+                    }).then((result) => {
+                        setTimeout(function () {
+                            window.location = "pontuacao.html";
+                        }, 1000);
+                    })
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+            return false;
+        }
+    }
 </script>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1.5rem;
+}
+
+.navbar-container {
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+nav {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 15%;
+    height: 100vh;
+    color: #FF4500;
+    background: rgba(0, 0, 0, 0.9);
+    background-blend-mode: darken;
+    gap: 2vh;
+    padding: 0.6rem;
+    top: 0;
+    left: 0;
+}
+
+nav img {
+    max-width: 10vw;
+}
+
+
+.texto-quiz span {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    padding: 12vh 8vw;
+    font-size: 70rem;
+}
+
+.bem-vindo h3 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.bem-vindo span {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 85%;
+    height: 55vh;
+    gap: 5vh;
+    padding-left: 1vw;
+}
+
+.nav a {
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: #fff;
+    font-size: 35px;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.nav a:hover {
+    background-color: #FF4500;
+}
+
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0.3rem;
+}
+
+span {
+    font-size: 1rem;
+}
+
+li span {
+    font-size: 1.1vw;
+}
+
+.icone-nav {
+    max-width: 2.5vw;
+}
+
+
+nav button {
+    width: 10vw;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: #fff;
+    font-size: 55px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 5px solid #00ff;
+    padding: 1.5rem;
+    transition: 0.5s ease;
+}
+
+nav button:hover {
+    color: #000;
+    background-color: #FF0000;
+}

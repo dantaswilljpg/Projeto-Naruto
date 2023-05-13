@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+    background-color: #000;
+    /* cor do fundo do scroll */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #00f;
+    height: 5px;
+    /* cor da barra do scroll */
+}
+
+
+
+.graficos::-webkit-scrollbar-track {
+    background-color: #ff4500;
+}
+
+.graficos::-webkit-scrollbar-thumb {
+    background-color: #00f;
+    border-radius: 15px;
+}
+
+.graficos::-webkit-scrollbar {
+    height: 5px;
+}

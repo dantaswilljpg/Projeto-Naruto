@@ -5,55 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" href="assets/imgs/naruto-sign.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/pontuacao.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
     <title>Pontuações</title>
 </head>
 
 <body>
-    <body>
-        <div class="banner-ponts">
-        <nav id="navbar-container">
-            <nav class="navbar" id="nav">
-                <img src="assets/imgs/logo naruto.png" alt="Logo Naruto">
-                <div class="bem-vindo">
-                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-                </div>
-                 <span id="anime_usuario"></span>
-                <ul class="nav">
-                    <li class="lista"><a href="index.html">
-                            <img class="icone-nav" src="assets/imgs/icone-ninja.png" alt="Geral" >
-                            <span>Inicio</span></a>
-                    </li>
-                    <li class="lista"><a href="dashboard/dashboards.html">
-                            <img class="icone-nav" src="assets/imgs/sasuke-uchiha.png" alt="dashboard">
-                            <span>Personagens</san></a>
-                    </li>
-                    <li class="lista"><a href="quiz.html">
-                        <img class="icone-nav" src="assets/imgs/gaara-areia.png" alt="dashboard">
-                        <span>Quiz</span></san></a>
-                </li>
-                </ul>
-            </nav>
-        </nav>
-        <div class="pontuacao">
-            <div class="pontos">
-                <span>Pontuação geral</span>
-                <div class="pont-total">
-                    <table class="pont" id="pont">
-                        <li>
-                            <span>Nome</span>
-                            <span>Pontuação</span>
-                            <span>Percentual</span>
-                        </li>
-                    </table>
-                </div>
-            </div>
-    </body>
-    </html>
 
-    <script>
-        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    </script>
+    <body>
+
+        <body scroll="no" style="overflow: hidden" onload="atualizarFeed(), validarSessao()">
+            <div class="banner-ponts">
+
+                <body scroll="no" style="overflow: hidden" onload="atualizarFeed(), validarSessao()"></body>
+                <nav id="navbar-container">
+                    <nav class="navbar" id="nav">
+                        <img src="assets/imgs/logo naruto.png" alt="Logo Naruto">
+                        <div class="bem-vindo">
+                            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                        </div>
+                        <span id="anime_usuario"></span>
+                        <ul class="nav">
+                            <li class="lista"><a href="../index.html">
+                                    <img class="icone-nav" src="../assets/imgs/icone-ninja.png" alt="Geral">
+                                    <span>Geral</span></a>
+                            </li>
+                            <li class="lista"><a href="dashboard/dashboards.html">
+                                    <img class="icone-nav" src="assets/imgs/sasuke-uchiha.png" alt="dashboard">
+                                    <span>Gráfico</san></a>
+                            </li>
+                            <li class="lista"><a href="quiz.html">
+                                    <img class="icone-nav" src="assets/imgs/sakura.png" alt="dashboard">
+                                    <span>Quiz-Anime</span></san></a>
+                            </li>
+                        </ul>
+                        <img style="height: 55px; cursor: pointer;" src="assets/imgs/exit.png" alt="logout"
+                            onclick="limparSessao()">
+                        <a href="login.html"><button>SAIR</button></a>
+                    </nav>
+                </nav>
+                <div class="pontuacao">
+                    <div class="pontos">
+                        <span>Pontuação geral</span>
+                        <div class="pont-total">
+                            <table class="pont" id="pont">
+                                <li>
+                                    <table class="infos" id="infos">
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Pontuação</th>
+                                            <th>Percentual</th>
+                                        </tr>
+                                    </table>
+                        </div>
+                    </div>
+        </body>
+
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+</script>

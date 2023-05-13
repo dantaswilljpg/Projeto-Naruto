@@ -2,13 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Sedgwick Ave Display';
-    font-size: 1.5rem;
-}
 
 .banner-quiz{
     display: flex;
@@ -16,220 +9,117 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-  background: linear-gradient( to bottom, #f57344, #FF4500);
-    height:530vh;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Sedgwick Ave Display';
-    font-size: 1.5rem;
-}
-
-.navbar-container {
-    display: flex;
-    width: 15%;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-nav {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 15%;
-    height: 100vh;
-    color: #FF4500;
-    background: rgba(0, 0, 0, 0.9);
-    background-blend-mode: darken;
-    gap: 2vh;
-    padding: 0.6rem;
-    top: 0;
-    left: 0;
-}
-
-nav img {
-    max-width: 10vw;
-}
-
-
-.texto-quiz span {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-content: center;
-    padding: 12vh 8vw;
-    font-size: 70rem;
-}
-
-.nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 85%;
-    height: 55vh;
-    gap: 5vh;
-    padding-left: 1vw;
-}
-
-.nav a {
-    width: 10vw;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    color: #fff;
-    font-size: 35px;
-    background-color: transparent;
-    border-radius: 20px;
-    padding: 1.5rem;
-}
-
-.nav a:hover {
-    background-color: #FF4500;
-}
-
-
-li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 0.3rem;
-}
-
-span {
-    font-size: 1rem;
-}
-
-li span {
-    font-size: 1.1vw;
-}
-
-.icone-nav {
-    max-width: 2.5vw;
-}
-
-
-nav button {
-    width: 10vw;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    color: #fff;
-    font-size: 55px;
-    background-color: transparent;
-    border-radius: 20px;
-    border: 20px solid #00ff;
-    padding: 1.5rem;
-    transition: 0.5s ease;
-}
-
-nav button:hover {
-    color: #000;
-    background-color: #FF0000;
-}
-
-.bem-vindo h3 {
-    font-size:3rem;
-    color: #FF4500;
-}
-
-.bem-vindo span {
-    font-size:3rem;
-    color: #FF4500;
-}
-
-.text h1 {
-    font-size: 6.5rem;
-    color: #fff;
-    margin-left: 800px;
-    border: 30px solid #000;
-    background-color: #FF4500;
-}
-
-.questoes h2{
-    font-size: 4.7rem;
-}
-
-
-.img-quiz img {
-    display: flex;
-    width: 40vw;
-    height: 45vh;
-    border-radius: 40px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
-    margin-bottom: 70px;
-    border: 20px solid #000;
-}
-
-.opção input {
-    width: 2vw;
-    height: 3vh;
-    margin-bottom: 90px;
-    margin: 8px solid #fff;
-}
-
-.quiz span {
-    text-align: center;
-    font-size: 3.2rem;
-    color: #fff;
+   background: linear-gradient( to bottom, #f57344, #FF4500);
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw top;
+    box-shadow: 0px 170px 48px rgba(0, 0, 0, 0.01), 0px 109px 44px rgba(0, 0, 0, 0.06),
+        0px 61px 37px rgba(0, 0, 0, 0.2), 0px 27px 27px rgba(0, 0, 0, 0.34),
+        0px 7px 15px rgba(0, 0, 0, 0.39), 0px 0px 0px rgba(0, 0, 0, 0.4);
 }
 
 
 
 .quiz {
-    margin-top: 8vh;
+    margin-top: 13vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
-
-.quiz .container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 8px 10px 12px;
-    
-}
-
-.quiz .card {
-    padding: 3vh 5vw;
+.quiz .list-naruto {
+    padding: 2vh 2vw 2vh 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FF4500;
+    justify-content: center;
+    background: url(../assets/imgs/manga\ naruto\ painel.jpg);
+    border-radius: 10px;
+    box-shadow: 5px 0px 55px #333333;
+    margin-left: 3500px;
+    border: #333333;
+    border-radius: 10px;
+}
+
+.quiz .card{
+    padding: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../assets/imgs/banner-cadas.jpg);
     border-radius: 15px;
-    margin-left: 800px;
-    border: 20px solid #000;
+    width: 50vw;
+    box-shadow: inset 0px 0px 150px #333333;
+    border: 8px solid #FF4500;
 }
 
 
-button {
-    width: 15vw;
-    justify-content: center;
+.list-naruto .titulo{
+color: #fff;
+font-size: 4rem;
+}
+
+
+.quiz .questoes {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    align-self: center;
-    color: #fff;
-    font-size: 95px;
-    background-color: transparent;
-    border-radius: 20px;
-    border: 20px solid #00ff;
-    padding: 1.5rem;
-    transition: 0.5s ease;
 }
 
-button:hover {
-    background-color: #008000;
+.questoes h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow:
+      -1px -1px 0px #000,
+      -1px 1px 0px #000,
+      1px -1px 0px #000,
+      1px 0px 0px #000;
+    font-weight: 400;
+    font-size: 3rem;
+    color:#fff;
+}
+
+.questoes img{
+    width: 50vw;
+    height: 10vh;
+}
+
+.quiz .opcao {
+    margin: 0.5vh 0 5vh 0;
+}
+
+.opcao .text{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow:
+      -1px -1px 0px #000,
+      -1px 1px 0px #000,
+      1px -1px 0px #000,
+      1px 0px 0px #000;
+    font-weight: 400;
+font-size: 3rem;
+color: #fff;
+}
+
+.opcao input{
+    width: 5vw;
+    height: 3vh;
+    border: 6px solid #000;
+}
+
+
+.quiz .resp {
+    margin: 2vh 0 2vh 0;
+}
+
+.botao {
+    color: white;
+    padding: 1vh 1vw;
+    margin: 0 2vw;
+    font-size: 40px;;
+    align-self: center;
+    box-shadow: 0px 0px 5px #FF4500;
+    border-radius: 5px;
+    background-color:  #FF4500;;
+    border: none;
+    cursor: pointer;
 }

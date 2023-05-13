@@ -31,8 +31,32 @@ function cadastrar(nome, email, senha,fkpersonagem) {
     return database.executar(instrucao);
 }
 
+
+function cadastrarPontuacao(idUsuario, pontos, percentual) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n cadastrarPontuacao()", idUsuario, pontos, percentual);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.  +9*
+    console.log(idUsuario);
+    var instrucao = `
+        INSERT INTO Pontuacao (fkUsuario, pontuacao,  percentualPontuacao) VALUES (${idUsuario}, ${pontos}, ${percentual});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function listarPontuacao() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listarPontuacao()");
+    var instrucao = `SELECT nome, pontuacao,  percentualPontuacao FROM Pontuacao JOIN usuario ON fkUsuario = idUsuario ORDER BY  percentualPontuacao  DESC;;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
+    listar,
     entrar,
     cadastrar,
-    listar,
+    cadastrarPontuacao,
+    listarPontuacao
 };

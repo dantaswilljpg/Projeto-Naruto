@@ -2,603 +2,624 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Sedgwick Ave Display';
-    font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Sedgwick Ave Display';
+  font-size: 1.5rem;
 }
 
 
-
-.banner-header {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    width: 98.5vw;
-    /*vh-altura e vw-largura(unidade usada por conta que o banner estava numa boa resolução)*/
-    background-image: url(../assets/imgs/banner-land-page.jpg);
-    height: 120vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    /* Definição de como e onde a imagem de fundo é posicionada*/
-    background-size: 104%;
-    /*define as dimensões da imagem no box*/
-    background-position: -4vw;
+body {
+  margin: 0;
+  padding: 0;
+  background: #0C0C0C;
+  color: white;
 }
+
 
 
 
 .navbar {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    width: 99vw;
-    transition: 0.6s;
-    /*Alterando posição da navbar*/
-    z-index: 3;
-    /*Sobreposição de elementos da navbar*/
-    background: linear-gradient( to bottom, #f57344, #FF4500);
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  padding: 2.5px 7% 5px 2%;
+  background: linear-gradient(to bottom, #f57344, #FF4500);
+  box-shadow: 0px 0px 6px black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 
+
 .logo-naruto {
-    width: 11vw;
+  width: 20vh;
 }
 
 
 
 .ul-lista {
-    width: 50vw;
-    display: flex;
-    justify-content: space-around;
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
 }
 
 .ul-lista ul {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .navbar ul li {
-    list-style: none;
+  list-style: none;
 }
 
 .header {
-    display: flex;
-    width: 95vw;
-    align-items: center;
-    justify-content: space-around
+  display: flex;
+  width: 95vw;
+  align-items: center;
+  justify-content: space-around;
+
 }
 
 .navbar ul li a {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color:#fff;
-    font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 3.5vh;
+  text-decoration: none;
+  justify-content: space-evenly;
 }
+
+
 
 .navbar ul li a:hover {
-    color:#0000FF;
+  color: #0000FF;
+
+}
+
+
+/*BANNER*/
+.banner {
+  /* width: 100vw;*/
+  height: 120vh;
+  /* As unidades vh e vw significam viewport, sendo a primeira para altura e a segunda para largura. Isso significa que elas utilizam o tamanho total da viewport, tamanho total do layout do pc*/
+  margin-top: 10vh;
+  background-image: url(../assets/imgs/banner-land-pagee.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 0px 10px black;
 
 }
 
 
 
-/*SECTION SOBRE MIM*/
 
-.perfil h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 2.5rem;
-    text-align: center;
-    color:#fff;
+/* CONTEXTO ANIME */
+
+
+.anime .sinopse .span2 {
+  margin-top: 10px;
 }
 
-
-.sobre-perfil h2{
-    font-size: 1.5rem;
-    text-align: center;
-    color: #fff;
-}
-
-
-
-.banner-perfil{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.7) url(../assets/imgs/card-sobre\ mim.jpg);
-    background-blend-mode: darken;
-    height:125vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+.anime .card-context {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
 
 }
 
+.card-context h2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.5rem;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+}
 
-.img-perfil img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15vw;
-    height: 35vh;
-    border-radius: 15%;
-    border: solid 5px #FF4500;
-    margin-left: 545px;
+
+.card-temat-temp {
+  display: flex;
+
+}
+
+.card-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.card-anime {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 220px;
+  background-color: #FF4500;
+  border-radius: 20px;
+  margin-left: 45px;
+}
+
+
+.card-anime h3 {
+  font-size: 1rem;
+  text-align: justify;
+  font-weight: 400;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+}
+
+
+.card-anime span {
+  font-size: 0.5rem;
+  text-align: justify;
+  font-weight: 50;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
 }
 
 
 
-.sobre-perfil p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
-    text-shadow: 
-             -1px -1px 0px #000, 
-             -1px 1px 0px #000,      
-              1px -1px 0px #000,    
-              1px 0px 0px #000;
-    text-align: center;
-    font-size: 1rem;
- 
+.card-anime ul,
+li {
+  list-style: none;
+  text-align: center;
+  padding-inline-start: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+  font-size: 25px;
+}
+
+.card-anime img {
+  width: 5vw;
+  height: 10vh;
+  align-self: center;
+
 }
 
 
-/*FIM DA SECTION SOBRE MIM*/
-
-
-
-
-/*INTRODUCAO INICIO ANIME*/
-
-.intro-anime {
-    width: 400px;
-    text-align: justify;
-    color:#fff;
-    font-size: 1.8rem;
+.anime {
+  background-color: #0C0C0C;
 }
 
-.banner-intro{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.7) url(../assets/imgs/banner-sobre.jpg);
-    background-blend-mode: darken;
-    height:130vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
-}
-
-.intro h2{
-    text-align: center;
-    font-size: 3.1rem;
-    color:#fff;
-    align-items: center;
+.anime .anime h2 {
+  font-size: 2rem;
+  justify-content: center;
+  text-align: center;
+  margin-left: 300px;
 }
 
 
-section h2 {
-    text-align: center;
-    font-size: 6.2rem;
-    color:#fff;
-    align-items: center;
+
+/*INTRO*/
+
+.sobre-naruto {
+  display: flex;
+  height: 450px;
+  background-color: #0C0C0C;
+  margin-top: 100px;
 }
 
-section.intro .anime-intro {
-    display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    padding: 100px;
+.sobre-naruto .info-naruto {
+  display: flex;
 }
 
 
-.img-logo img {
-    width: 27vw;
-    height: 32vh;
-    justify-content: space-between;
+
+.info-naruto .informacoes {
+  font-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  justify-content: start;
+  margin-left: 100px;
 }
 
-.intro-anime p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
-    text-shadow: 
-             -1px -1px 0px #000, 
-             -1px 1px 0px #000,      
-              1px -1px 0px #000,    
-              1px 0px 0px #000;
-    text-align: center;
-    font-size: 1rem;
+.informacoes h2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: 900;
+  text-align: center;
+
 }
 
-/*FIM DA SECTION DE INTRO DO ANIME*/
+.bio .legenda {
+  text-align: justify;
+}
+
+.sobre-naruto .info-naruto img {
+  width: 32vw;
+  height: 50vh;
+  margin-left: 250px;
+  align-self: center;
+  filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.7));
+  border-style: 30px;
+  border-radius: 30px;
+  border-bottom: #0000FF;
+
+}
+
+.info-naruto .info-naruto {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  justify-content: end;
+
+}
+
+.informacoes span {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+.informacoes button {
+  width: 15vw;
+  height: 10vh;
+  align-self: center;
+  justify-self: center;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #FF4500;
+  font-size: 1rem;
+}
 
 
 
 
-/*INICIO SECTION  MEUS VALORES*/
-section.valores .animeValores {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+/*MEUS VALORES*/
+
+.valores .animeValores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 
 
 .valores h2 {
-    text-align: center;
-    font-size: 2.4rem;
-    align-items: center;
-    justify-content: center;
-    color:#fff;
-    margin-bottom: 70px;
+  text-align: center;
+  font-size: 3.4rem;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 70px;
+  margin-top: 40px;
 }
-
-
-.banner-valor{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    /*width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-valores.jpg);
-    background-blend-mode: darken;
-    height: 155vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
-}
-
-
 
 
 .animeValores .animeValor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .img-valor img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 18vw;
-    border-radius: 15%;
-    border: solid 10px #FF4500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18vw;
+  border-radius: 15%;
 }
 
 .animeValor h3 {
-    font-size: 1.5rem;
-    text-align: justify;
-    color:#fff;
+  font-size: 1.5rem;
+  text-align: justify;
+  color: #fff;
 }
 
 
 .animeValor .traco {
-    width: 50%;
-    height: 5px;
-    border-radius: 10px;
-    margin-block: 10px;
-    background-color: #FF4500;
+  width: 50%;
+  height: 5px;
+  border-radius: 10px;
+  margin-block: 10px;
+  background-color: #0000FF;
 }
 
 .animeValor p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
-    text-shadow: 
-             -1px -1px 0px #000, 
-             -1px 1px 0px #000,      
-              1px -1px 0px #000,    
-              1px 0px 0px #000;
-    text-align: center;
-    font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+  text-align: center;
+  font-size: 1rem;
 }
 
-/*FIM SECTION MEUS VALORES*/
 
 
+/*FALAS MARCANTES*/
 
+.personagem {
+  background-color: #0C0C0C;
+  margin-top: 100px;
+}
 
-/*INICIO SECTION FRASES MARCANTES DE ALGUNS PERSONAGENS*/
-
-
-section.personagem .animePersonagem {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.personagem .animePersonagem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .personagem h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    color:#fff;
-    margin-left: 100px;
-    margin-bottom: 70px;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-left: 100px;
+  margin-bottom: 70px;
+  margin-top: 50px;
 }
-
-
-
-.banner-falas{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-falas.jpg);
-    background-blend-mode: darken;
-    height:170vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
-}
-
-
 
 
 .animePersonagem .animePerso {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 
 
 
 .img-falas img {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 18vw;
-    border-radius: 15%;
-    border: solid 10px #FF4500;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 18vw;
+  border-radius: 15%;
+  width: 20vw;
+  background-color: #FF4500;
 }
 
 .animePerso h3 {
-    font-size: 1.5rem;
-    text-align: justify;
-    color:#fff;
+  font-size: 1.5rem;
+  text-align: justify;
+  color: #fff;
 }
 
 
 .animePerso .traco {
-    width: 50%;
-    height: 5px;
-    border-radius: 10px;
-    margin-block: 10px;
-    background-color: #FF4500;
+  width: 50%;
+  height: 5px;
+  border-radius: 10px;
+  margin-block: 10px;
+  background-color: #0000FF;
 }
 
-.animePerso  p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
-    text-shadow: 
-             -1px -1px 0px #000, 
-             -1px 1px 0px #000,      
-              1px -1px 0px #000,    
-              1px 0px 0px #000;
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-/*FIM SECTION FRASES MARCANTES DE ALGUNS PERSONAGENS*/
-
-
-
-
-/* INICIO SECTION HISTORIA DOS PERSONAGENS */
-
-section.historia .animeHistorias {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.animePerso p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+  text-align: center;
+  font-size: 1rem;
 }
 
 
-.banner-naruto{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-naruto.jpg);
-    background-blend-mode: darken;
-    height:160vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+/* SOBRE MIM*/
+.sobre-mim {
+  display: flex;
+  height: 450px;
+  background-color: #0C0C0C;
+  margin-top: 120px;
+}
+
+.sobre-mim .box-sobre {
+  display: flex;
 }
 
 
 
-.banner-sasuke{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-sasuke.jpg);
-    background-blend-mode: darken;
-    height:170vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+.box-sobre .bio {
+  font-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  justify-content: start;
+  margin-left: 100px;
 }
 
-.banner-kakashi{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-kakashi.jpg);
-    background-blend-mode: darken;
-    height:160vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+.bio h2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  text-align: justify;
+  font-weight: 400;
+  text-align: center;
+
 }
 
-.banner-jiraya{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-jiraya.jpg);
-    background-blend-mode: darken;
-    height:178vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+.bio .legenda {
+  text-align: justify;
 }
 
-.banner-itachi{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-itachi.jpg);
-    background-blend-mode: darken;
-    height:160vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+.sobre-mim .box-sobre img {
+  width: 25vw;
+  height: 50vh;
+  margin-left: 250px;
+  border-radius: 100%;
+  align-self: center;
+  filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.7));
+  border: 5px solid #FF4500;
+  z-index: 1;
 }
 
-.banner-gaara{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-gaara.jpg);
-    background-blend-mode: darken;
-    height: 160vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+.box-sobre .box-sobre {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  justify-content: end;
+
+}
+
+.bio span {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
+
+.bio button {
+  width: 15vw;
+  height: 10vh;
+  align-self: center;
+  justify-self: center;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #FF4500;
+  font-size: 1rem;
 }
 
 
 
 
-.banner-neji{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-neji.jpg);
-    background-blend-mode: darken;
-    height:160vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+/* Quiz*/
+.sobre-quiz {
+  display: flex;
+  height: 450px;
+  background-color: #0C0C0C;
+  margin-top: 100px;
+}
+
+.sobre-quiz .box-quiz {
+  display: flex;
 }
 
 
 
-.banner-orochimaru{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-   /* width: 100vw;*/
-    background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-orochimaru.jpg);
-    background-blend-mode: darken;
-    height:160vh;
-    background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw;
-    background-size: 104%;
-    background-position: -4vw;
+.box-quiz .bio {
+  font-size: 8rem;
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  justify-content: start;
+  margin-left: 100px;
 }
 
+.bio h2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: 400;
+  text-align: center;
 
-.animeHist h3 {
-    font-size: 1.7rem;
-    text-align: center;
-    color:#fff;
-    margin-bottom: 40px;
-} 
-
-
-
-.img-his img {
-    align-items: center;
-    justify-content: center;
-    width: 18vw;
-    text-align: center;
-    border-radius: 15%;
-    margin-bottom: 20px;
 }
 
-
-.img-hist img {
-    align-items: center;
-    justify-content: center;
-    width: 18vw;
-    text-align: center;
-    border-radius: 15%;
-    margin-left: 515px;
-    margin-bottom: 20px;
+.bio .legenda {
+  text-align: justify;
 }
 
+.sobre-quiz .box-quiz img {
+  width: 32vw;
+  height: 50vh;
+  margin-left: 250px;
+  align-self: center;
+  filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.7));
+  border-style: 30px;
+  border-radius: 30px;
+  border-bottom: #0000FF;
 
-
-
-.animeHist p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
-    text-shadow: 
-             -1px -1px 0px #000, 
-             -1px 1px 0px #000,      
-              1px -1px 0px #000,    
-              1px 0px 0px #000;
-    text-align: center;
-    font-size: 1rem;
 }
 
-/* FIM DA SECTION HISTORIA DOS PERSONAGENS*/
+.box-quiz .box-quiz {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  justify-content: end;
 
+}
 
+.bio span {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.2px;
+}
 
-
-
-
+.bio button {
+  width: 15vw;
+  height: 10vh;
+  align-self: center;
+  justify-self: center;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #FF4500;
+  font-size: 1rem;
+}

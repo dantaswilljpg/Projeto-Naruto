@@ -1,35 +1,39 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
-.banner-ponts {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background: linear-gradient( to bottom, #f57344, #FF4500);
-    background-size: cover;
-    height: 150vh;
-    background-repeat: no-repeat;
-  }
-  
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  font-family: 'Sedgwick Ave Display';
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave Display';
     font-size: 1.5rem;
-
 }
 
-.bem-vindo h1{
-    font-size: 1rem;
-    color: #FF4500;
+.banner-ponts{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+   /* width: 100vw;*/
+  background: linear-gradient( to bottom, #f57344, #FF4500);
+    height:150vh;
 }
 
 
- 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1.5rem;
+}
+
+
+
+
 .pontos span{
-    font-size: 5.8rem;
+    font-size: 4.8rem;
     color:#fff;
 }
 
@@ -69,21 +73,25 @@
 
 
 .pontuacao li {
-    font-size: 2rem;
+    font-size: 5rem;
     font-weight: 400;
     justify-content: space-between;
 }
 
-
-li {
-    border-bottom: 8px solid #000;
+.infos th{
+    font-size: 5rem;
+    color: #fff;
 }
 
-li {
-    padding: 0.5vh;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-th{
+tr {
+    border-bottom: 2px solid #fff;
+}
+
+td {
     padding: 0.5vh;
-    margin-left: 150px;
 }

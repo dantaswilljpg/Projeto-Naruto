@@ -6,67 +6,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <script src="./js/funcoes.js"></script>
-    <link rel="shortcut icon" href="assets/imgs/naruto-sign.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/login_cadastro.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
-     <!-- Sweet alert-->
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <!-- Sweet alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Sweet alert -->
 </head>
 
 <body>
     <div class="banner-cadas">
-        <nav class="navbar-cadas">
-            <div class="nav-cadas">
-                <div class="logo-cadas">
+        <nav class="navbar">
+            <div class="header">
+                <div class="logo">
                     <img src="assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
                 </div>
-                <div class="ul-lista-cadas">
+                <div class="ul-lista">
                     <ul>
-                        <li><a href="index.html">inicial</a></li>
-                        <li><a href="curiosidades.html">História</a></li>
+                        <li><a href="index.html#anime">Contexto</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
                         <li><a href="login.html">Login</a></li>
+                        <li><a href="cadastro.html">Cadastro</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="cartao-cadas">
-            <div class="card-cadas">
-                <div class="formulario-cadas">
-                    <img src="assets/imgs/logo naruto.png"></a>
+        <div class="formulario">
+            <div class="container">
+                <div class="form">
+                    <h1>BEM VINDO!</h1>
                     <span>Usuario:</span>
-                    <input id="nome_input" type="text" placeholder="insira seu nome">
+                    <input id="nome_input" type="text" placeholder="Insira seu nome"">
                     <span>Email:</span>
-                    <input id="email_input" type="text" placeholder="Insira seu E-mail">
+                    <input id="email_input" type="text" placeholder="Insira seu E-mail"">
                     <span>Senha:</span>
                     <input id="senha_input" type="password" placeholder="***********">
-                    <span>Personagem Favorito:</span>
-                    <div class="select">
-                        <select id="personagem_naruto" class="personagem_naruto">
-                            <option value="1">Uchiha Madara</option>
-                            <option value="2">Uchiha Sasuke</option>
-                            <option value="3">Uchiha Obito</option>
-                            <option value="4">Uzumaki Naruto</option>
-                        </select>
-                    </div>
-                    <button onclick="cadastrar()">Cadastrar</button>
-                    <span>Já tem uma conta? <a href="login.html">Clique Aqui</a></span>
                 </div>
-
+                <div class="personagem">
+                    <div class="naruto" id="img_personagem"></div>
+                    <h1>Personagem Preferido</h1>
+                    <select class="personagem_naruto" id="personagem_naruto" onchange="fotoPersonagem()">
+                        <option value="1">Uzumaki Naruto</option>
+                        <option value="2">Uchiha Sasuke</option>
+                        <option value="3">Hatake Kakashi</option>
+                        <option value="4">Uchiha Itachi</option>
+                        <option value="5">Gaara Deserto</option>
+                        <option value="6">Neji Hyugaa</option>
+                        <option value="7">Jiraya Sama</option>
+                    </select>
                 </div>
+                <button onclick="cadastrar()">cadastrar</button>
             </div>
         </div>
     </div>
-    <footer>
-        <span>Feito por Will Gustavo Dantas - 2023</span>
-    </footer>
+    </div>
+    </div>
+    </div>
 </body>
+<footer>
+    <span>Feito por Will Gustavo Dantas - 2023 &copy;</span>
+</footer>
 
 </html>
+
+
 <script>
 
-function cadastrar() {
+
+    function fotoPersonagem() {
+        img_personagem.className = ""
+        var num_personagem = personagem_naruto.value;
+
+        if (num_personagem == 1) {
+            img_personagem.classList.add("naruto")
+        } else if (num_personagem == 2) {
+            img_personagem.classList.add("sasuke")
+        } else if (num_personagem == 3) {
+            img_personagem.classList.add("kakashi")
+        } else if (num_personagem == 4) {
+            img_personagem.classList.add("itachi")
+        } else if (num_personagem == 5) {
+            img_personagem.classList.add("gaara")
+        } else if (num_personagem == 6) {
+            img_personagem.classList.add("neji")
+        } else {
+            img_personagem.classList.add("jiraya")
+        }
+
+    }
+    function cadastrar() {
         //aguardar();
 
         //Recupere o valor da nova input pelo nome do id
@@ -75,71 +106,76 @@ function cadastrar() {
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var personagemVar = personagem_naruto.value;
-        
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || personagemVar=="") {
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || personagemVar == "") {
             //cardErro.style.display = "block"
-            swal ( "Ops" ,  "Preencha todos os campos" ,  "error" )
+            swal("Ops", "Preencha todos os campos 😠", "error")
+
 
             finalizarAguardar();
             return false;
         }
-        else if(nomeVar.length <3){
-            swal ( "Ops" ,  "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres" ,  "warning" )
+        else if (nomeVar.length < 8) {
+            swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 8 caracteres 😠", "warning")
         }
-        else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length <7 ){
-            swal ( "Ops" ,  "O e-mail cadastrado é inválido. Por favor, insira um e-mail válido." ,  "warning" )
+        else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length < 7) {
+            swal("Ops", "O e-mail cadastrado é inválido. Por favor, insira um e-mail válido 😠", "warning")
         }
-        else if(senhaVar.length <8){
-            swal ( "Ops" ,  "A senha inserida é muito curta. Por favor,insira uma senha com pelo menos 8 caracteres." ,  "warning" )
+        else if (senhaVar.length < 8) {
+            swal("Ops", "A senha inserida é muito curta. Por favor,insira uma senha com pelo menos 8 caracteres 😠", "warning")
         }
         else {
             setInterval('oi', 5000)
-        
 
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                nomeServer: nomeVar,
-                emailServer: emailVar,
-                senhaServer: senhaVar,
-                personagemServer: personagemVar
-            })
-        }).then(function (resposta) {
 
-            console.log("resposta: ", resposta);
 
-            if (resposta.ok) {
-                //cardErro.style.display = "block";
 
-                swal("Bom trabalho!", "Cadastro realizado com sucesso redirecionando a tela de login...!", "success");
 
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
+            // Enviando o valor da nova input
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar,
+                    personagemServer: personagemVar
+                })
+            }).then(function (resposta) {
 
-                limparFormulario();
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    //cardErro.style.display = "block";
+                    swal("Parábens", "Cadastro realizado com sucesso redirecionando a tela de login 😄...!", "success");
+
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, 3000)
+
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    swal("Ops", "Mais de um usuário com o mesmo login e senha 😭!")
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
                 finalizarAguardar();
-            } else {
-                swal ( "Ops" ,  "Mais de um usuário com o mesmo login e senha!" ,  "error" )
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
+            });
 
-        return false;
-    }  
-}
+            return false;
+        }
+    }
 
     //function sumirMensagem() {
         //cardErro.style.display = "none"
     //}
+
 
 </script>

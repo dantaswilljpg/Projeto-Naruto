@@ -5,170 +5,210 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/imgs/naruto-sign.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/dashboards.css">
-    <link rel="stylesheet" href="../css/style-dash.css">
+    <link rel="shortcut icon" href="../assets/imgs/logo naruto.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css//dashboards.css">
+    <link rel="stylesheet" href="../css//sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <script src="../js/funcoes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>-9
     <title>Dashboard</title>
 </head>
 
 <body>
-    <div id="dashboard-container">
-        <nav class="nav" id="nav-dash">
-            <img src="../assets/imgs/logo naruto.png" alt="Logo Naruto">
-            <div class="bem-vindo">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-            </div>
-            <ul class="nav-list">
-                <li class="lista"><a href="../index.html">
-                    <img class="icone-nav" src="../assets/imgs/tsunade.png"
-                            alt="Tsunade"><span>Inicio</span></a></li>
+    <div class="banner">
 
-                <li class="lista"><a href="../pontuacao.html">
-                    <img class="icone-nav" src="../assets/imgs/sakura.png" alt="Sakura">
-                        <span>Pontuação</span></a>
-
+        <div id="dashboard-container">
+            <nav id="navbar-container">
+                <nav class="navbar" id="nav">
+                    <img src="../assets/imgs/logo naruto.png" alt="Logo Naruto">
+                    <div class="bem-vindo">
+                        <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                    </div>
+                    <span id="anime_usuario"></span>
+                    <ul class="nav">
+                        <li class="lista"><a href="../index.html">
+                                <img class="icone-nav" src="../assets/imgs/icone-ninja.png" alt="Geral">
+                                <span>Geral</span></a>
+                        </li>
                         <li class="lista"><a href="../quiz.html">
-                            <img class="icone-nav" src="../assets/imgs/hinata.png" alt="Hinata">
-                            <span>Quiz</span></a>
-        </nav>
-        <div id="content">
-            <div class="grafico">
-                <h2>Personagens favoritos</h2>
-                <ul class="chart-grafico">
-                    <li class="slide">
-                        <canvas id="myChart1"></canvas>
-                    </li>
-                    <li class="slide">
-                        <canvas id="myChart2"></canvas>
-                    </li>
-                </ul>
-            </div>
-            <div class="grafico">
-                <h2>Média do quiz</h2>
-                <ul class="chart-grafico">
-                    <li class="slide">
-                        <canvas id="myChart3"></canvas>
-                    </li>
-                    <li class="slide">
-                        <canvas id="myChart4"></canvas>
-                    </li>
-                </ul>
-            </div>
+                                <img class="icone-nav" src="../assets/imgs/sasuke-uchiha.png" alt="dashboard">
+                                <span>Quiz</san></a>
+                        </li>
+                        <li class="lista"><a href="../pontuacao.html">
+                                <img class="icone-nav" src="../assets/imgs/gaara-areia.png" alt="dashboard">
+                                <span>Pontuações</san></a>
+                        </li>
+                    </ul>
+                    <img style="height: 55px; cursor: pointer;" src="../assets/imgs/exit.png" alt="logout"
+                        onclick="limparSessao()">
+                    <a href="login.html"><button>SAIR</button></a>
+                </nav>
+
         </div>
+        <div class="graficos">
+            <h2>Personagens favoritos</h2>
+            <ul class="listas">
+                <li class="slide">
+                    <canvas id="myChart"></canvas>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  
-  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-    const ctx1 = document.getElementById('myChart1');
-    const ctx2 = document.getElementById('myChart2');
-    const ctx3 = document.getElementById('myChart3');
-    const ctx4 = document.getElementById('myChart4');
 
 
-    //Gráfico 1 - Personagens favoritos-barra
-    new Chart(ctx1, {
-        type: 'bar',
-        data: {
-            labels: ['Naruto Uzumaki', 'Sasuke Uchiha', 'Madara Uchiha', 'Obito Uchiha'],
-            datasets: [{
-                label: 'Quantidade de votos:',
-                backgroundColor: [
-                    '#ff4500',
-                    '#DAA520',
-                    '#FF0000',
-                    '#0000FF'
-                ],
-                borderColor: '##0000FF',
-                borderWidth: 3,
-                data: [40, 32, 38,45],
-                hoverOffset: 2
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO
+
+
+
+    let proximaAtualizacao;
+
+    window.onload = obterDadosGrafico(1);
+
+
+    function obterDadosGrafico(idAquario) {
+
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
         }
 
-    });
 
-    //Gráfico 1 - Personagens favoritos- linha
-    new Chart(ctx2, {
-        type: 'line',
-        data: {
-            labels: ['Naruto Uzumaki', 'Sasuke Uchiha', 'Madara Uchiha', 'Obito Uchiha'],
-            datasets: [{
-                label: 'Quantidade de votos',
-                backgroundColor: [
-                     '#ff4500',
-                    '#DAA520',
-                    '#FF0000',
-                    '#0000FF'
-                ],
-                borderColor: '##0000FF',
-                borderWidth: 1,
-                data: [40, 32, 38,45],
-                hoverOffset: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    plotarGrafico(resposta, idAquario);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
             }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta, idAquario) {
+        console.log('iniciando plotagem do gráfico...');
+
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    label: '',
+
+                    data: []
+                },
+                {
+                    yAxisID: 'y-totalpersonagens',
+                    label: 'Personagem Favorito',
+                    backgroundColor: ['#FF1493', '#FFFF00', '#FF4500', '#00FF00', '#4B0082', '#0000FF', '#FFF'],
+                    fill: true,
+                    data: []
+                }
+            ]
+        };
+
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            dados.labels.push(registro.personagem);
+            dados.datasets[0].data.push(registro.personagem);
+            dados.datasets[1].data.push(registro.voto);
+            console.log(registro.voto)
+
+
         }
 
-    });
+        console.log(JSON.stringify(dados));
 
-    //Gráfico 2 - Pontuação dos usuarios- barra
-    new Chart(ctx3, {
-        type: 'bar',
-        data: {
-            labels: ['10%', '20%', '30%', '40%','50%', '60%', '70%','80%', '90%','100%'],
-            datasets: [{
-                label: 'Média de pontuação de cada jogador',
-                backgroundColor: ['#ff4500'],
-                borderColor: '##0000FF',
-                data: [24, 25, 28, 30, 32, 34,36,38,40,42],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+        var ctx = myChart.getContext('2d');
+        window.myChart = Chart.Bar(ctx, {
+            data: dados,
+            options: {
+                responsive: true,
+                animation: { duration: 900 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: true,
+                    text: 'Os Personagens mais Escolhidos'
+                },
+
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-totalpersonagens',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 50,
+                            min: 0
+                        }
+                    }, {
+                        display: false,
+                    }],
                 }
             }
-        }
-    })
+        });
 
-     //Gráfico 2 - Pontuação dos usuarios-linha
-     new Chart(ctx4, {
-        type: 'line',
-        data: {
-            labels: ['10%', '20%', '30%', '40%','50%', '60%', '70%','80%', '90%','100%'],
-            datasets: [{
-                label: 'Média de pontuação de cada jogador',
-                backgroundColor: ['#ff4500'],
-                borderColor: ['#ff4500'],
-                data: [24, 25, 28, 32, 34, 36,38,40,42,44],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+
+
+        // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
+        // buscando a última medida inserida em tabela contendo as capturas, 
+
+        //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+        //     Para ajustar o "select", ajuste o comando sql em src/models
+        function atualizarGrafico(idAquario, dados) {
+
+            fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (novoRegistro) {
+
+                        console.log(`Dados recebidos Atualizar  Graficos: ${JSON.stringify(novoRegistro)}`);
+                        console.log(dados);
+
+                        for (i = 0; i < novoRegistro.length; i++) {
+                            var registro = novoRegistro[i];
+                            // tirando e colocando valores no gráfico
+                            dados.labels.shift(); // apagar o primeiro
+                            dados.labels.push(registro.personagem);// incluir um novo momento
+
+                            dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                            dados.datasets[0].data.push(registro.personagem); // incluir uma nova medida de umidade
+
+                            dados.datasets[1].data.shift();
+                            dados.datasets[1].data.push(registro.voto);
+                        }
+
+                        window.myChart.update();
+
+                        // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                        proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 200000);
                 }
-            }
+            })
+                .catch(function (error) {
+                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+                });
+
         }
-    })
+
+    }
+
 </script>
