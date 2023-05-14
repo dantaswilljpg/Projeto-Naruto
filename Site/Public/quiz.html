@@ -41,8 +41,6 @@
                             <span>Pontuações</san></a>
                     </li>
                 </ul>
-                <img style="height: 55px; cursor: pointer;" src="assets/imgs/exit.png" alt="logout"
-                    onclick="limparSessao()">
                 <a href="login.html"><button>SAIR</button></a>
             </nav>
 
@@ -136,23 +134,23 @@
                             </div>
                         </div>
                         <div class="questoes" id="questao5" style="display: none;">
-                            <h1>5- Nome do jutsu que hiruzen usou para impedir que orochimaru use jutsu?</h1>
+                            <h1>5-Que jutsu impediu o Orochimaru de usar jutsu ?</h1>
                             <div class="resp">
                                 <div class="opcao">
                                     <input type="radio" name="opcao5" value="Selo ceifeiro da morte">
-                                    <span class="text">a) Selo ceifeiro da morte</span>
+                                    <span class="text">a) Selo Ceifeiro da morte</span>
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao5" value="Selo ceifero da vida">
                                     <span class="text">b) Selo ceifero da vida</span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao5" value="Selo ceifeiro do inferno">
-                                    <span class="text">c) Selo ceifeiro do inferno</span>
+                                    <input type="radio" name="opcao5" value="Selo Ceifeiro do inferno">
+                                    <span class="text">c) Selo Ceifeiro do inferno</span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao5" value="Selo ceifeiro da vontade">
-                                    <span class="text">d) Selo ceifeiro da vontade</span>
+                                    <input type="radio" name="opcao5" value="Selo Ceifeiro da vontade">
+                                    <span class="text">d) Selo Ceifeiro da vontade</span>
                                 </div>
                             </div>
                         </div>
@@ -241,8 +239,7 @@ S
     var proxima = 0;
     var pontos = 0;
     var percentual = 0;
-    var img1 = 'assets/imgs/gif-apaixonado.gif';
-    var img2 = "assets/imgs/gif-apaixonado.gif"
+    var img= '';
     var msg = '';
     var radios = [];
     var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo ceifeiro da morte", "Jutsu multiclone das sombras", "Fugaku Uchiha", "Minato Namikaze"];
@@ -251,7 +248,7 @@ S
 
 
     Swal.fire({
-        imageUrl: 'assets/imgs/gif-quiz.gif',
+        imageUrl: 'assets/imgs/gif-sobre.gif',
         imageWidth: 3000,
         title: 'Bem-vindo ao Quiz de Naruto Clássico, boa sorte😄...!',
         html: 'Feito por: Will Dantas - 1ADS A',
@@ -264,7 +261,7 @@ S
         if (anterior == 6) {
             question8.style.display = "none";
             question7.style.display = "flex";
-            document.getElementById('proxima').style.display = 'block';
+            document.getElementById('anterior').style.display = 'block';
             document.getElementById('finalizar').style.display = 'none';
         } else if (anterior == 5) {
             questao7.style.display = "none";
@@ -337,14 +334,14 @@ S
             pontos = Usuario * 10;
             percentual = Usuario / respostascorretas.length * 100;
 
-            if (Usuario == 0 || Usuario <= 3) {
-                imageUrl = 'assets/imgs/quiz-triste.gif';
+            if (Usuario == 0 || Usuario <= 4) {
+                imageUrl: 'assets/imgs/gif-triste.gif',
                 msg = ` <span class="text"> 
                             Poderia ter sido melhor <b>${idUsuario}</b> 😔😔, sua pontuação foi de
-                            <b>${pontos}</b> pontos, que equivale à <b>${Percentual.toFixed(2)}%</b> do Quiz
+                            <b>${pontos}</b> pontos, que equivale à <b>${percentual.toFixed(2)}%</b> do Quiz
                         </span>`;
             } else {
-                imageUrl = 'assets/imgs/gif-apaixonado.gif';
+                imageUrl: 'assets/imgs/gif-apaixonado.gif',
                 msg = ` <span class="text">
                             PARÁBENS  <b>${idUsuario}</b> 🥳🥳, você é FÃ NÚMERO 1 DE NARUTO e sua pontuação foi de
                             <b>${pontos}</b> pontos, que equivale à<b> ${percentual.toFixed(2)}%</b> do Quiz

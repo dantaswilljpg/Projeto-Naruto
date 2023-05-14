@@ -85,6 +85,7 @@
   color: #FF4500;
 }
 
+
 .form span {
   margin-right: 600px;
 }
@@ -116,44 +117,44 @@ select .favorito {
 }
 
 .naruto {
-  background-image: url(../assets/imgs/foto-cadastro-naruto.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-naruto.gif);
 }
 
 .sasuke {
-  background-image: url(../assets/imgs/foto-cadastro-sasuke.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-sasuke.gif);
 }
 
 .kakashi {
-  background-image: url(../assets/imgs/foto-cadastro-kakashi.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-kakashi.gif);
 }
 
 .itachi {
-  background-image: url(../assets/imgs/foto-cadastro-itachi.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-itachi.gif);
 }
 
 .gaara {
-  background-image: url(../assets/imgs/foto-cadastro-gaara.jpg)
+  background-image: url(../assets/imgs/gif-cadastro-gaara.gif)
 }
 
 .neji {
-  background-image: url(../assets/imgs/foto-cadastro-neji.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-neji.gif);
 }
 
 .jiraya {
-  background-image: url(../assets/imgs/foto-cadastro-jiraya.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-jiraya.gif);
 }
 
 .rock{
-  background-image: url(../assets/imgs/foto-cadastro-rock.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-rock.gif);
 }
 
 .sakura {
-  background-image: url(../assets/imgs/foto-cadastro-sakura.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-sakura.gif);
 }
 
 
 .hinata {
-  background-image: url(../assets/imgs/foto-cadastro-hinata.jpg);
+  background-image: url(../assets/imgs/gif-cadastro-hinata.gif);
 }
 
 

@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/pontuacao.css">
     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="../css/scrollbar.css">
+     <!-- Sweet alert -->
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+     <script src="../app.js"></script>
+     <!-- Sweet alert -->
     <title>Pontuações</title>
 </head>
 
@@ -38,13 +42,12 @@
                                     <span>Gráfico</san></a>
                             </li>
                             <li class="lista"><a href="quiz.html">
-                                    <img class="icone-nav" src="assets/imgs/sakura.png" alt="dashboard">
-                                    <span>Quiz-Anime</span></san></a>
+                                    <img class="icone-nav" src="assets/imgs/kakashi-hatake.png" alt="dashboard">
+                                    <span>Quiz</span></san></a>
                             </li>
                         </ul>
                         <img style="height: 55px; cursor: pointer;" src="assets/imgs/exit.png" alt="logout"
                             onclick="limparSessao()">
-                        <a href="login.html"><button>SAIR</button></a>
                     </nav>
                 </nav>
                 <div class="pontuacao">
@@ -68,5 +71,51 @@
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    function atualizarFeed() {
+        //aguardar();
+        fetch("/usuarios/listarPontuacao").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    throw "Nenhum resultado encontrado!!";
+                }
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    var table = document.getElementById("infos");
+                    for (var  contador = 0; contador < resposta.length; contador++) {
+                        var publicacao = resposta[contador];
+                        // criando e manipulando elementos do HTML via JavaScript
+
+                        var tdNome = document.createElement("td");
+                        var tdpontuacao = document.createElement("td");
+                        var tdpercentualPontuacao = document.createElement("td");
+                        var tableTr = document.createElement("tr");
+                        var hr = document.createElement("hr");
+
+                        tdNome.className = "text"
+                        tdpontuacao.className = "text"
+                        tdpercentualPontuacao.className = "text"
+
+                        tdNome.innerHTML = `${publicacao.nome}`;
+                        tdpontuacao.innerHTML = `${publicacao.pontuacao}pts.`;
+                        tdpercentualPontuacao.innerHTML = `${publicacao.percentualPontuacao}%`;
+
+                        tableTr.appendChild(tdNome);
+                        tableTr.appendChild(tdpontuacao);
+                        tableTr.appendChild(tdpercentualPontuacao);
+                        table.appendChild(tableTr);
+                    }
+
+                    // finalizarAguardar();
+                });
+            } else {
+                swal ("Ops","Houve um erro na API!","warning");
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+            // finalizarAguardar();
+        });
+    }
 
 </script>

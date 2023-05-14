@@ -129,20 +129,17 @@
         else if (nomeVar.length < 8) {
             swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 8 caracteres 😠", "warning")
         }
-        else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length < 7) {
+        else if (emailVar.indexOf("gmail")==-1||emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length <12 ) {
             swal("Ops", "O e-mail cadastrado é inválido. Por favor, insira um e-mail válido 😠", "warning")
         }
-        else if (senhaVar.length < 8) {
+        else if (senhaVar.length < 10) {
             swal("Ops", "A senha inserida é muito curta. Por favor,insira uma senha com pelo menos 8 caracteres 😠", "warning")
         }
         else {
             setInterval('oi', 5000)
 
 
-
-
-
-            // Enviando o valor da nova input
+           // Enviando o valor da nova input
             fetch("/usuarios/cadastrar", {
                 method: "POST",
                 headers: {

@@ -30,6 +30,7 @@ nav {
     padding: 0.6rem;
     top: 0;
     left: 0;
+    border: 10 solid #00ff;
 }
 
 nav img {

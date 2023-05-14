@@ -31,6 +31,7 @@
   margin-top: 30px;
   font-weight: 700;
   text-align: center;
+  color: #ff4500;
 }
 
 .sinopse span {
@@ -64,9 +65,8 @@
 
 
 .card-arcos h1 {
-  color: #fff;
+  color: #ff4500;
   margin-bottom: 30px;
-  color: #ADD8e6
 }
 
 
@@ -102,6 +102,7 @@
   margin-top: 30px;
   font-weight: 700;
   text-align: center;
+  color:#ff4500;
 }
 
 
@@ -116,7 +117,7 @@
 
 
 .card-personagem h1 {
-  color: #fff;
+  color: #ff4500;
   margin-bottom: 30px;
 }
 

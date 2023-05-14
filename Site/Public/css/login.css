@@ -62,7 +62,7 @@
   background-color: transparent;
   border-radius: 20px;
   border: 2px solid #FF4500;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .form button {
@@ -75,7 +75,7 @@
   width: 25vw;
   height: 7vh;
   align-self: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .form button:hover {

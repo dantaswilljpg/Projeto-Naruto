@@ -11,37 +11,32 @@
 
 
 
-.banner {
+#content {
     display: flex;
     position: relative;
     flex-direction: column;
-    align-items: center;
-    /* width: 100vw;*/
-    background: linear-gradient(to bottom, #f57344, #FF4500);
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 85%;
     height: 100vh;
-}
-
-
-
-.graficos {
+    background: linear-gradient(to bottom, #0C0C0C, #1F1F1F);
+    padding: 2rem 3rem;
+    margin-left: 15%;
+    gap: 5vh;
     overflow: hidden;
-    overflow-x: scroll;
 }
 
-.graficos h2 {
-    color: #FFF;
-    font-size: 5rem;
-    font-weight: 700;
-    padding: 10px 0 10px 1.3vw;
-    margin: 2vh 0 3vh 0;
+.slide-show h2{
+    color:#fff;
+    font-size: 3.5rem;
+    font-weight: 900;
 }
-
-.listas {
+.slides-list {
     list-style-type: none;
-    margin: 10px 0;
-    gap: 3vw;
+    margin: 50px 0;
+    gap: 8vw;
     padding: 0;
-
+    
     /* 
       deixa todos os itens da lista
       na horizontal e todos com a
@@ -50,17 +45,16 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-
 }
 
-.listas {
+.slide{
     background-color: #151515;
-    border: 20px solid #00f;
+    border: 10px solid #FF4500;
     border-radius: 6px;
 }
 
 canvas {
-    height: 85vh;
-    width: 65vw;
+    height: auto;
+    width: 74vw;
     padding: 10px 1vw 10px 3vw;
 }
