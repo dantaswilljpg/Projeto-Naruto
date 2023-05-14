@@ -56,6 +56,9 @@
                         <option value="5">Gaara Deserto</option>
                         <option value="6">Neji Hyugaa</option>
                         <option value="7">Jiraya Sama</option>
+                        <option value="8">Rock Lee</option>
+                        <option value="9">Sakura </option>
+                        <option value="10">Hinata Hyugaa</option>
                     </select>
                 </div>
                 <button onclick="cadastrar()">cadastrar</button>
@@ -92,11 +95,18 @@
             img_personagem.classList.add("gaara")
         } else if (num_personagem == 6) {
             img_personagem.classList.add("neji")
-        } else {
+        } else if (num_personagem == 7) {
             img_personagem.classList.add("jiraya")
+        } else if (num_personagem == 8) {
+            img_personagem.classList.add("rock")
+        } else if (num_personagem == 9) {
+            img_personagem.classList.add("sakura")
+        } else {
+            img_personagem.classList.add("hinata")
         }
-
     }
+
+    
     function cadastrar() {
         //aguardar();
 

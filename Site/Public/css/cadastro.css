@@ -143,6 +143,18 @@ select .favorito {
   background-image: url(../assets/imgs/foto-cadastro-jiraya.jpg);
 }
 
+.rock{
+  background-image: url(../assets/imgs/foto-cadastro-rock.jpg);
+}
+
+.sakura {
+  background-image: url(../assets/imgs/foto-cadastro-sakura.jpg);
+}
+
+
+.hinata {
+  background-image: url(../assets/imgs/foto-cadastro-hinata.jpg);
+}
 
 
 
