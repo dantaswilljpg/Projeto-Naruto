@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Sedgwick Ave Display';
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .banner-ponts{
@@ -16,82 +16,88 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-  background: linear-gradient( to bottom, #f57344, #FF4500);
-    height:150vh;
+   background: linear-gradient( to bottom, #f57344, #FF4500);
+    height:100vh;
+    background-repeat: no-repeat;
+    background-size: 104%;
+    background-position: -4vw top;
+    box-shadow: 0px 170px 48px rgba(0, 0, 0, 0.01), 0px 109px 44px rgba(0, 0, 0, 0.06),
+        0px 61px 37px rgba(0, 0, 0, 0.2), 0px 27px 27px rgba(0, 0, 0, 0.34),
+        0px 7px 15px rgba(0, 0, 0, 0.39), 0px 0px 0px rgba(0, 0, 0, 0.4);
 }
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Sedgwick Ave Display';
-    font-size: 1.5rem;
-}
-
-
-
-
-.pontos span{
-    font-size: 4.8rem;
+.Pontuacao h1{
+    font-size: 2rem;
     color:#fff;
 }
 
-.pontuacao {
-    margin-top: 8vh;
+.Pontuacao {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
-.pontuacao .pontos {
-    padding: 2vh 2vw 4vh 2vw;
+.texto span{
+    font-size: 0.5rem;
+}
+
+.Pontuacao .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:#0000FF;
+    background:url(../assets/imgs/azul-e-laranja.png);
     border-radius: 20px;
-    margin-left: 750px;
-    border: 20px solid #000;
-   
+    box-shadow: 0px 0px 15px #FF4500;
+    border: 10px solid #000ff0;
+    margin-top: 120px;
+    margin-left: 80px;
 }
 
 
-.pontuacao  .pont-total {
-    width: 70vw;
-    height: 50vh;
-    padding: 4vh 0vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FF4500;
-    border-radius: 15px;
-    border: 20px solid #000;
-  
+.Pontuacao  .card-pontos{
+    width: 55vw;
+   height: 60vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #ff4500;
+   border-radius: 15px;
+   border: 8px solid #000ff0;
+   overflow-y: scroll;
 }
 
 
-.pontuacao li {
+.Pontuacao li {
     font-size: 5rem;
     font-weight: 400;
     justify-content: space-between;
+    
 }
 
-.infos th{
-    font-size: 5rem;
-    color: #fff;
-}
+
 
 table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 0.6rem;
 }
 
 tr {
     border-bottom: 2px solid #fff;
+    font-size: 0.6rem;
+    text-align: center;
+    color: #fff;
 }
 
 td {
     padding: 0.5vh;
+    font-size: 0.6rem;
+}
+
+
+th{
+    font-size: 1rem;
 }

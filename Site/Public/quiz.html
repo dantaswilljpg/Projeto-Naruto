@@ -20,31 +20,25 @@
 
 <body>
     <div class="banner-quiz">
-        <nav id="navbar-container">
-            <nav class="navbar" id="nav">
-                <img src="assets/imgs/logo naruto.png" alt="Logo Naruto">
-                <div class="bem-vindo">
-                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+        <div id="dashboard-container">
+            <nav class="select-disable" id="nav">
+                <img src="assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
+                <div class="texto-user">
+                    <span>Bem-vindo</span>
+                    <span id="b_usuario"></span>
                 </div>
-                <span id="anime_usuario"></span>
-                <ul class="nav">
-                    <li class="lista"><a href="../index.html">
-                            <img class="icone-nav" src="../assets/imgs/icone-ninja.png" alt="Geral">
-                            <span>Geral</span></a>
+                <ul class="nav-list">
+                    <li><a href="dashboard/dash.html"><img class="icon-nav" src="assets/imgs/naruto-sign.png"
+                                alt="icone naruto"><span>Gráfico</span></a></li>
+                    <li><a href="../quiz.html"><img class="icon-nav" src="assets/imgs/kakashi-hatake.png" alt="icone kakashi">
+                            <span>Quiz</span></a>
                     </li>
-                    <li class="lista"><a href="dashboard/dashboards.html">
-                            <img class="icone-nav" src="assets/imgs/sasuke-uchiha.png" alt="dashboard">
-                            <span>Gráfico</san></a>
-                    </li>
-                    <li class="lista"><a href="pontuacao.html">
-                            <img class="icone-nav" src="assets/imgs/gaara-areia.png" alt="dashboard">
-                            <span>Pontuações</san></a>
+                    <li class="pag-atual"><a href="pontuacao.html"><img class="icon-nav" src="assets/imgs/sasuke-uchiha.png"
+                                alt="icone sasuke"><span>Pontuações</span></a>
                     </li>
                 </ul>
-                <a href="login.html"><button>SAIR</button></a>
+                <a href="../login.html"><button>SAIR</button></a>
             </nav>
-
-
             <div class="quiz">
                 <div class="list-naruto">
                     <span class="titulo">Quiz Naruto Clássico.</span>
@@ -104,7 +98,7 @@
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao3" value="matatabi">
-                                    <span class="text">c) matatabi</span>
+                                    <span class="text">c) Matatabi</span>
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao3" value="Isobu">
@@ -159,11 +153,11 @@
                             <div class="resp">
                                 <div class="opcao">
                                     <input type="radio" name="opcao6" value="Jutsu clone das sombras">
-                                    <span class="text">a) Jutsu clone das sombras</span>
+                                    <span class="text">a) Jutsu Clone das Sombras</span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao6" value="Jutsu multiclone das sombras">
-                                    <span class="text">b) Jutsu multiclone das sombras</span>
+                                    <input type="radio" name="opcao6" value="Jutsu multiclone das Sombras">
+                                    <span class="text">b) Jutsu Multiclone das Sombras</span>
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao6" value="Rasengan">
@@ -228,7 +222,7 @@
 </body>
 
 </html>
-S
+
 <script>
     document.getElementById('anterior').style.display = 'none';
     document.getElementById('finalizar').style.display = 'none';
@@ -239,17 +233,17 @@ S
     var proxima = 0;
     var pontos = 0;
     var percentual = 0;
-    var img= '';
+    var img = './assets/imgs/gif-apaixonado.gif';
     var msg = '';
     var radios = [];
-    var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo ceifeiro da morte", "Jutsu multiclone das sombras", "Fugaku Uchiha", "Minato Namikaze"];
+    var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo ceifeiro da morte", "Jutsu multiclone das Sombras", "Fugaku Uchiha", "Minato Namikaze"];
     var idUsuario = sessionStorage.ID_USUARIO;
     console.log(sessionStorage.ID_USUARIO)
 
 
     Swal.fire({
         imageUrl: 'assets/imgs/gif-sobre.gif',
-        imageWidth: 3000,
+        imageWidth: 1000,
         title: 'Bem-vindo ao Quiz de Naruto Clássico, boa sorte😄...!',
         html: 'Feito por: Will Dantas - 1ADS A',
     })
@@ -336,13 +330,13 @@ S
 
             if (Usuario == 0 || Usuario <= 4) {
                 imageUrl: 'assets/imgs/gif-triste.gif',
-                msg = ` <span class="text"> 
+                    msg = ` <span class="text"> 
                             Poderia ter sido melhor <b>${idUsuario}</b> 😔😔, sua pontuação foi de
                             <b>${pontos}</b> pontos, que equivale à <b>${percentual.toFixed(2)}%</b> do Quiz
                         </span>`;
             } else {
                 imageUrl: 'assets/imgs/gif-apaixonado.gif',
-                msg = ` <span class="text">
+                    msg = ` <span class="text">
                             PARÁBENS  <b>${idUsuario}</b> 🥳🥳, você é FÃ NÚMERO 1 DE NARUTO e sua pontuação foi de
                             <b>${pontos}</b> pontos, que equivale à<b> ${percentual.toFixed(2)}%</b> do Quiz
                         </span>`;

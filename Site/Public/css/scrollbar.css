@@ -1,12 +1,22 @@
-::-webkit-scrollbar {
-    background-color: #000;
-    /* cor do fundo do scroll */
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ff4500;
     border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
     border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
     background: #00f;
-    height: 5px;
-    /* cor da barra do scroll */
+    border-radius: 20px;
+
 }

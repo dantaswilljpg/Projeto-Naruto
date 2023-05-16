@@ -6,73 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
+    <link rel=" stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
     <link rel="stylesheet" href="css/pontuacao.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-     <!-- Sweet alert -->
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-     <script src="../app.js"></script>
-     <!-- Sweet alert -->
-    <title>Pontuações</title>
+    <link rel="stylesheet" href="css/quiz.css">
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="../app.js"></script>
+    <!-- Sweet alert -->
 </head>
 
 <body>
-
-    <body>
-
-        <body scroll="no" style="overflow: hidden" onload="atualizarFeed(), validarSessao()">
-            <div class="banner-ponts">
-
-                <body scroll="no" style="overflow: hidden" onload="atualizarFeed(), validarSessao()"></body>
-                <nav id="navbar-container">
-                    <nav class="navbar" id="nav">
-                        <img src="assets/imgs/logo naruto.png" alt="Logo Naruto">
-                        <div class="bem-vindo">
-                            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-                        </div>
-                        <span id="anime_usuario"></span>
-                        <ul class="nav">
-                            <li class="lista"><a href="../index.html">
-                                    <img class="icone-nav" src="../assets/imgs/icone-ninja.png" alt="Geral">
-                                    <span>Geral</span></a>
-                            </li>
-                            <li class="lista"><a href="dashboard/dashboards.html">
-                                    <img class="icone-nav" src="assets/imgs/sasuke-uchiha.png" alt="dashboard">
-                                    <span>Gráfico</san></a>
-                            </li>
-                            <li class="lista"><a href="quiz.html">
-                                    <img class="icone-nav" src="assets/imgs/kakashi-hatake.png" alt="dashboard">
-                                    <span>Quiz</span></san></a>
-                            </li>
-                        </ul>
-                        <img style="height: 55px; cursor: pointer;" src="assets/imgs/exit.png" alt="logout"
-                            onclick="limparSessao()">
-                    </nav>
-                </nav>
-                <div class="pontuacao">
-                    <div class="pontos">
-                        <span>Pontuação geral</span>
-                        <div class="pont-total">
-                            <table class="pont" id="pont">
-                                <li>
-                                    <table class="infos" id="infos">
-                                        <tr>
-                                            <th>Nome</th>
-                                            <th>Pontuação</th>
-                                            <th>Percentual</th>
-                                        </tr>
-                                    </table>
-                        </div>
+    <body scroll="si" style="overflow: hidden" onload="updatePontos(), validarSessao()"></body>
+    <div class="banner-quiz">
+        <nav class="select-disable" id="nav">
+            <img src="assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
+            <div class="texto-user">
+                <span>Bem-vindo</span>
+                <span id="b_usuario"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="dashboard/dash.html"><img class="icon-nav" src="assets/imgs/naruto-sign.png"
+                            alt="icone naruto"><span>Gráfico</span></a></li>
+                <li><a href="../quiz.html"><img class="icon-nav" src="assets/imgs/kakashi-hatake.png" alt="icone kakashi">
+                        <span>Quiz</span></a>
+                </li>
+                <li class="pag-atual"><a href="pontuacao.html"><img class="icon-nav" src="assets/imgs/sasuke-uchiha.png"
+                            alt="icone sasuke"><span>Pontuações</span></a>
+                </li>
+            </ul>
+            <a href="../login.html"><button>SAIR</button></a>
+        </nav>
+            <div class="Pontuacao">
+                <div class="card">
+                    <h1>Pontuação geral do quiz</h1>
+                    <div class="card-pontos">
+                        <li>
+                            <table class="bordered, striped e centered highlight e responsive-table" id="infos" width="467" border="1px" bgcolor="#000">
+                                <tr>
+                                    <th>Jogador</th>
+                                    <th>Pontuação</th>
+                                    <th>Percentual</th>
+                                </tr>
+                            </table>
                     </div>
-        </body>
+                </div>
+</body>
+
+</html>
+
 
 </html>
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    function atualizarFeed() {
+    function updatePontos() {
         //aguardar();
         fetch("/usuarios/listarPontuacao").then(function (resposta) {
             if (resposta.ok) {
@@ -83,7 +74,7 @@
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
 
                     var table = document.getElementById("infos");
-                    for (var  contador = 0; contador < resposta.length; contador++) {
+                    for (var contador = 0; contador < resposta.length; contador++) {
                         var publicacao = resposta[contador];
                         // criando e manipulando elementos do HTML via JavaScript
 
@@ -110,7 +101,7 @@
                     // finalizarAguardar();
                 });
             } else {
-                swal ("Ops","Houve um erro na API!","warning");
+                swal("Ops", "Houve um erro na API!", "warning");
             }
         }).catch(function (resposta) {
             console.error(resposta);

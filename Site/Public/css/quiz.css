@@ -20,35 +20,44 @@
 }
 
 
+#dashboard-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
 
 .quiz {
-    margin-top: 13vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left:15% ;
 }
 
 .quiz .list-naruto {
-    padding: 2vh 2vw 2vh 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: url(../assets/imgs/preto-png.png);
     border-radius: 10px;
     box-shadow: 5px 0px 55px #333333;
-    margin-left: 3500px;
     border: #333333;
     border-radius: 10px;
+    height: fit-content;
 }
 
 .quiz .card{
-    padding: 2vh 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: url(../assets/imgs/banner-cadas.jpg);
+    background-size: cover;
     border-radius: 15px;
-    width: 50vw;
+    width: 58vw;
     box-shadow: inset 15px 10px 150px #333333;
     border: 8px solid #00f;
 }
@@ -56,7 +65,7 @@
 
 .list-naruto .titulo{
 color: #fff;
-font-size: 4rem;
+font-size: 1.6rem;
 }
 
 
@@ -74,7 +83,7 @@ font-size: 4rem;
       1px -1px 0px #000,
       1px 0px 0px #000;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 1.77rem;
     color:#fff;
 }
 
@@ -95,12 +104,12 @@ font-size: 4rem;
       1px -1px 0px #000,
       1px 0px 0px #000;
     font-weight: 400;
-font-size: 3rem;
+font-size: 1.5rem;
 color: #fff;
 }
 
 .opcao input{
-    width: 5vw;
+    width: 3vw;
     height: 3vh;
     border: 6px solid #000;
 }
@@ -114,7 +123,7 @@ color: #fff;
     color: white;
     padding: 1vh 1vw;
     margin: 0 2vw;
-    font-size: 40px;;
+    font-size: 20px;;
     align-self: center;
     box-shadow: 0px 0px 5px #FF4500;
     border-radius: 5px;
