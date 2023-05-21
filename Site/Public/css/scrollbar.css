@@ -16,7 +16,8 @@ body::-webkit-scrollbar {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00f;
+    background: #000;
     border-radius: 20px;
+    width: 7px;
 
 }

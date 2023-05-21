@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/scrollbar.css">
     <link rel="stylesheet" href="css/pontuacao.css">
     <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- Sweet alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
@@ -19,6 +21,7 @@
 </head>
 
 <body>
+
     <body scroll="si" style="overflow: hidden" onload="updatePontos(), validarSessao()"></body>
     <div class="banner-quiz">
         <nav class="select-disable" id="nav">
@@ -28,31 +31,36 @@
                 <span id="b_usuario"></span>
             </div>
             <ul class="nav-list">
-                <li><a href="dashboard/dash.html"><img class="icon-nav" src="assets/imgs/naruto-sign.png"
-                            alt="icone naruto"><span>Gráfico</span></a></li>
-                <li><a href="../quiz.html"><img class="icon-nav" src="assets/imgs/kakashi-hatake.png" alt="icone kakashi">
+                <li><a href="quiz.personalidade.html"><img class="icon-nav" src="assets/imgs/icone-ninja.png" alt="
+                            icone naruto">
+                        <span>Personalidade</span></a>
+                </li>
+                <li><a href="../dashboard/dash.html"><img class="icon-nav" src="assets/imgs/sasuke-uchiha.png"
+                            alt="icone sasuke"><span>Gráfico</span></a></li>
+                <li><a href="quiz.html"><img class="icon-nav" src="assets/imgs/sakura.png" alt="icone sasuke">
                         <span>Quiz</span></a>
                 </li>
-                <li class="pag-atual"><a href="pontuacao.html"><img class="icon-nav" src="assets/imgs/sasuke-uchiha.png"
-                            alt="icone sasuke"><span>Pontuações</span></a>
+                <li class="pag-atual"><a href="pontuacao.html"><img class="icon-nav" src="assets/imgs/hinata.png"
+                            alt="icone hinata"><span>Pontuações</span></a>
                 </li>
             </ul>
             <a href="../login.html"><button>SAIR</button></a>
         </nav>
-            <div class="Pontuacao">
-                <div class="card">
-                    <h1>Pontuação geral do quiz</h1>
-                    <div class="card-pontos">
-                        <li>
-                            <table class="bordered, striped e centered highlight e responsive-table" id="infos" width="467" border="1px" bgcolor="#000">
-                                <tr>
-                                    <th>Jogador</th>
-                                    <th>Pontuação</th>
-                                    <th>Percentual</th>
-                                </tr>
-                            </table>
-                    </div>
+        <div class="Pontuacao">
+            <div class="card">
+                <h1>Pontuação geral do quiz</h1>
+                <div class="card-pontos">
+                    <li>
+                        <table class="bordered, striped e centered highlight e responsive-table" id="infos" width="467"
+                            border="1px" bgcolor="#000">
+                            <tr>
+                                <th>Jogador</th>
+                                <th>Pontuação</th>
+                                <th>Percentual</th>
+                            </tr>
+                        </table>
                 </div>
+            </div>
 </body>
 
 </html>
@@ -78,6 +86,9 @@
                         var publicacao = resposta[contador];
                         // criando e manipulando elementos do HTML via JavaScript
 
+
+                        // // cria um novo elemento div
+                        // e dá à ele conteúdo
                         var tdNome = document.createElement("td");
                         var tdpontuacao = document.createElement("td");
                         var tdpercentualPontuacao = document.createElement("td");
@@ -91,6 +102,9 @@
                         tdNome.innerHTML = `${publicacao.nome}`;
                         tdpontuacao.innerHTML = `${publicacao.pontuacao}pts.`;
                         tdpercentualPontuacao.innerHTML = `${publicacao.percentualPontuacao}%`;
+
+
+                        // (APPENDCHILD) Cria um novo elemento de parágrafo e adiciona-o ao final do documento
 
                         tableTr.appendChild(tdNome);
                         tableTr.appendChild(tdpontuacao);

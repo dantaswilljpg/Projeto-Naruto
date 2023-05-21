@@ -1,0 +1,64 @@
+
+.navbar {
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    padding: 2.5px 7% 5px 2%;
+    background: linear-gradient(to bottom, #f57344, #FF4500);
+    box-shadow: 0px 0px 6px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  
+  
+  .logo-naruto {
+    width: 20vh;
+  }
+  
+  
+  
+  .ul-lista {
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .ul-lista ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .navbar ul li {
+    list-style: none;
+  }
+  
+  .header {
+    display: flex;
+    width: 95vw;
+    align-items: center;
+    justify-content: space-around;
+  
+  }
+  
+  .navbar ul li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 3.5vh;
+    text-decoration: none;
+    justify-content: space-evenly;
+  }
+  
+  
+  
+  .navbar ul li a:hover {
+    color: #0000FF;
+  
+  }

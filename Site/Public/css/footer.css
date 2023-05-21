@@ -15,4 +15,20 @@ footer span {
     text-align: center;
 }
 
+.footer-inicio {
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #f57344, #FF4500);
+    padding: 2.1%;
+    /* color: white; */
+}
+
+.footer-inicio span {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
+
 /* FIM FOOTER*/

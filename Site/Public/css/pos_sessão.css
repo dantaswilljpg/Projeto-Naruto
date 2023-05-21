@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+
+.sessao-inicial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    margin-top: 60px;
+}
+
+.card-sessao  img{
+    margin-top: 30px;
+    border-radius: 30px;
+    border:10px solid #ff4500;
+    margin-top: 140px
+}
+
+
+.card-sessao  img{
+    margin-top: 30px;
+    border-radius: 30px;
+    border:10px solid #ff4500;
+    margin-top: 140px
+}
+
+.button_pos:hover{
+
+    cursor: pointer;
+    background-color: #ff4500;
+    transition: 0.3s;
+}
+
+
+.button_pos{
+    background-color: #000ff0;
+    border: none;
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    border-bottom: 10px solid #ff4500;
+}
+

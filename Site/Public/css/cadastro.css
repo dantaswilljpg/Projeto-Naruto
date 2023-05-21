@@ -79,6 +79,7 @@
   margin-right: 300px;
   text-align: center;
   margin-top: 5px;
+  color: #fff;
 }
 
 .form input:hover {
@@ -106,7 +107,6 @@ select .favorito {
 }
 
 .personagem #img_personagem {
-
   background-size: cover;
   width: 24vw;
   height: 50vh;
@@ -144,7 +144,7 @@ select .favorito {
   background-image: url(../assets/imgs/gif-cadastro-jiraya.gif);
 }
 
-.rock{
+.rock {
   background-image: url(../assets/imgs/gif-cadastro-rock.gif);
 }
 
@@ -189,6 +189,7 @@ select .favorito {
   align-self: center;
   margin-left: 150px;
   margin-top: -150px;
+  border-bottom: 10px solid #0000FF;
 }
 
 .formulario button:hover {

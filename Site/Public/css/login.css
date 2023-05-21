@@ -63,7 +63,10 @@
   border-radius: 20px;
   border: 2px solid #FF4500;
   margin-top: 25px;
+  color: #fff;
 }
+
+
 
 .form button {
   border-radius: 20px;
@@ -75,7 +78,8 @@
   width: 25vw;
   height: 7vh;
   align-self: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  border-bottom: 10px solid #0000FF;
 }
 
 .form button:hover {
@@ -87,7 +91,6 @@
 .form a {
   color: #FF4500;
   font-size: 1.2rem;
-  padding: 10px;
 }
 
 
