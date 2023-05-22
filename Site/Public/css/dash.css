@@ -16,7 +16,7 @@
     justify-content: flex-start;
     align-items: start;
     background: linear-gradient( to bottom, #f57344, #FF4500);
-    gap: 3vh;
+    gap: 150vh;
     margin-left: 15%;
     padding: 0 2vw;
 }
@@ -24,7 +24,7 @@
 
 .slide-show h2 {
     color: #FFF;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     padding: 1vh 0
 }
@@ -53,6 +53,6 @@
 
 canvas {
     height: auto;
-    width: 40vw;
+    width: 30vw;
     padding: 10px 1vw 10px 3vw;
 }

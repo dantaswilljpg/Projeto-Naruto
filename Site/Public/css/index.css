@@ -17,10 +17,6 @@ body {
   color: white;
 }
 
-
-
-
-
 /*BANNER*/
 .banner {
   /* width: 100vw;*/
@@ -84,7 +80,7 @@ body {
   height: 40vh;
   background-color: #FF4500;
   border-radius: 20px;
-  margin-left: 45px;
+  margin-left: 85px;
   border: 5px solid #0000FF;
 }
 
@@ -242,6 +238,12 @@ li {
   font-size: 1rem;
   border-bottom: 10px solid #0000FF;
 }
+
+
+.informacoes button:hover {
+  background-color: #FF4500;
+}
+
 
 
 
@@ -474,7 +476,7 @@ li {
 
 
 
-/* Quiz*/
+/* QUIZ*/
 .sobre-quiz {
   display: flex;
   height: 450px;
@@ -551,7 +553,7 @@ li {
 }
 
 .bio button {
-  width: 15vw;
+  width: 12vw;
   height: 10vh;
   align-self: center;
   justify-self: center;

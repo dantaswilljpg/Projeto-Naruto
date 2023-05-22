@@ -6,6 +6,7 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar {
     width: 7px;
+    background-color: #000;
 }
 
 
