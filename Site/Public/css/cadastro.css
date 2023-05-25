@@ -16,11 +16,11 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  /* width: 100vw;*/
-  background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-cadas.jpg);
+  background: rgba(0, 0, 0, 0.4) url(../assets/imgs/walpapper-quiz1.jpg);
   background-blend-mode: darken;
-  background-size: cover;
-  height: 118vh;
+background-size: cover;
+  background-repeat: no-repeat;
+  height: 112vh
 }
 
 
@@ -74,21 +74,19 @@
   height: 7vh;
   font-size: 1rem;
   border: 2px solid #FF4500;
-  border-radius: 50px;
-  background-color: transparent;
+  border-radius: 10px;
   margin-right: 300px;
   text-align: center;
-  margin-top: 5px;
-  color: #fff;
+  margin-top: 18px;
+  color: #ff4500;
 }
 
-.form input:hover {
-  color: #FF4500;
-}
+
 
 
 .form span {
-  margin-right: 600px;
+  margin-right: 750px;
+  font-size: 26.8px;
 }
 
 select .favorito {
@@ -103,16 +101,17 @@ select .favorito {
   align-items: center;
   width: 50%;
   margin-left: 500px;
+ 
 
 }
 
 .personagem #img_personagem {
   background-size: cover;
-  width: 24vw;
-  height: 50vh;
-  border: 8px solid #0000f0;
-  border-radius: 5px;
-  margin-top: -450px;
+  width: 30vw;
+  height: 45vh;
+  border: 4px solid #FF4500;
+  border-radius: 15px;
+  margin-top: -500px;
 
 }
 
@@ -161,13 +160,12 @@ select .favorito {
 
 .personagem #personagem_naruto {
   width: 100%;
-  height: 30%;
-  border: 5px solid #0000f0;
+  height: 20%;
+  border: 5px solid #ff4500;
   border-radius: 50px;
-  padding-left: 2%;
   font-weight: 50;
   font-size: 50px;
-  color: #FF4500;
+  color: #00f;
   background-color: transparent;
 }
 
@@ -178,20 +176,16 @@ select .favorito {
 }
 
 .formulario button {
-  border-radius: 20px;
-  font-size: 25px;
-  padding: 1px 2px;
-  color: #fff;
-  background-color: transparent;
-  border: 8px solid #FF4500;
   width: 28vw;
   height: 8vh;
+  border-radius: 20px;
+  font-size: 25px;
+  color: #fff;
+  background-color: #FF4500;
+  margin-top: -1580px;
   align-self: center;
-  margin-left: 150px;
-  margin-top: -150px;
-  border-bottom: 10px solid #0000FF;
 }
 
 .formulario button:hover {
-  background-color: #FF4500;
+  background-color: #00f;
 }

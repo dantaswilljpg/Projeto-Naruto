@@ -9,14 +9,9 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-   background: linear-gradient( to bottom, #f57344, #FF4500);
-    height:100vh;
+   background: url(../assets/imgs/walpapper-quiz1.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw top;
-    box-shadow: 0px 170px 48px rgba(0, 0, 0, 0.01), 0px 109px 44px rgba(0, 0, 0, 0.06),
-        0px 61px 37px rgba(0, 0, 0, 0.2), 0px 27px 27px rgba(0, 0, 0, 0.34),
-        0px 7px 15px rgba(0, 0, 0, 0.39), 0px 0px 0px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -42,9 +37,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../assets/imgs/preto-png.png);
+    background-color: #00f;
     border-radius: 10px;
-    box-shadow: 5px 0px 55px #333333;
     border: #333333;
     border-radius: 10px;
     height: fit-content;
@@ -54,13 +48,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../assets/imgs/banner-cadas.jpg);
+    background-color:#FF4500;
     background-size: cover;
     border-radius: 15px;
     width: 58vw;
-    box-shadow: inset 15px 10px 150px #333333;
     border: 8px solid #00f;
-    padding: 4vh 2vw;
+    padding: 1vh 2vw;
 }
 
 
@@ -128,7 +121,7 @@ color: #fff;
     align-self: center;
     box-shadow: 0px 0px 5px #FF4500;
     border-radius: 5px;
-    background-color:  #FF4500;;
+    background-color:#00f;
     border: none;
     cursor: pointer;
 }

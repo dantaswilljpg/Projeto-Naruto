@@ -4,11 +4,11 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  /* width: 100vw;*/
-  background: rgba(0, 0, 0, 0.8) url(../assets/imgs/banner-login.jpg);
+  background: rgba(0, 0, 0, 0.5) url(../assets/imgs/walpapper-quiz1.jpg);
   background-blend-mode: darken;
-  background-size: cover;
-  height: 118vh;
+background-size: cover;
+  background-repeat: no-repeat;
+  height: 112vh;
 }
 
 
@@ -57,13 +57,12 @@
   font-size: 1rem;
   text-align: center;
   border-radius: 6px;
-  margin-bottom: 18px;
+  margin-bottom: 29px;
   flex-direction: column;
-  background-color: transparent;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 2px solid #FF4500;
-  margin-top: 25px;
-  color: #fff;
+  margin-top:30px;
+  color: #ff4500;
 }
 
 
@@ -72,29 +71,27 @@
   border-radius: 20px;
   font-size: 24px;
   padding: 1px 2px;
-  color: #fff;
-  background-color: transparent;
-  border: 5px solid #FF4500;
+ background-color: #FF4500;
+ color: #fff;
   width: 25vw;
   height: 7vh;
   align-self: center;
-  margin-bottom: 10px;
-  border-bottom: 10px solid #0000FF;
+  margin-bottom: 45px;
 }
 
 .form button:hover {
-  background-color: #FF4500;
+  background-color: #0000FF;
 }
 
 
 
 .form a {
-  color: #FF4500;
+  color: #0000FF;
   font-size: 1.2rem;
 }
 
 
 .form a:hover {
-  color: #0000FF;
+  color: #FF4500;
 
 }

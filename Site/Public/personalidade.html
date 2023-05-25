@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel=" stylesheet" href="css/sidebar.css">
+    <link rel=" stylesheet" href="css/personalidade.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="../app.js"></script>
+    <!-- Sweet alert -->
+</head>
+
+<body>
+    <div class="banner-quiz">
+        <div id="dashboard-container">
+            <nav class="select-disable" id="nav">
+                <img src="assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
+                <div class="texto-user">
+                    <span>Bem-vindo</span>
+                    <span id="b_usuario"></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="dashboard/dashabord-personagens-favoritos.html"><img class="icone-nav"
+                                src="assets/imgs/naruto-sign.png" alt="icone naruto"><span>Personagens</span></a></li>
+
+                    <li><a href="dashboard/dashboard-média-quiz.html"><img class="icone-nav"
+                                src="assets/imgs/icone-anime.png" alt="icone naruto"><span>Média do quiz</span></a></li>
+
+                    <li class="pag-atual"><a href="personalidade.html"><img class="icone-nav"
+                                src="assets/imgs/itachi-uchiha.png" alt="icone naruto"><span>Personalidade</span></a>
+                    </li>
+                    <li><a href="quiz.html"><img class="icone-nav" src="assets/imgs/kakashi-hatake.png"
+                                alt="icone kakashi">
+                            <span>Quiz</span></a>
+                    </li>
+                    <li><a href="pontuacao.html"><img class="icone-nav" src="assets/imgs/sasuke-uchiha.png"
+                                alt="icone sasuke"><span>Pontuações</span></a>
+                    </li>
+                </ul>
+                <a href="../login.html"><button>SAIR</button></a>
+            </nav>
+            <div class="quiz">
+                <div class="list-naruto">
+                    <span class="titulo">Quiz Personalidade.</span>
+                    <div class="card">
+                        <div class="questoes" id="questao1">
+                            <h1>1- Como shinobi, seu objetivo seria: ?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" nome="opcao1" value="Se tornar hokage ">
+                                    <span class="text">a) Se tornar hokage </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" nome="opcao1" value="Se tornar jonin ">
+                                    <span class="text">b)Se tornar jonin </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" nome="opcao1" value="Se tornan chunnin ">
+                                    <span class="text">c) Se tornan chunnin </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" nome="opcao1" value="Nem se formar na academia ">
+                                    <span class="text">d) Nem se formar na academia </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao2" style="display: none;">
+                            <h1>2-Qual habilidade você teria?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao2" value="Super força">
+                                    <span class="text">a) Super força</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao2" value="Habilidade ocular ">
+                                    <span class="text">b) Habilidade ocular </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao2" value=" Todos os jutsus ">
+                                    <span class="text">c) Todos os jutsus </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao2" value="Controle de bijuu">
+                                    <span class="text">d) Controle de bijuu</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao3" style="display: none;">
+                            <h1>3-Como aluno você:</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao3" value="Esforçado,melhor da turma ">
+                                    <span class="text">a) Esforçado, melhor da turma </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao3"
+                                        value="É extrovertido, não se importa com estudos ">
+                                    <span class="text"> b) É extrovertido, não se importa com estudos </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao3" value="Não ligo para estudos ">
+                                    <span class="text">c) Não ligo para estudos </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao3" value="Deixo a vida me levar">
+                                    <span class="text">d) Deixo a vida me levar </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao4" style="display: none;">
+                            <h1>4- Você teria vontade lutar contra:</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao4" value="Neji Hyugaa">
+                                    <span class="text">a) Neji Hyugaa</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao4" value="Sasuke Uchiha ">
+                                    <span class="text">b) Sasuke Uchiha </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao4" value="Kakashi Hatake ">
+                                    <span class="text">c) Kakashi Hatake </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao4" value="Orochimaru ">
+                                    <span class="text">d) Orochimaru </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao5" style="display: none;">
+                            <h1>5-Em uma luta, você?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao5" value="Começa atacando">
+                                    <span class="text">a) Começa atacando</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao5" value="Analisa as habilidades ">
+                                    <span class="text">b) Analisa as habilidades </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao5" value="Luta despreocupadamente ">
+                                    <span class="text">c) Luta despreocupadamente </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao5" value="Só apanha">
+                                    <span class="text">d) Só apanha</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao6" style="display: none;">
+                            <h1>6- Quem você teria como exemplo, para se espelhar?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao6" value="Kakashi Hatake ">
+                                    <span class="text">a) Kakashi Hatake </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao6" value="Rock Lee">
+                                    <span class="text">b) Rock Lee</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao6" value="Naruto Uzumaki ">
+                                    <span class="text">c) Naruto Uzumaki </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao6" value="Sasuke Uchiha">
+                                    <span class="text">d) Sasuke Uchiha</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao7" style="display: none;">
+                            <h1>7- Quem você queria como sensei ?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao7" value="Jiraya Sama">
+                                    <span class="text">a) Jiraya Sama</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao7" value="Kakashi Hatake">
+                                    <span class="text">b) Kakashi Hatake</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao7" value="Maito Gay">
+                                    <span class="text">c) Maito Gay</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao7" value="Asuma Sarutobi">
+                                    <span class="text">d) Asuma Sarutobi</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="questoes" id="questao8" style="display: none;">
+                            <h1>8- Como você reagiria se um amigo o abandonasse?</h1>
+                            <div class="resp">
+                                <div class="opcao">
+                                    <input type="radio" name="opcao8" value="Criaria rivalidade ">
+                                    <span class="text">a) Criaria rivalidade </span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao8" value="Não perdoaria">
+                                    <span class="text">b) Não perdoaria</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao8" value="Apenas lamentaria">
+                                    <span class="text">c) Apenas lamentaria</span>
+                                </div>
+                                <div class="opcao">
+                                    <input type="radio" name="opcao8" value="Tentaria trazer de volta">
+                                    <span class="text">d) Tentaria trazer de volta</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex;">
+                            <button class="botao" id="anterior" onclick="AntQuestao()">Questão Anterior</button>
+                            <button class="botao" id="proxima" onclick="ProxQuestao()">Próxima Questão</button>
+                            <button class="botao" id="finalizar" onclick="FinalizarQuiz()">Finalizar Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
+
+<script>
+    document.getElementById('anterior').style.display = 'none';
+    document.getElementById('finalizar').style.display = 'none';
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var Usuario = 0;
+    var anterior = 0;
+    var proxima = 0;
+    var pontos = 0;
+    var percentual = 0;
+    var img = 'assets/imgs/banner-arcos-personagens.jpg';
+    var msg = '';
+    var radios = [];
+    var respostascorretas = ["Se tornar hokage ", "Habilidade ocular", "Esforçado, melhor da turma", "Kakashi Hatake", "Começa atacando", "Rock Lee", "Jiraya Sama", "Tentaria trazer de volta"];
+    var idUsuario = sessionStorage.ID_USUARIO;
+    console.log(sessionStorage.ID_USUARIO)
+
+
+    Swal.fire({
+        imageUrl: 'assets/imgs/gif-apaixonado.gif',
+        imageWidth: 1000,
+        title: 'Quiz de Naruto Clássico, vamos ver com qual personalidade dos personagens de naruto você se identifica, boa sorte😄...!',
+        html: 'Feito por: Will Dantas - 1ADS A',
+    })
+
+    function AntQuestao() {
+        anterior--;
+        proxima = anterior
+
+        if (anterior == 6) {
+            questao8.style.display = "none";
+            questao7.style.display = "flex";
+            document.getElementById('anterior').style.display = 'block';
+            document.getElementById('finalizar').style.display = 'none';
+        } else if (anterior == 5) {
+            questao7.style.display = "none";
+            questao6.style.display = "flex";
+        } else if (anterior == 4) {
+            questao6.style.display = "none";
+            questao5.style.display = "flex";
+        } else if (anterior == 3) {
+            questao5.style.display = "none";
+            questao4.style.display = "flex";
+        } else if (anterior == 2) {
+            questao4.style.display = "none";
+            questao3.style.display = "flex";
+        } else if (anterior == 1) {
+            questao3.style.display = "none";
+            questao2.style.display = "flex";
+        } else if (anterior == 0) {
+            questao2.style.display = "none";
+            questao1.style.display = "flex";
+            document.getElementById('anterior').style.display = 'none';
+        }
+    }
+
+    function ProxQuestao() {
+        proxima++;
+        anterior = proxima
+        if (proxima == 1) {
+            questao1.style.display = "none";
+            questao2.style.display = "flex";
+            document.getElementById('anterior').style.display = 'block';
+        } else if (proxima == 2) {
+            questao2.style.display = "none";
+            questao3.style.display = "flex";
+        } else if (proxima == 3) {
+            questao3.style.display = "none";
+            questao4.style.display = "flex";
+        } else if (proxima == 4) {
+            questao4.style.display = "none";
+            questao5.style.display = "flex";
+        } else if (proxima == 5) {
+            questao5.style.display = "none";
+            questao6.style.display = "flex";
+        } else if (proxima == 6) {
+            questao6.style.display = "none";
+            questao7.style.display = "flex";
+        } else if (proxima == 7) {
+            questao7.style.display = "none";
+            questao8.style.display = "flex";
+            document.getElementById('proxima').style.display = 'none';
+            document.getElementById('finalizar').style.display = 'block';
+        }
+    }
+
+    function FinalizarQuiz() {
+        radios = document.querySelectorAll("input[type='radio']:checked");
+        if (radios.length < respostascorretas.length) {
+            Swal.fire({
+                imageUrl: 'assets/imgs/gif-naruto.gif',
+                imageWidth: 3000,
+                title: 'Responda todas questões 😠...!',
+
+            });
+        } else {
+            Usuario = 0;
+            for (var index = 0; index < radios.length; index++) {
+                if (respostascorretas.indexOf(radios[index].value) >= 0) {
+                    Usuario++;
+                }
+            }
+            pontos = Usuario * 10;
+            percentual = Usuario / respostascorretas.length * 100;
+
+            if (Usuario == 0 || Usuario <= 3) {
+                imageUrl: 'assets/imgs/gif-triste.gif',
+                    msg = ` 
+                           Sua personalidade é semelhante com a de sasuke uchiha
+                           
+                        `;
+            } else if (Usuario >= 4 || Usuario <= 6) {
+                imageUrl: 'assets/imgs/gif-apaixonado.gif',
+                    msg = ` 
+                            Sua personalidade é semelhante  com a de Naruto Uzumaki 
+                           
+                        `;
+            }
+            else {
+                imageUrl: 'assets/imgs/gif-apaixonado.gif',
+                    msg = `
+                            Sua personalidade é semelhante com a de Kakashi Hatake
+                            
+                        `;
+            }
+            fetch("/usuarios/cadastrarPontuacao", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.j
+                    idUsuarioServer: idUsuario,
+                    pontosServer: pontos,
+                    percentualServer: percentual.toFixed(2)
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    Swal.fire({
+
+                        imageUrl: 'assets/imgs/gif-quiz.gif',
+                        imageWidth: 3000,
+                        title: 'Quiz finalizado',
+                        html: msg,
+                    }).then((result) => {
+                        setTimeout(function () {
+                            // window.location = "pontuacao.html";
+                        }, 1000);
+                    })
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+            return false;
+        }
+    }
+</script>

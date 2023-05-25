@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#banner-personagens {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: start;
+    background: url(../assets/imgs/walpapper-dsh.png);
+    background-size: cover;
+    gap: 150vh;
+    margin-left: 15%;
+}
+
+
+.card h2 {
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0
+}
+
+.container-list {
+    list-style-type: none;
+    margin: 12px 0;
+    gap: 8vw;
+    padding: 0;
+    
+    /* 
+      deixa todos os itens da lista
+      na horizontal e todos com a
+      mesma largura
+    */
+    display: grid;
+    grid-auto-flow: column;
+ 
+}
+
+.slide{
+    background-color: #151515;
+    border: 2px solid #00f;
+    border-radius: 6px;
+}
+
+canvas {
+    height: auto;
+    width: 35vw;
+    padding: 10px 1vw 10px 3vw;
+}

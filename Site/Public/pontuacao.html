@@ -9,9 +9,7 @@
     <link rel=" stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/scrollbar.css">
     <link rel="stylesheet" href="css/pontuacao.css">
-    <link rel="stylesheet" href="css/quiz.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/index.css">
     <!-- Sweet alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
@@ -23,7 +21,7 @@
 <body>
 
     <body scroll="si" style="overflow: hidden" onload="updatePontos(), validarSessao()"></body>
-    <div class="banner-quiz">
+    <div class="banner-ponts">
         <nav class="select-disable" id="nav">
             <img src="assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
             <div class="texto-user">
@@ -31,16 +29,22 @@
                 <span id="b_usuario"></span>
             </div>
             <ul class="nav-list">
-                <li><a href="quiz.personalidade.html"><img class="icon-nav" src="assets/imgs/icone-ninja.png" alt="
+                <li><a href="personalidade.html"><img class="icone-nav" src="assets/imgs/icone-ninja.png" alt="
                             icone naruto">
                         <span>Personalidade</span></a>
                 </li>
-                <li><a href="../dashboard/dash.html"><img class="icon-nav" src="assets/imgs/sasuke-uchiha.png"
-                            alt="icone sasuke"><span>Gráfico</span></a></li>
-                <li><a href="quiz.html"><img class="icon-nav" src="assets/imgs/sakura.png" alt="icone sasuke">
+                <li><a href="dashboard/dashboard-média-quiz.html"><img class="icone-nav" src="assets/imgs/icone-anime.png"
+                            alt="icone sasuke"><span>Média do quiz</span></a></li>
+
+
+                <li><a href="dashboard/dashabord-personagens-favoritos.html"><img class="icone-nav" src="assets/imgs/sasuke-uchiha.png"
+                            alt="icone sasuke"><span>Personagens</span></a></li>
+
+
+                <li><a href="quiz.html"><img class="icone-nav" src="assets/imgs/icone-ninja.png" alt="icone sasuke">
                         <span>Quiz</span></a>
                 </li>
-                <li class="pag-atual"><a href="pontuacao.html"><img class="icon-nav" src="assets/imgs/hinata.png"
+                <li class="pag-atual"><a href="pontuacao.html"><img class="icone-nav" src="assets/imgs/gaara-areia.png"
                             alt="icone hinata"><span>Pontuações</span></a>
                 </li>
             </ul>

@@ -16,19 +16,15 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-   background: linear-gradient( to bottom, #f57344, #FF4500);
+   background:url(../assets/imgs/walpapper-quiz2.png);
     height:100vh;
     background-repeat: no-repeat;
-    background-size: 104%;
-    background-position: -4vw top;
-    box-shadow: 0px 170px 48px rgba(0, 0, 0, 0.01), 0px 109px 44px rgba(0, 0, 0, 0.06),
-        0px 61px 37px rgba(0, 0, 0, 0.2), 0px 27px 27px rgba(0, 0, 0, 0.34),
-        0px 7px 15px rgba(0, 0, 0, 0.39), 0px 0px 0px rgba(0, 0, 0, 0.4);
+    background-size: cover;
 }
 
 
 .Pontuacao h1{
-    font-size: 2rem;
+    font-size: 1.8rem;
     color:#fff;
 }
 
@@ -52,18 +48,18 @@
     border-radius: 20px;
     box-shadow: 0px 0px 15px #FF4500;
     border: 10px solid #000ff0;
-    margin-top: 100px;
+    margin-top: 170px;
     margin-left: 150px;
 }
 
 
 .Pontuacao  .card-pontos{
-    width: 65vw;
-   height: 65vh;
+    width: 50vw;
+   height: 50vh;
    display: flex;
    flex-direction: column;
    align-items: center;
-   background-color: #ff4500;
+   background-color: #000ff0;
    border-radius: 15px;
    border: 8px solid #000ff0;
    overflow-y: scroll;
@@ -71,8 +67,8 @@
 
 
 .Pontuacao li {
-    font-size: 5rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 300;
     justify-content: space-between;
     
 }
@@ -93,13 +89,13 @@ tr {
 }
 
 td {
-    padding: 2.5vh 0;
-    font-size: 1rem;
+    padding: 1.5vh 0;
+    font-size: 0.85rem;
     color: #fff;
 }
 
 
 th{
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 2.5vh 0;
 }

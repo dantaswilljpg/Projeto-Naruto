@@ -19,15 +19,11 @@ body {
 
 /*BANNER*/
 .banner {
-  /* width: 100vw;*/
   height: 120vh;
   /* As unidades vh e vw significam viewport, sendo a primeira para altura e a segunda para largura. Isso significa que elas utilizam o tamanho total da viewport, tamanho total do layout do pc*/
   margin-top: 10vh;
   background-image: url(../assets/imgs/banner-land-pagee.jpg);
   background-size: cover;
-  background-position: center;
-  border-radius: 0px 0px 10px 10px;
-  box-shadow: 0px 0px 10px black;
 
 }
 
@@ -250,6 +246,11 @@ li {
 
 /*MEUS VALORES*/
 
+.valores {
+  background-color: #0C0C0C;
+  margin-top: 160px;  
+}
+
 .valores .animeValores {
   display: flex;
   flex-direction: row;
@@ -318,7 +319,7 @@ li {
 
 .personagem {
   background-color: #0C0C0C;
-  margin-top: 100px;
+  margin-top: 160px;
 }
 
 .personagem .animePersonagem {
@@ -390,7 +391,7 @@ li {
   display: flex;
   height: 450px;
   background-color: #0C0C0C;
-  margin-top: 120px;
+  margin-top: 160px;
 }
 
 .sobre-mim .box-sobre {
@@ -425,8 +426,8 @@ li {
 }
 
 .sobre-mim .box-sobre img {
-  width: 25vw;
-  height: 50vh;
+  width: 20vw;
+  height: 35vh;
   margin-left: 250px;
   border-radius: 100%;
   align-self: center;

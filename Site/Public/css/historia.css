@@ -3,12 +3,8 @@
   height: 120vh;
   /* As unidades vh e vw significam viewport, sendo a primeira para altura e a segunda para largura. Isso significa que elas utilizam o tamanho total da viewport, tamanho total do layout do pc*/
   margin-top: 10vh;
-  background-image: url(../assets/imgs/banner-arcos-personagens.jpg);
+  background-image: url(../assets/imgs/banner-historia.png);
   background-size: cover;
-  background-position: center;
-  border-radius: 0px 0px 10px 10px;
-  box-shadow: 0px 0px 10px black;
-
 }
 
 

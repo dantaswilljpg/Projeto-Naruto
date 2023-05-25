@@ -10,7 +10,6 @@
     <link rel=" stylesheet" href="css/sidebar.css">
     <link rel=" stylesheet" href="css/quiz.css">
     <link rel="stylesheet" href="../css/scrollbar.css">
-    <link rel="stylesheet" href="css/index.css">
     <!-- Sweet alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
@@ -29,16 +28,20 @@
                     <span id="b_usuario"></span>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="dashboard/dash.html"><img class="icon-nav" src="assets/imgs/sharingan.png"
-                                alt="icone sharigan"><span>Gráfico</span></a></li>
-                    <li><a href="quiz.personalidade.html"><img class="icon-nav" src="assets/imgs/icone-anime.png"" alt="
-                                icone anime">
+                    <li><a href="dashboard/dashboard-média-quiz.html"><img class="icone-nav"
+                                src="assets/imgs/sharingan.png" alt="icone sharigan"><span>Média do quiz</span></a></li>
+
+                    <li><a href="dashboard/dashabord-personagens-favoritos.html"><img class="icone-nav"
+                                src="assets/imgs/sasuke-uchiha.png" alt="icone sharigan"><span>Personagem </span></a>
+                    </li>
+                    <li><a href="personalidade.html"><img class="icone-nav"
+                                src="assets/imgs/icone-anime.png"" alt=" icone anime">
                             <span>Personalidade</span></a>
                     </li>
-                    <li class="pag-atual"><a href="pontuacao.html"><img class="icon-nav"
-                                src="assets/imgs/naruto-sign.png" alt="icone bandana"><span>Pontuações</span></a>
+                    <li><a href="pontuacao.html"><img class="icone-nav" src="assets/imgs/naruto-sign.png"
+                                alt="icone bandana"><span>Pontuações</span></a>
                     </li>
-                    <li class="pag-atual"><a href="quiz.html"><img class="icon-nav" src="assets/imgs/logo naruto.png"
+                    <li class="pag-atual"><a href="quiz.html"><img class="icone-nav" src="assets/imgs/logo naruto.png"
                                 alt="icone hinata"><span>Quiz</span></a>
                     </li>
                 </ul>
@@ -258,8 +261,8 @@
         proxima = anterior
 
         if (anterior == 6) {
-            question8.style.display = "none";
-            question7.style.display = "flex";
+            questao8.style.display = "none";
+            questao7.style.display = "flex";
             document.getElementById('anterior').style.display = 'block';
             document.getElementById('finalizar').style.display = 'none';
         } else if (anterior == 5) {
