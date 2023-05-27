@@ -15,8 +15,13 @@ footer span {
     text-align: center;
 }
 
-.footer-inicio {
-    width: 96%;
+/* FIM FOOTER*/
+
+
+/* COMEÇO FOOTER */
+.index-footer {
+    margin-top: 100px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background: linear-gradient(to bottom, #f57344, #FF4500);
@@ -24,7 +29,7 @@ footer span {
     /* color: white; */
 }
 
-.footer-inicio span {
+.index-footer span {
     font-size: 0.75rem;
     font-weight: 300;
     color: #fff;

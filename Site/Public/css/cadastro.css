@@ -16,11 +16,11 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.4) url(../assets/imgs/walpapper-quiz1.jpg);
+  background: rgba(0, 0, 0, 0.2) url(../assets/imgs/banner-dash.jpg);
   background-blend-mode: darken;
 background-size: cover;
   background-repeat: no-repeat;
-  height: 112vh
+  height: 100vh;
 }
 
 
@@ -29,7 +29,7 @@ background-size: cover;
 /*FORM*/
 .formulario {
   display: flex;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .formulario h1 {
@@ -43,7 +43,6 @@ background-size: cover;
 }
 
 .formulario .container {
-  gap: 5%;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -71,13 +70,13 @@ background-size: cover;
 
 .form input {
   width: 35vw;
-  height: 7vh;
+  height: 6vh;
   font-size: 1rem;
   border: 2px solid #FF4500;
   border-radius: 10px;
   margin-right: 300px;
   text-align: center;
-  margin-top: 18px;
+  margin-top: 23px;
   color: #ff4500;
 }
 
@@ -85,14 +84,15 @@ background-size: cover;
 
 
 .form span {
-  margin-right: 750px;
-  font-size: 26.8px;
+  margin-right: 700px;
+  font-size:1.55rem;
+  text-shadow:
+  -1px -1px 0px #000,
+  -1px 1px 0px #000,
+  1px -1px 0px #000,
+  1px 0px 0px #000;
 }
 
-select .favorito {
-  width: 40px;
-  height: 80px;
-}
 
 .personagem {
   display: flex;
@@ -102,8 +102,14 @@ select .favorito {
   width: 50%;
   margin-left: 500px;
  
-
 }
+
+
+
+.personagem h1 {
+  margin-top: -1px;
+}
+
 
 .personagem #img_personagem {
   background-size: cover;
@@ -111,9 +117,27 @@ select .favorito {
   height: 45vh;
   border: 4px solid #FF4500;
   border-radius: 15px;
-  margin-top: -500px;
+  margin-top: -390px;
 
 }
+
+
+
+.personagem #personagem_naruto {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  border: 2px solid #ff450099;
+  border-radius: 50px;
+  font-weight: 50;
+  color: #fff;
+  background-color: #ff450099;
+  font-size: 1.7rem;
+}
+
+
+
+
 
 .naruto {
   background-image: url(../assets/imgs/gif-cadastro-naruto.gif);
@@ -158,22 +182,6 @@ select .favorito {
 
 
 
-.personagem #personagem_naruto {
-  width: 100%;
-  height: 20%;
-  border: 5px solid #ff4500;
-  border-radius: 50px;
-  font-weight: 50;
-  font-size: 50px;
-  color: #00f;
-  background-color: transparent;
-}
-
-
-
-.personagem h1 {
-  margin-top: -1px;
-}
 
 .formulario button {
   width: 28vw;

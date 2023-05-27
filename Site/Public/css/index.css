@@ -19,10 +19,9 @@ body {
 
 /*BANNER*/
 .banner {
-  height: 120vh;
+  height: 100vh;
   /* As unidades vh e vw significam viewport, sendo a primeira para altura e a segunda para largura. Isso significa que elas utilizam o tamanho total da viewport, tamanho total do layout do pc*/
-  margin-top: 10vh;
-  background-image: url(../assets/imgs/banner-land-pagee.jpg);
+  background-image: url(../assets/imgs/banner-historia.png);
   background-size: cover;
 
 }
@@ -32,10 +31,6 @@ body {
 
 /* CONTEXTO ANIME */
 
-
-.anime .sinopse .span2 {
-  margin-top: 10px;
-}
 
 .anime .card-context {
   display: flex;
@@ -48,8 +43,8 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 3.5rem;
-  justify-content: center;
   text-align: center;
+  align-items: center;
   margin-top: 60px;
 }
 
@@ -72,11 +67,12 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 220px;
+  width: 15vw;
   height: 40vh;
   background-color: #FF4500;
   border-radius: 20px;
-  margin-left: 85px;
+  margin-left: 80px;
+  margin-top: 70px;
   border: 5px solid #0000FF;
 }
 
@@ -209,21 +205,21 @@ li {
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-shadow:
     -1px -1px 0px #000,
     -1px 1px 0px #000,
     1px -1px 0px #000,
     1px 0px 0px #000;
-  font-weight: 400;
+  font-weight: 600;
   text-align: left;
   letter-spacing: 0.2px;
 }
 
 .informacoes button {
   width: 15vw;
-  height: 10vh;
+  height: 75vh;
   align-self: center;
   justify-self: center;
   border-radius: 20px;
@@ -231,13 +227,13 @@ li {
   margin-top: 20px;
   color: #fff;
   background-color: #FF4500;
-  font-size: 1rem;
-  border-bottom: 10px solid #0000FF;
+  font-size: 1.5rem;
+  border-bottom: 4px solid #0000FF;
 }
 
 
 .informacoes button:hover {
-  background-color: #FF4500;
+  background-color: #0000FF;
 }
 
 
@@ -283,7 +279,7 @@ li {
   justify-content: center;
   width: 18vw;
   border-radius: 15%;
-  border: 10px solid #ff4500;
+  border: 5px solid #ff4500;
 }
 
 .animeValor h3 {
@@ -304,6 +300,7 @@ li {
 .animeValor p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #fff;
+  font-weight: 600;
   text-shadow:
     -1px -1px 0px #000,
     -1px 1px 0px #000,
@@ -319,7 +316,7 @@ li {
 
 .personagem {
   background-color: #0C0C0C;
-  margin-top: 160px;
+  margin-top: 100px;
 }
 
 .personagem .animePersonagem {
@@ -330,7 +327,7 @@ li {
 
 .personagem h2 {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2.55rem;
   color: #fff;
   margin-left: 100px;
   margin-bottom: 70px;
@@ -355,7 +352,7 @@ li {
   width: 18vw;
   border-radius: 15%;
   width: 20vw;
-  border: 10px solid #ff4500;
+  border:5px solid #ff4500;
 }
 
 .animePerso h3 {
@@ -365,13 +362,6 @@ li {
 }
 
 
-.animePerso .traco {
-  width: 50%;
-  height: 5px;
-  border-radius: 10px;
-  margin-block: 10px;
-  background-color: #0000FF;
-}
 
 .animePerso p {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -383,8 +373,16 @@ li {
     1px 0px 0px #000;
   text-align: center;
   font-size: 1rem;
+  font-weight: 600;
 }
 
+.animePerso .traco {
+  width: 50%;
+  height: 5px;
+  border-radius: 10px;
+  margin-block: 10px;
+  background-color: #0000FF;
+}
 
 /* SOBRE MIM*/
 .sobre-mim {
@@ -426,8 +424,8 @@ li {
 }
 
 .sobre-mim .box-sobre img {
-  width: 20vw;
-  height: 35vh;
+  width: 27vw;
+  height: 50vh;
   margin-left: 250px;
   border-radius: 100%;
   align-self: center;
@@ -449,16 +447,16 @@ li {
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 0.7rem;
+  font-size: 1.8rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-shadow:
     -1px -1px 0px #000,
     -1px 1px 0px #000,
     1px -1px 0px #000,
     1px 0px 0px #000;
-  font-weight: 400;
+  font-weight: 800;
   text-align: left;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.8px;
 }
 
 .bio button {
@@ -498,6 +496,7 @@ li {
   width: 470px;
   justify-content: start;
   margin-left: 100px;
+  
 }
 
 .bio h2 {
@@ -524,7 +523,7 @@ li {
   filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.7));
   border-style: 30px;
   border-radius: 30px;
-  border: 7px solid #FF4500;
+
 
 }
 
@@ -548,14 +547,14 @@ li {
     -1px 1px 0px #000,
     1px -1px 0px #000,
     1px 0px 0px #000;
-  font-weight: 400;
+  font-weight: 700;
   text-align: left;
   letter-spacing: 0.2px;
 }
 
 .bio button {
   width: 12vw;
-  height: 10vh;
+  height: 7vh;
   align-self: center;
   justify-self: center;
   border-radius: 20px;
@@ -563,6 +562,11 @@ li {
   margin-top: 20px;
   color: #fff;
   background-color: #FF4500;
-  font-size: 1rem;
-  border-bottom: 10px solid #0000FF;
+  font-size: 1.5rem;
+  border-bottom: 5px solid #0000FF;
+}
+
+
+.bio button:hover{
+  background-color: #0000FF;
 }

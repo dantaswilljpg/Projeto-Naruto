@@ -4,55 +4,123 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1.5rem;
 }
 
 
 
- #banner-media {
+#banner-personagens {
     display: flex;
     flex-direction: column;
     width: 85%;
     height: fit-content;
     justify-content: flex-start;
     align-items: start;
-    background: url(../assets/imgs/walpapper-dash1.png);
+    background: url(../assets/imgs/walpapper-dsh.png);
     background-size: cover;
-    gap: 150vh;
     margin-left: 15%;
+    height: 100vh;
 }
 
 
-.card  h2 {
-    color: #FFF;
-    font-size: 1.8rem;
-    font-weight: 700;
-    padding: 1vh 0
+.home {
+    display: flex;
+    width: 85vw;
 }
 
 .container {
-    list-style-type: none;
-    margin: 10px 0;
-    gap: 8vw;
-    padding: 0;
-    
-    /* 
-      deixa todos os itens da lista
-      na horizontal e todos com a
-      mesma largura
-    */
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
 }
 
-.slide{
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 0.8rem;
+    color: #ffffff;
+    background-color:#151515;
+    border: 5px #ff4500 solid;
+    width: 382px;
+    height: 160px;
+    text-shadow:
+        -1px -1px 0px #000000,
+        -1px 1px 0px #000000,
+        1px -1px 0px #000000,
+        1px 0px 0px #000000;
+}
+
+.card span{
+font-size: 1.1rem;
+font-weight: 1200;
+text-shadow:
+-1px -1px 0px #000000,
+-1px 1px 0px #000000,
+1px -1px 0px #000000,
+1px 0px 0px #000000;
+margin-left: 70px;
+}
+
+
+#media{
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-right: 100px;
+    text-shadow:
+    -1px -1px 0px #000000,
+    -1px 1px 0px #000000,
+    1px -1px 0px #000000,
+    1px 0px 0px #000000;
+}
+
+
+
+#questao{
+    font-size: 1.4rem;
+    margin-right: 30px;
+    font-weight: 800;
+    text-shadow:
+    -1px -1px 0px #000000,
+    -1px 1px 0px #000000,
+    1px -1px 0px #000000,
+    1px 0px 0px #000000;
+}
+
+.card #img_fav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #000000 solid;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border: 5px #ff4500 solid;
+}
+
+.card img {
+    border-radius: 100%;
+    width: 220px;
+    height: 140px;
+    border: 5px #ff4500 solid;
+}
+
+
+.grafico {
+    display: flex;
+    justify-content: center;
+    width: 45vw;
+    height: 22.5vw;
+    margin-left: 88%;
     background-color: #151515;
-    border: 4px solid #00f;
     border-radius: 6px;
-}
-
-canvas {
-    height: auto;
-    width: 35vw;
-    padding: 10px 1vw 10px 3vw;
+    border: 2px #ff4500 solid;
 }

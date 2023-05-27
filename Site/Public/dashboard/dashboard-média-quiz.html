@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="../css/scrolldash.css">
     <link rel="stylesheet" href="../css/dashboard-media.css">
     <link rel="stylesheet" href="../css/sidebar.css">
-    <!-- scripts do Chart.js - 2022-1 -->
-    <!-- scripts do Chart.js - 2022-1 -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <!-- scripts do Chart.js - 2022-1 -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-    <title>Dashboard Quiz</title>
+    <title>Dashboard Média</title>
 </head>
 
-<body onload="obterDadosGrafico()">
+<body onload="obterDadosGrafico">
     <div id="dashboard-container">
         <nav class=navbar" id="nav">
             <img src="../assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
@@ -28,53 +28,44 @@
             <ul class="nav-list">
                 <li><a href="../personalidade.html"><img class="icone-nav" src="../assets/imgs/itachi-uchiha.png"
                             alt="icone anime">
-                        <span>Peronalidade</span></a>
+                        <span>Personalidade</span></a>
                 </li>
-                <li><a href="../quiz.html"><img class="icone-nav" src="../assets/imgs/icone-anime.png" alt="icone anime">
+                <li class="pag-atual"><a href="dashboard-média-quiz.html"><img class="icone-nav" src="../assets/imgs/logo naruto.png"
+                            alt="icone anime">
+                        <span> Média Quiz</span></a>
+                </li>
+                <li><a href="../quiz.html"><img class="icone-nav" src="../assets/imgs/icone-anime.png"
+                            alt="icone anime">
                         <span>Quiz</span></a>
                 </li>
-
-                <li><a href="dashabord-personagens-favoritos.html"><img class="icone-nav"
+               <a href="dashabord-personagens-favoritos.html"><img class="icone-nav"
                             src="../assets/imgs/sasuke-uchiha.png" alt="icone anime">
-                        <span>Personagens</span></a>
+                        <span>Personagens favoritos</span></a>
                 </li>
-                <li class="pag-atual"><a href="dashboard-média-quiz.html"><img class="icone-nav"
-                            src="../assets/imgs/logo naruto.png" alt="icone anime">
-                        <span>Média do quiz</span></a>
-                </li>
-
                 <a href="../pontuacao.html"><img class="icone-nav" src="../assets/imgs/naruto-sign.png"
                         alt="icone banadana"><span>Pontuações</span></a>
                 </li>
             </ul>
             <a href="../login.html"><button>SAIR</button></a>
         </nav>
-        <div id="banner-media">
-            <div class="card">
-                <h2>Média do quiz</h2>
-                <ul class="container">
-                    <li class="slide">
-                        <canvas id="myChart2"></canvas>
-                    </li>
-                    <li class="slide">
-                        <img src="../assets/imgs/gif-media1.gif" width="550px" height="305px">
-                    </li>
-                </ul>
-                <div class="card">
-                    <ul class="container">
-                        <li class="slide">
-                            <img src="../assets/imgs/gif2-quiz.gif" width="550px" height="305px">
-                        </li>
-                        <li class="slide">
-                            <img src="../assets/imgs/gif3-quiz.gif" width="550px" height="305px">
-                        </li>
-
-                    </ul>
+        <div id="banner-personagens">
+            <div class="home">
+                <div class="container">
+                    <div class="card">
+                        <span>Média do quiz:</span>
+                        <div id="media">51.92%</div>
+                    </div>
+                    <div class="card">
+                        <span>Questão mais acertada:</span>
+                        <div id="questao">questão 2</div>
+                    </div>
+                    <div class="grafico" id="grafico_personagem"><canvas id="myChart"></canvas></div>
                 </div>
             </div>
-</body>
-
-</html>
+        </body>
+        
+        </html>
+        
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
@@ -140,19 +131,16 @@
         let dados = {
             labels: labels,
             datasets: [{
+                // label: 'Média do Quiz',
+                data: [],
+            },
+            {
+                // label: 'Média',
                 label: 'Média do Quiz',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
-                backgroundColor: ['#FFFF00'],
-                tension: 0.1
-            },
-            {
-                label: 'Média',
-                data: [],
-                fill: false,
-                borderColor: 'rgb(199, 52, 52)',
-                backgroundColor: ['#FF1493'],
+                borderColor: 'rgb(105, 2022, 392)',
+                backgroundColor: ['#FF1493', '#FFFF00', '#FF4500', '#00FF00', '#4B0082', '#0000FF', '#FFF', '#ADD8e6', '#FF007F', '#008000'],
                 tension: 0.1
             }]
         };
@@ -164,9 +152,9 @@
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.media);
-            dados.datasets[0].data.push(registro.media);
-            dados.datasets[1].data.push(registro.media);
+            labels.push(registro.nome);
+            dados.datasets[0].data.push(registro.pontuacao);
+            dados.datasets[1].data.push(registro.percentualPontuacao);
         }
 
         console.log('----------------------------------------------')
@@ -185,7 +173,7 @@
 
         // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
-            document.getElementById(`myChart2`),
+            document.getElementById(`myChart`),
             config
         );
 

@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
 
 
@@ -9,13 +8,13 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-   background: url(../assets/imgs/walpapper-quiz1.jpg);
+   background: url(../assets/imgs/banner-arcos-personagens.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 
-#dashboard-container {
+#container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,6 +22,19 @@
     width: 100%;
     height: 100vh;
 }
+
+
+
+.list-naruto .titulo{
+    color: #fff;
+    font-size: 3rem;
+    text-shadow:
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
+    text-align: center;
+    }
 
 
 .quiz {
@@ -52,15 +64,11 @@
     background-size: cover;
     border-radius: 15px;
     width: 58vw;
+    height: 66vh;
     border: 8px solid #00f;
     padding: 1vh 2vw;
 }
 
-
-.list-naruto .titulo{
-color: #fff;
-font-size: 1.6rem;
-}
 
 
 .quiz .questoes {
@@ -77,7 +85,7 @@ font-size: 1.6rem;
       1px -1px 0px #000,
       1px 0px 0px #000;
     font-weight: 400;
-    font-size: 1.77rem;
+    font-size: 2rem;
     color:#fff;
 }
 
@@ -98,11 +106,17 @@ font-size: 1.6rem;
       1px -1px 0px #000,
       1px 0px 0px #000;
     font-weight: 400;
-font-size: 1.5rem;
+font-size: 2rem;
 color: #fff;
 }
 
-.opcao input{
+.opcao img{
+    width: 20vw;
+    height: 25vh;
+    border: 5px solid #00f;
+}
+
+    .opcao input{
     width: 3vw;
     height: 3vh;
     border: 6px solid #000;

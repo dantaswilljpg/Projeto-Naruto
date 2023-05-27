@@ -17,10 +17,13 @@
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
 
+   
+
+
     <title>Dashboard Personagem</title>
 </head>
 
-<body>
+<body onload="obterDadosGrafico">
     <div id="dashboard-container">
         <nav class=navbar" id="nav">
             <img src="../assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
@@ -52,32 +55,23 @@
             <a href="../login.html"><button>SAIR</button></a>
         </nav>
         <div id="banner-personagens">
-            <div class="card">
-                <h2>Personagens favoritos</h2>
-                <ul class="container-list">
-                    <li class="slide">
-                        <canvas id="myChart"></canvas>
-                    </li>
-                    <li class="slide">
-                        <img src="../assets/imgs/gif-dashboard.gif" width="550px" height="315px">
-
-                    </li>
-                </ul>
-                <div class="card">
-                    <ul class="container-list">
-                        <li class="slide">
-                            <img src="../assets/imgs/gif-dashboard2.gif" width="540px" height="315px">
-                        </li>
-                        <li class="slide">
-                            <img src="../assets/imgs/gif-dashboard-3.gif" width="550px" height="315px">
-                        </li>
-
-                    </ul>
+            <div class="home">
+                <div class="container">
+                    <div class="card">
+                        <span>Primeiro Personagem mais escolhido:Naruto Uzumaki <br><br> Votos:25</span>
+                        <div id="img_fav"><img src="../assets/imgs/card-falas-naruto.jpg"></div>
+                    </div>
+                    <div class="card">
+                        <span>Segundo Personagem mais escolhido:Sasuke Uchiha<br><br>Votos:20</span>
+                        <div id="img_fav"><img src="../assets/imgs/card-falas-sasuke.jpg"></div>
+                    </div>
+                    <div class="grafico" id="grafico_personagem"><canvas id="myChart"></canvas></div>
                 </div>
             </div>
-</body>
-
-</html>
+        </body>
+        
+        </html>
+        
 
 <script>
 
@@ -228,4 +222,12 @@
         }
 
     }
+
+    
+    
+
+</script>
+
+<script>
+    
 </script>

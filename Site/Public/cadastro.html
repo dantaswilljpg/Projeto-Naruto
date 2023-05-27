@@ -8,12 +8,10 @@
     <title>Cadastro</title>
     <link rel="shortcut icon" href="assets/imgs/logo naruto.png" type="image/x-icon">
     <link rel="stylesheet" href="css/cadastro.css">
-    <link rel="stylesheet" href="css/scrollbar.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="../css/scrollbar.css">
     <!-- Sweet alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Sweet alert -->
@@ -40,17 +38,17 @@
             <div class="container">
                 <div class="form">
                     <h1>BEM VINDO!</h1>
-                    <span>Usuario:</span>
+                    <span>Usuario</span>
                     <input id="nome_input" type="text" placeholder="Insira seu nome"">
-                    <span>Email:</span>
-                    <input id="email_input" type="text" placeholder="Insira seu E-mail"">
-                    <span>Senha:</span>
-                    <input id="senha_input" type="password" placeholder="insira sua senha">
+                    <span>Email</span>
+                    <input id="email_input" type="text" placeholder="teste@gmail.com.br">
+                    <span>Senha</span>
+                    <input id="senha_input" type="password" placeholder="********">
                 </div>
                 <div class="personagem">
                     <div class="naruto" id="img_personagem"></div>
                     <h1>Personagem Preferido</h1>
-                    <select class="personagem_naruto" id="personagem_naruto" onchange="fotoPersonagem()">
+                    <select class="personagem_naruto" id="personagem_naruto" onchange="Personagem()">
                         <option value="1">Uzumaki Naruto</option>
                         <option value="2">Uchiha Sasuke</option>
                         <option value="3">Hatake Kakashi</option>
@@ -77,7 +75,7 @@
 
 </html>
 <script>
-    function fotoPersonagem() {
+    function Personagem() {
         img_personagem.className = ""
         var num_personagem = personagem_naruto.value;
 
@@ -124,13 +122,13 @@
             finalizarAguardar();
             return false;
         }
-        else if (nomeVar.length <= 8) {
-            swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 8 caracteres 😠", "warning")
+        else if (nomeVar.length < 3) {
+            swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres 😠", "warning")
         }
-        else if (emailVar.indexOf("gmail") == -1 || emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.length < 12) {
+        else if (emailVar.indexOf("gmail") == -1 && emailVar.indexOf("@") == -1 && emailVar.indexOf(".com") == -1 && emailVar.length < 10) {
             swal("Ops", "O e-mail cadastrado é inválido. Por favor, insira um e-mail válido 😠", "warning")
         }
-        else if (senhaVar.length <= 10) {
+        else if (senhaVar.length < 4) {
             swal("Ops", "A senha inserida é muito curta. Por favor,insira uma senha com pelo menos 8 caracteres 😠", "warning")
         }
         else {

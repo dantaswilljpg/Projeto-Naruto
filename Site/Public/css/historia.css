@@ -1,9 +1,9 @@
 .banner-historia {
   /* width: 100vw;*/
-  height: 120vh;
+  height: 100vh;
   /* As unidades vh e vw significam viewport, sendo a primeira para altura e a segunda para largura. Isso significa que elas utilizam o tamanho total da viewport, tamanho total do layout do pc*/
   margin-top: 10vh;
-  background-image: url(../assets/imgs/banner-historia.png);
+  background-image: url(../assets/imgs/walpapper-quizpersonalidade.jpg);
   background-size: cover;
 }
 

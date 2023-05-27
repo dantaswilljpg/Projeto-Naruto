@@ -26,10 +26,10 @@ function buscarMedidasEmTempoReal(idAquario) {
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `
-        SELECT round(AVG(pontuacao.percentualPontuacao) , 2) AS 'Média do quiz' FROM Pontuacao;`;
+       `;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = ` SELECT round(AVG(pontuacao.percentualPontuacao) , 2) AS 'Média do quiz' FROM Pontuacao;`;
+        instrucaoSql = ``;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -46,10 +46,10 @@ function buscarquiz(idAquario) {
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `
-        SELECT round(AVG(pontuacao.percentualPontuacao) , 2) AS media FROM Pontuacao;`;
+        SELECT nome, pontuacao,  percentualPontuacao FROM Pontuacao JOIN usuario ON fkUsuario = idUsuario ORDER BY  pontuacao  DESC;`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = ` SELECT round(AVG(pontuacao.percentualPontuacao) , 2) AS media FROM Pontuacao;`;
+        instrucaoSql = `SELECT nome, pontuacao,  percentualPontuacao FROM Pontuacao JOIN usuario ON fkUsuario = idUsuario ORDER BY  pontuacao  DESC;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
