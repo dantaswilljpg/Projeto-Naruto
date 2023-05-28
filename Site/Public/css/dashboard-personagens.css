@@ -52,7 +52,7 @@
     margin-right: 400px;
     color: #ffffff;
     background-color: #151515;
-    border: 3px solid #00f;
+    box-shadow: 7px 7px 7px #000000;
     width: 612px;
     height: 180px;
     text-shadow:
@@ -75,7 +75,6 @@
     margin-left: 800px;
     color: #ffffff;
     background-color: #151515;
-    border: 2px #ff4500 solid;
     width: 612px;
     height: 180px;
     text-shadow:
@@ -109,7 +108,7 @@
     width: 100px;
     height: 100px;
     margin-right: 20px;
-    border: 2px #ff4500 solid;
+    box-shadow: 7px 7px 7px #000000;
 }
 
 .card img {
@@ -128,6 +127,6 @@
     margin-left: 10%;
     background-color: #151515;
     margin-right: 400px;
-    border-radius: 6px;
-    border: 3px solid #00f;
+    border-radius: 20px;
+    box-shadow: 7px 7px 7px #000000;
 }

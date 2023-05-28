@@ -41,7 +41,7 @@ body {
 .card-context h2 {
   display: flex;
   flex-direction: column;
-  font-size: 3.5rem;
+  font-size: 3.9rem;
   text-align: center;
   align-items: center;
   margin-top: 60px;
@@ -72,6 +72,7 @@ body {
   border-radius: 20px;
   margin-left: 80px;
   margin-top: 70px;
+  border: 2px solid #0000FF;
   box-shadow: 8px 8px 8px #000000;
 }
 
@@ -146,7 +147,7 @@ li {
   display: flex;
   height: 450px;
   background-color: #0C0C0C;
-  margin-top: 100px;
+  margin-top: 290px;
 }
 
 .sobre-naruto .info-naruto {
@@ -181,8 +182,8 @@ li {
 }
 
 .sobre-naruto .info-naruto img {
-  width: 32vw;
-  height: 50vh;
+  width: 42vw;
+  height: 55vh;
   margin-left: 250px;
   align-self: center;
   filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.2));
@@ -243,7 +244,7 @@ li {
 
 .valores {
   background-color: #0C0C0C;
-  margin-top: 160px;
+  margin-top: 300px;
 }
 
 .valores .animeValores {
@@ -315,7 +316,7 @@ li {
 
 .personagem {
   background-color: #0C0C0C;
-  margin-top: 100px;
+  margin-top: 290px;
 }
 
 .personagem .animePersonagem {
@@ -326,7 +327,7 @@ li {
 
 .personagem h2 {
   text-align: center;
-  font-size: 2.55rem;
+  font-size: 3.4rem;
   color: #fff;
   margin-left: 100px;
   margin-bottom: 70px;
@@ -383,12 +384,14 @@ li {
   background-color: #0000FF;
 }
 
+
+
 /* SOBRE MIM*/
 .sobre-mim {
   display: flex;
   height: 450px;
   background-color: #0C0C0C;
-  margin-top: 160px;
+  margin-top: 290px;
 }
 
 .sobre-mim .box-sobre {
@@ -397,7 +400,7 @@ li {
 
 
 
-.box-sobre .bio {
+.box-sobre .bio-sobre {
   font-size: 8rem;
   display: flex;
   flex-direction: column;
@@ -406,19 +409,9 @@ li {
   margin-left: 100px;
 }
 
-.bio h2 {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 3rem;
-  text-align: justify;
-  font-weight: 400;
-  text-align: center;
 
-}
 
-.bio .legenda {
+.bio-sobre .legenda {
   text-align: justify;
 }
 
@@ -441,12 +434,12 @@ li {
 
 }
 
-.bio span {
+.bio-sobre span {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 1.8rem;
+  font-size: 0.80rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-shadow:
     -1px -1px 0px #000,
@@ -458,7 +451,7 @@ li {
   letter-spacing: 0.8px;
 }
 
-.bio button {
+.bio-sobre button {
   width: 15vw;
   height: 10vh;
   align-self: center;
@@ -477,9 +470,9 @@ li {
 /* QUIZ*/
 .sobre-quiz {
   display: flex;
-  height: 450px;
+  height: 540px;
   background-color: #0C0C0C;
-  margin-top: 100px;
+  margin-top: 290px;
 }
 
 .sobre-quiz .box-quiz {
@@ -488,7 +481,7 @@ li {
 
 
 
-.box-quiz .bio {
+.box-quiz .bio-quiz  {
   font-size: 8rem;
   display: flex;
   flex-direction: column;
@@ -498,25 +491,26 @@ li {
 
 }
 
-.bio h2 {
+
+.bio-quiz  h2 {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 2rem;
   text-align: justify;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
 
 }
 
-.bio .legenda {
+.bio-quiz  .legenda {
   text-align: justify;
 }
 
 .sobre-quiz .box-quiz img {
-  width: 32vw;
-  height: 50vh;
+  width: 40vw;
+  height: 55vh;
   margin-left: 250px;
   align-self: center;
   filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.7));
@@ -533,12 +527,12 @@ li {
 
 }
 
-.bio span {
+.bio-quiz  span {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 0.7rem;
+  font-size: 0.92rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-shadow:
     -1px -1px 0px #000,
@@ -550,7 +544,7 @@ li {
   letter-spacing: 0.2px;
 }
 
-.bio button {
+.bio-quiz  button {
   width: 12vw;
   height: 7vh;
   align-self: center;

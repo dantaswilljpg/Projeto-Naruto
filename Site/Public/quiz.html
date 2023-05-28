@@ -45,7 +45,7 @@
                                 alt="icone hinata"><span>Quiz</span></a>
                     </li>
                 </ul>
-                <a href="../login.html"><button>SAIR</button></a>
+                <button onclick="sair()">Sair</button>
             </nav>
             <div class="quiz">
                 <div class="list-naruto">
@@ -232,6 +232,22 @@
 </html>
 
 <script>
+
+function sair() {
+        location.href = "login.html";
+        Swal.fire({
+        imageUrl: 'assets/imgs/gif-sobre.gif',
+        imageWidth: 1000,
+        title: 'Obrigado pela visita😄...!',
+        html: 'Feito por: Will Dantas - 1ADS A',
+        confirmButtonText: 'DATTEBAYO!',
+        background: '#000',
+        color: '#FFF',
+    })
+        console.log('login')
+    }
+
+
     document.getElementById('anterior').style.display = 'none';
     document.getElementById('finalizar').style.display = 'none';
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
@@ -241,12 +257,10 @@
     var proxima = 0;
     var pontos = 0;
     var percentual = 0;
-    var img = './assets/imgs/gif-quiz1.gif';
     var msg = '';
     var radios = [];
     var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo ceifeiro da morte", "Jutsu multiclone das Sombras", "Fugaku Uchiha", "Minato Namikaze"];
-    var idUsuario = sessionStorage.ID_USUARIO;
-    console.log(sessionStorage.ID_USUARIO)
+ 
 
 
     Swal.fire({
