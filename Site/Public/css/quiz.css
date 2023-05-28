@@ -8,9 +8,13 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-   background: url(../assets/imgs/banner-arcos-personagens.jpg);
+   background: url(../assets/imgs/banner-quizes.jpg);
+   background-position: 50%;
+    background-blend-mode: darken;
     background-size: cover;
-    background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin-left: 229px;
 }
 
 
@@ -42,17 +46,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left:15% ;
+    margin-left:370px ;
 }
 
 .quiz .list-naruto {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #00f;
     border-radius: 10px;
     border: #333333;
     border-radius: 10px;
+    background-color: #FF450099;
     height: fit-content;
 }
 
@@ -60,12 +64,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:#FF4500;
+    background: rgba(0, 0, 0, 0.12) url(../assets/imgs/banner-quiz.png);
     background-size: cover;
     border-radius: 15px;
-    width: 58vw;
-    height: 66vh;
-    border: 8px solid #00f;
+    width: 52vw;
+    height: 65vh;
     padding: 1vh 2vw;
 }
 
@@ -89,10 +92,7 @@
     color:#fff;
 }
 
-.questoes img{
-    width: 50vw;
-    height: 10vh;
-}
+
 
 .quiz .opcao {
     margin: 0.5vh 0 5vh 0;

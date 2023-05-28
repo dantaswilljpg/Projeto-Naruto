@@ -28,7 +28,7 @@
                 </div>
                 <ul class="nav-list">
                     <li><a href="dashboard/dashboard-média-quiz.html"><img class="icone-nav"
-                                src="assets/imgs/sharingan.png" alt="icone sharigan"><span>Média do quiz</span></a></li>
+                                src="assets/imgs/sharingan.png" alt="icone sharigan"><span>Média quiz</span></a></li>
 
                     <li><a href="dashboard/dashabord-personagens-favoritos.html"><img class="icone-nav"
                                 src="assets/imgs/sasuke-uchiha.png" alt="icone sharigan"><span>Personagem </span></a>
@@ -253,6 +253,9 @@
         imageWidth: 1000,
         title: 'Bem-vindo ao Quiz de Naruto Clássico, boa sorte😄...!',
         html: 'Feito por: Will Dantas - 1ADS A',
+        confirmButtonText: 'DATTEBAYO!',
+        background: '#000',
+        color: '#FFF',
     })
 
     function AntQuestao() {
@@ -322,6 +325,9 @@
             Swal.fire({
                 imageUrl: 'assets/imgs/gif-naruto.gif',
                 imageWidth: 3000,
+                background: '#000',
+                 color: '#FFF',
+                 confirmButtonText: 'triste!',
                 title: 'Responda todas questões 😠...!',
 
             });
@@ -370,6 +376,9 @@
                         imageUrl: 'assets/imgs/gif-quiz.gif',
                         imageWidth: 3000,
                         title: 'Quiz finalizado',
+                        background: '#000',
+                        confirmButtonText: 'DATTEBAYO!',
+                        color: '#FFF',
                         html: msg,
                     }).then((result) => {
                         setTimeout(function () {

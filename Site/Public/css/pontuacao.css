@@ -9,11 +9,25 @@
     flex-direction: column;
     align-items: center;
    /* width: 100vw;*/
-   background:url(../assets/imgs/banner-historia.png);
-    height:100vh;
+   background: 
+   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+   url(../assets/imgs/banner-pontuacao.jpg);
+   margin-left: 229px;
+     height:100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+
+.table-titulo h1{
+    text-align: center;
+    font-size: 3rem;
+    color: #FFF;
+    font-weight: 400;
+    background-color: #00f;
+}
+
 
 
 .container {
@@ -22,17 +36,18 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-left: 520px;
     height: 90vh;
 }
 
 .table-container {
-    width: 60vw;
-    height: 45vh;
+    width: 40vw;
+    height: 65vh;
     color: #FFF;
     border-radius: 5px;
-    border: 6px solid #ff4500;
+    border: 6px solid #00f;
     margin-left: 150px;
-    box-shadow: 3px 3px 5px #00f;
+    box-shadow: 5px 5px 5px #00f;
     overflow: hidden scroll;
 }
 
@@ -41,14 +56,8 @@
 }
 
 .table-container::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #ff4500, #00f);
+    background: linear-gradient(to top, #ff4500,#ff4500);
     border-radius: 5px;
-}
-
-.table-titulo h1{
-    text-align: center;
-    font-size: 3rem;
-    background-color: #ff4500;
 }
 
 table {
@@ -61,31 +70,26 @@ table tbody tr td {
     width: 33%;
     height: 40px;
     padding: 15px;
-    border-bottom: 1px solid #FFF;
-
-
 }
 
 table thead tr td {
     color: #FFF;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.5rem;
-    border-bottom: 1px solid #00f  ;
 }
 
 table th{
     color: #FFF;
-    font-weight: 700;
-    font-size: 2.2rem;
-    border-bottom: 1px solid #00f  ;
+    font-weight: 400;
+    font-size: 2rem; 
 }
 
 
 table td{
     color: #FFF;
-    font-weight: 700;
-    font-size: 1.5rem;
-    border-bottom: 1px solid #00f ;
+    font-weight: 400;
+    font-size: 2rem;
+    border-bottom: 3px solid #FFF;
 }
 
 

@@ -16,7 +16,7 @@
     height: fit-content;
     justify-content: flex-start;
     align-items: start;
-    background: url(../assets/imgs/walpapper-dsh.png);
+    background: url(../assets/imgs/banner-cadastro-login.jpg);
     background-size: cover;
     margin-left: 15%;
     height: 100vh;
@@ -45,10 +45,11 @@
     justify-content: space-between;
     border-radius: 20px;
     padding: 5px;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    margin-top: -150px;
     color: #ffffff;
     background-color:#151515;
-    border: 5px #ff4500 solid;
+    border: 3px #ff4500 solid;
     width: 382px;
     height: 160px;
     text-shadow:
@@ -60,7 +61,7 @@
 
 .card span{
 font-size: 1.1rem;
-font-weight: 1200;
+font-weight: 600;
 text-shadow:
 -1px -1px 0px #000000,
 -1px 1px 0px #000000,
@@ -103,14 +104,14 @@ margin-left: 70px;
     width: 100px;
     height: 100px;
     margin-right: 20px;
-    border: 5px #ff4500 solid;
+    border:2px #ff4500 solid;
 }
 
 .card img {
     border-radius: 100%;
     width: 220px;
     height: 140px;
-    border: 5px #ff4500 solid;
+    border:2px #ff4500 solid;
 }
 
 
