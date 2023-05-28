@@ -16,9 +16,9 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.2) url(../assets/imgs/banner-dash.jpg);
+  background: rgba(0, 0, 0, 0.2) url(../assets/imgs/banner-cadastro.png);
   background-blend-mode: darken;
-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -85,12 +85,12 @@ background-size: cover;
 
 .form span {
   margin-right: 700px;
-  font-size:1.55rem;
+  font-size: 1.55rem;
   text-shadow:
-  -1px -1px 0px #000,
-  -1px 1px 0px #000,
-  1px -1px 0px #000,
-  1px 0px 0px #000;
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
 }
 
 
@@ -101,7 +101,7 @@ background-size: cover;
   align-items: center;
   width: 50%;
   margin-left: 500px;
- 
+
 }
 
 
@@ -118,7 +118,6 @@ background-size: cover;
   border: 4px solid #FF4500;
   border-radius: 15px;
   margin-top: -390px;
-
 }
 
 
@@ -128,7 +127,6 @@ background-size: cover;
   width: 100%;
   height: 50px;
   border: 2px solid #ff450099;
-  border-radius: 50px;
   font-weight: 50;
   color: #fff;
   background-color: #ff450099;

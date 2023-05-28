@@ -16,7 +16,9 @@
     height: fit-content;
     justify-content: flex-start;
     align-items: start;
-    background: url(../assets/imgs/banner-cadastro-login.jpg);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+        url(../assets/imgs/banner-pontuação.png);
     background-size: cover;
     margin-left: 15%;
     height: 100vh;
@@ -46,12 +48,13 @@
     border-radius: 20px;
     padding: 5px;
     font-size: 1rem;
-    margin-top: -150px;
+    margin-top: 100px;
+    margin-left: 590px;
     color: #ffffff;
-    background-color:#151515;
-    border: 3px #ff4500 solid;
-    width: 382px;
-    height: 160px;
+    background-color: #151515;
+    border: 2px #ff4500 solid;
+    width: 612px;
+    height: 180px;
     text-shadow:
         -1px -1px 0px #000000,
         -1px 1px 0px #000000,
@@ -59,41 +62,31 @@
         1px 0px 0px #000000;
 }
 
-.card span{
-font-size: 1.1rem;
-font-weight: 600;
-text-shadow:
--1px -1px 0px #000000,
--1px 1px 0px #000000,
-1px -1px 0px #000000,
-1px 0px 0px #000000;
-margin-left: 70px;
+.card span {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-left: 50px;
+    text-shadow:
+        -1px -1px 0px #000000,
+        -1px 1px 0px #000000,
+        1px -1px 0px #000000,
+        1px 0px 0px #000000;
+    margin-left: 70px;
 }
 
 
-#media{
-    font-size: 1.8rem;
+#media {
+    font-size: 3rem;
     font-weight: 800;
     margin-right: 100px;
     text-shadow:
-    -1px -1px 0px #000000,
-    -1px 1px 0px #000000,
-    1px -1px 0px #000000,
-    1px 0px 0px #000000;
+        -1px -1px 0px #000000,
+        -1px 1px 0px #000000,
+        1px -1px 0px #000000,
+        1px 0px 0px #000000;
 }
 
 
-
-#questao{
-    font-size: 1.4rem;
-    margin-right: 30px;
-    font-weight: 800;
-    text-shadow:
-    -1px -1px 0px #000000,
-    -1px 1px 0px #000000,
-    1px -1px 0px #000000,
-    1px 0px 0px #000000;
-}
 
 .card #img_fav {
     display: flex;
@@ -104,14 +97,14 @@ margin-left: 70px;
     width: 100px;
     height: 100px;
     margin-right: 20px;
-    border:2px #ff4500 solid;
+    border: 2px #ff4500 solid;
 }
 
 .card img {
     border-radius: 100%;
     width: 220px;
     height: 140px;
-    border:2px #ff4500 solid;
+    border: 2px #ff4500 solid;
 }
 
 
@@ -120,7 +113,7 @@ margin-left: 70px;
     justify-content: center;
     width: 45vw;
     height: 22.5vw;
-    margin-left: 88%;
+    margin-left: 48%;
     background-color: #151515;
     border-radius: 6px;
     border: 2px #ff4500 solid;

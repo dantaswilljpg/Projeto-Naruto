@@ -3,29 +3,30 @@
 
 
 
-.banner-ponts{
+.banner-ponts {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
-   /* width: 100vw;*/
-   background: 
-   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-   url(../assets/imgs/banner-pontuacao.jpg);
-   margin-left: 229px;
-     height:100vh;
+    /* width: 100vw;*/
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
+        url(../assets/imgs/banner-pontuacao.jpg);
+    margin-left: 229px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
 
-.table-titulo h1{
+.table-titulo h1 {
     text-align: center;
     font-size: 3rem;
-    color: #FFF;
+    color: #fff;
+    background-color: #ff4500;
     font-weight: 400;
-    background-color: #00f;
+
 }
 
 
@@ -36,18 +37,20 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-left: 520px;
+    margin-left: 500px;
     height: 90vh;
+
 }
 
 .table-container {
-    width: 40vw;
-    height: 65vh;
+    width: 41.8vw;
+    height: 75.5vh;
     color: #FFF;
+    margin-top: 120px;
     border-radius: 5px;
-    border: 6px solid #00f;
-    margin-left: 150px;
-    box-shadow: 5px 5px 5px #00f;
+    border: 6px solid #000000;
+    margin-left: 140px;
+    box-shadow: 4px 4px 0px #000000;
     overflow: hidden scroll;
 }
 
@@ -55,10 +58,23 @@
     width: 7px;
 }
 
+
 .table-container::-webkit-scrollbar-thumb {
-    background: linear-gradient(to top, #ff4500,#ff4500);
-    border-radius: 5px;
+    background: #ff4500;
+    border-radius: 20px;
+    width: 7px;
+
 }
+
+
+.title {
+    background-color: #ff4500;
+    height: 30px;
+    color: #fff;
+    font-size: 26px;
+}
+
+
 
 table {
     width: 100%;
@@ -78,19 +94,16 @@ table thead tr td {
     font-size: 1.5rem;
 }
 
-table th{
+table th {
     color: #FFF;
     font-weight: 400;
-    font-size: 2rem; 
+    font-size: 2rem;
 }
 
 
-table td{
+table td {
     color: #FFF;
     font-weight: 400;
     font-size: 2rem;
     border-bottom: 3px solid #FFF;
 }
-
-
-

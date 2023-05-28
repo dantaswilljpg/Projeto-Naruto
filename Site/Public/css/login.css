@@ -6,7 +6,7 @@
   align-items: center;
   background: rgba(0, 0, 0, 0.2) url(../assets/imgs/banner-cadastro-login.jpg);
   background-blend-mode: darken;
-background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -48,10 +48,10 @@ background-size: cover;
   font-size: 1.55rem;
   color: #fff;
   text-shadow:
-  -1px -1px 0px #000,
-  -1px 1px 0px #000,
-  1px -1px 0px #000,
-  1px 0px 0px #000;
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
   margin-left: 10px;
 }
 
@@ -66,7 +66,7 @@ background-size: cover;
   flex-direction: column;
   border-radius: 10px;
   border: 2px solid #FF4500;
-  margin-top:30px;
+  margin-top: 30px;
   color: #ff4500;
 }
 
@@ -76,8 +76,8 @@ background-size: cover;
   border-radius: 20px;
   font-size: 24px;
   padding: 1px 2px;
- background-color: #FF4500;
- color: #fff;
+  background-color: #FF4500;
+  color: #fff;
   width: 25vw;
   height: 7vh;
   align-self: center;
@@ -93,10 +93,10 @@ background-size: cover;
 .form a {
   color: #FFF;
   text-shadow:
-  -1px -1px 0px #000,
-  -1px 1px 0px #000,
-  1px -1px 0px #000,
-  1px 0px 0px #000;
+    -1px -1px 0px #000,
+    -1px 1px 0px #000,
+    1px -1px 0px #000,
+    1px 0px 0px #000;
   font-size: 1.4rem;
 }
 

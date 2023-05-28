@@ -2,11 +2,11 @@
 
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Sedgwick Ave Display';
-  font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave Display';
+    font-size: 1rem;
 }
 
 
@@ -129,4 +129,3 @@ nav button:hover {
     transform: scale(1.08);
     cursor: pointer;
 }
-

@@ -5,35 +5,37 @@
     font-family: 'Sedgwick Ave Display';
     font-size: 1.5rem;
     text-align: center;
-  }
-  
+}
 
-  
 
-.sessao-inicial{
+
+
+.sessao-inicial {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
-    margin-top: 60px;
+    background: url(../assets/imgs/pos-2.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.card-sessao  img{
+.card-sessao img {
     margin-top: 30px;
     border-radius: 30px;
-    border:10px solid #ff4500;
+    border: 10px solid #ff4500;
     margin-top: 140px
 }
 
 
-.card-sessao  img{
+.card-sessao img {
     margin-top: 30px;
     border-radius: 30px;
-    border:10px solid #ff4500;
+    border: 10px solid #ff4500;
     margin-top: 140px
 }
 
-.button_pos:hover{
+.button_pos:hover {
 
     cursor: pointer;
     background-color: #ff4500;
@@ -41,7 +43,7 @@
 }
 
 
-.button_pos{
+.button_pos {
     background-color: #000ff0;
     border: none;
     margin-top: 10px;
@@ -52,4 +54,3 @@
     color: white;
     border-bottom: 10px solid #ff4500;
 }
-

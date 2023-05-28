@@ -21,9 +21,8 @@ body {
 .banner {
   height: 100vh;
   /* As unidades vh e vw significam viewport, sendo a primeira para altura e a segunda para largura. Isso significa que elas utilizam o tamanho total da viewport, tamanho total do layout do pc*/
-  background-image: url(../assets/imgs/banner-historia.png);
+  background-image: url(../assets/imgs/banner-land-page.png);
   background-size: cover;
-
 }
 
 
@@ -73,7 +72,7 @@ body {
   border-radius: 20px;
   margin-left: 80px;
   margin-top: 70px;
-  border: 5px solid #0000FF;
+  box-shadow: 8px 8px 8px #000000;
 }
 
 
@@ -186,10 +185,10 @@ li {
   height: 50vh;
   margin-left: 250px;
   align-self: center;
-  filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.2));
   border-style: 30px;
   border-radius: 30px;
-  border: 4px solid #ff4500;
+  box-shadow: 8px 8px 8px #000000;
 }
 
 .info-naruto .info-naruto {
@@ -244,7 +243,7 @@ li {
 
 .valores {
   background-color: #0C0C0C;
-  margin-top: 160px;  
+  margin-top: 160px;
 }
 
 .valores .animeValores {
@@ -352,7 +351,7 @@ li {
   width: 18vw;
   border-radius: 15%;
   width: 20vw;
-  border:5px solid #ff4500;
+  border: 5px solid #ff4500;
 }
 
 .animePerso h3 {
@@ -430,7 +429,7 @@ li {
   border-radius: 100%;
   align-self: center;
   filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.7));
-  border: 7px solid #FF4500;
+  box-shadow: 8px 8px 8px #000000;
   z-index: 1;
 }
 
@@ -496,7 +495,7 @@ li {
   width: 470px;
   justify-content: start;
   margin-left: 100px;
-  
+
 }
 
 .bio h2 {
@@ -523,8 +522,7 @@ li {
   filter: drop-shadow(5px 6px 4px rgba(0, 0, 0, 0.7));
   border-style: 30px;
   border-radius: 30px;
-
-
+  box-shadow: 8px 8px 8px #000000;
 }
 
 .box-quiz .box-quiz {
@@ -567,6 +565,6 @@ li {
 }
 
 
-.bio button:hover{
+.bio button:hover {
   background-color: #0000FF;
 }

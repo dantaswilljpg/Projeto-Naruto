@@ -31,10 +31,11 @@
                                 src="assets/imgs/sharingan.png" alt="icone sharigan"><span>Média quiz</span></a></li>
 
                     <li><a href="dashboard/dashabord-personagens-favoritos.html"><img class="icone-nav"
-                                src="assets/imgs/sasuke-uchiha.png" alt="icone sharigan"><span>Personagem </span></a>
+                                src="assets/imgs/sasuke-uchiha.png" alt="icone sharigan"><span>Personagens favoritos
+                            </span></a>
                     </li>
-                    <li><a href="personalidade.html"><img class="icone-nav"
-                                src="assets/imgs/icone-anime.png"" alt=" icone anime">
+                    <li><a href="personalidade.html"><img class="icone-nav" src="assets/imgs/icone-anime.png"" alt="
+                                icone anime">
                             <span>Personalidade</span></a>
                     </li>
                     <li><a href="pontuacao.html"><img class="icone-nav" src="assets/imgs/naruto-sign.png"
@@ -59,7 +60,7 @@
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" nome="opcao1" value="Sasuke Uchiha">
-                                    <span class="text">b)  Sasuke Uchiha</span>
+                                    <span class="text">b) Sasuke Uchiha</span>
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" nome="opcao1" value="Itachi Uchiha">
@@ -240,7 +241,7 @@
     var proxima = 0;
     var pontos = 0;
     var percentual = 0;
-    var img = './assets/imgs/gif-apaixonado.gif';
+    var img = './assets/imgs/gif-quiz1.gif';
     var msg = '';
     var radios = [];
     var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo ceifeiro da morte", "Jutsu multiclone das Sombras", "Fugaku Uchiha", "Minato Namikaze"];
@@ -249,7 +250,7 @@
 
 
     Swal.fire({
-        imageUrl: 'assets/imgs/gif-sobre.gif',
+        imageUrl: 'assets/imgs/gif-quiz1.gif',
         imageWidth: 1000,
         title: 'Bem-vindo ao Quiz de Naruto Clássico, boa sorte😄...!',
         html: 'Feito por: Will Dantas - 1ADS A',
@@ -326,8 +327,8 @@
                 imageUrl: 'assets/imgs/gif-naruto.gif',
                 imageWidth: 3000,
                 background: '#000',
-                 color: '#FFF',
-                 confirmButtonText: 'triste!',
+                color: '#FFF',
+                confirmButtonText: 'DATTEBAYO!',
                 title: 'Responda todas questões 😠...!',
 
             });
@@ -373,7 +374,7 @@
                 if (resposta.ok) {
                     Swal.fire({
 
-                        imageUrl: 'assets/imgs/gif-quiz.gif',
+                        imageUrl: 'assets/imgs/gif-personalidade.gif',
                         imageWidth: 3000,
                         title: 'Quiz finalizado',
                         background: '#000',
