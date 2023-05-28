@@ -1,6 +1,3 @@
--- DROP DATABASE naruto_projeto_individual;
-
-
 CREATE DATABASE naruto_projeto_individual;
 
 
@@ -14,19 +11,6 @@ CREATE TABLE Usuario (
    fkpersonagem INT ,
    FOREIGN KEY (fkpersonagem) REFERENCES Personagem (idPersonagem)
 );
-
-
-INSERT INTO Usuario VALUES
-(NULL,' Fernanda Caramico ','Caramico@gmail.com.br','12345678910',3),
-(NULL,' Eduardo Veri ','Edu@gmail.com.br','12345678910',4),
-(NULL,' Monica Herrero','Monica@gmail.com.br','12345678910',5),
-(NULL,' Caio Lima ','Caiogmail.com.br','12345678910',6),
-(NULL,' João Paula ','JP@gmail.com.br','12345678910',7),
-(NULL,'Erik Roberto','Vivians@gmail.com.br','12345678910',8),
-(NULL,' Vivian Silva ','Vivians@gmail.com.br','12345678910',9),
-(NULL,'teste123','teste@gmail.com.br','12345678',10);
-
-
 
 
 
@@ -69,7 +53,7 @@ SELECT fkUsuario, ROUND(AVG(pontuacao), 2) AS Média, ROUND(SUM(pontuacao), 2) A
 
 
 -- SELECT DE MENOR PERCENTUAL DO QUIZ E MAIOR PERCENTUAL
-SELECT fkUsuario, MIN(percentualPontuacao) AS MenorPercentual, MAX(percentualPontuacao) AS MaiorPercentual FROM Pontuacao GROUP BY fkUsuario;
+SELECT fkUsuario,  MAX(percentualPontuacao) AS MaiorPercentual FROM Pontuacao GROUP BY fkUsuario;
 
 
 
