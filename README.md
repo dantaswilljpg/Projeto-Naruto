@@ -1,13 +1,15 @@
-Site Individual - Naruto  <img src="https://www.pngitem.com/pimgs/m/2-29964_naruto-showing-punch-naruto-full-body-hd-hd.png"
+## Site Individual - Naruto  
+
+<img src="https://i0.wp.com/cdn2.tfx.company/images/clickwallpapers-naruto-wallpaper-in-4k-3840x2160-img5.png?w=880&ssl=1">
 
 
-Este site é sobre o anime de naruto, um anime japonês que integrou grande parte da minha vida, o anime foi um dos pilares para a trajetória dos animes no Brasil.Bom escolhi este tema para aborda sobre mim e apresentar sobre meu anime favorito e para treinar minhas habilidades de programação front-end e tanto back-end.
+## Este site é sobre o anime de naruto, um anime japonês que integrou grande parte da minha vida, o anime foi um dos pilares para a trajetória dos animes no Brasil.Bom escolhi este tema para aborda sobre mim e apresentar sobre meu anime favorito e para treinar minhas habilidades de programação front-end e tanto back-end.
 
-O site contém login/cadastro, dashboard sobre os personagens favoritos do anime e uma tela de quiz interativa para responder umas perguntas sobre o anime.
+## O site contém login/cadastro, dashboard sobre os personagens favoritos do anime e uma tela de quiz interativa para responder umas perguntas sobre o anime.
 
-No site irei abordar principalmente sobre a história do anime, curiosidade, falas marcantes e um quiz para responder as perguntas baseadas no anime
+## No site irei abordar principalmente sobre a história do anime, curiosidade, falas marcantes e um quiz para responder as perguntas baseadas no anime
 
-Site construido para o primeiro semestre de 2023 da faculdade SPTECH
+## Site construido para o primeiro semestre de 2023 da faculdade SPTECH
 
 ### 🛠 Ferramentas Utilizadas:
 <br>
