@@ -80,7 +80,7 @@
 
     function updatePontos() {
         //aguardar();
-        fetch("/usuarios/listarPontuacao").then(function (resposta) {
+        fetch("/usuarios/listarPontos").then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
                     throw "Nenhum resultado encontrado!!";

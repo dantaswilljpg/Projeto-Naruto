@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao2" value="Kakahi Hatake">
-                                    <span class="text">d) Kakahi Hatake</span>
+                                    <span class="text">d) Kakashi Hatake</span>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +244,7 @@ function sair() {
         background: '#000',
         color: '#FFF',
     })
-        console.log('login')
+        console.log('historia')
     }
 
 
@@ -260,7 +260,8 @@ function sair() {
     var msg = '';
     var radios = [];
     var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo ceifeiro da morte", "Jutsu multiclone das Sombras", "Fugaku Uchiha", "Minato Namikaze"];
- 
+    var idUsuario = sessionStorage.ID_USUARIO;
+    console.log(sessionStorage.ID_USUARIO)
 
 
     Swal.fire({
@@ -369,7 +370,7 @@ function sair() {
                             <b>${pontos}</b> pontos, que equivale à<b> ${percentual.toFixed(2)}%</b> do Quiz
                         </span>`;
             }
-            fetch("/usuarios/cadastrarPontuacao", {
+            fetch("/usuarios/Pontuacao", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

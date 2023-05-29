@@ -45,6 +45,10 @@
     gap: 0.5rem;
 }
 
+.div-footer :hover{
+    color: #ff4500;
+}
+
 .subdiv-footer {
     display: flex;
     flex-direction: column;
@@ -67,7 +71,7 @@
 }
 
 .subdiv-footer a:hover {
-    color: #ff4500;
+    color: #00F;
 }
 
 .div-footer:last-child {
@@ -87,9 +91,12 @@
 }
 
 .div-footer img{
-    width: 8vw;
+    width: 5vw;
     height: 10vh;
 }
+
+
+
 
 
 
@@ -156,12 +163,13 @@ footer div span {
 
 .subdiv-footer ul li{
     font-size: 0.8rem;
-    text-decoration: underline;
     margin-bottom: 1px;
+    Text-align: left;
+    text-decoration: none;
 }
 
 .subdiv-footer a:hover {
-    color: #ff4500;
+    color: #00F;
 }
 
 .div-footer:last-child {
@@ -181,7 +189,7 @@ footer .div-footer img:hover {
 }
 
 .div-footer img{
-    width: 8vw;
+    width: 5vw;
     height: 10vh;
     margin-left: 30%;
 }

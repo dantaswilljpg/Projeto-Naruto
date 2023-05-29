@@ -107,6 +107,11 @@
     border: 2px #ff4500 solid;
 }
 
+#numero_de_usuarios{
+font-size:7rem;
+}
+
+
 
 .grafico {
     display: flex;

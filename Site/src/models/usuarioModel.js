@@ -32,7 +32,7 @@ function cadastrar(nome, email, senha, fkpersonagem) {
 }
 
 
-function cadastrarPontuacao(idUsuario, pontos, percentual) {
+function Pontuacao(idUsuario, pontos, percentual) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n cadastrarPontuacao()", idUsuario, pontos, percentual);
 
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
@@ -45,19 +45,44 @@ function cadastrarPontuacao(idUsuario, pontos, percentual) {
     return database.executar(instrucao);
 }
 
-function listarPontuacao() {
+function listarPontos() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listarPontuacao()");
     var instrucao = `
     SELECT nome, pontuacao, percentualPontuacao FROM Pontuacao JOIN usuario ON fkUsuario = idUsuario ORDER BY  percentualPontuacao  DESC;;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
+
+
 }
+
+
+function votos() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao = `
+    SELECT COUNT(Usuario.fkPersonagem) as voto, Personagem.* FROM Usuario JOIN Personagem ON  personagem.idPersonagem = usuario.fkPersonagem GROUP BY usuario.fkPersonagem ORDER BY voto DESC LIMIT 1;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function  quantidade_usuarios() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao = `
+        SELECT COUNT(idusuario) AS qtdUsu FROM usuario;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 
 module.exports = {
     listar,
     entrar,
     cadastrar,
-    cadastrarPontuacao,
-    listarPontuacao
+    Pontuacao,
+     quantidade_usuarios,
+    votos,
+    listarPontos
 };

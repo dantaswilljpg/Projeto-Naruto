@@ -16,16 +16,27 @@ router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);
 })
 
-router.post("/cadastrarPontuacao", function (req, res) {
-    usuarioController.cadastrarPontuacao(req, res);
+router.post("/Pontuacao", function (req, res) {
+    usuarioController.Pontuacao(req, res);
 })
 
-router.get("/listarPontuacao", function (req, res) {
-    usuarioController.listarPontuacao(req, res);
+router.get("/listarPontos", function (req, res) {
+    usuarioController.listarPontos(req, res);
 });
 
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
+
+router.get("/votos", function (req, res) {
+    usuarioController.votos(req, res);
+});
+
+
+router.get("/quantidade_usuarios", function (req, res) {
+    usuarioController.quantidade_usuarios(req, res);
+});
+
+
 
 module.exports = router;

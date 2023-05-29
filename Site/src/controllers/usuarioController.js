@@ -98,7 +98,7 @@ function cadastrar(req, res) {
     }
 }
 
-function cadastrarPontuacao(req, res) {
+function Pontuacao(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var idUsuario = req.body.idUsuarioServer;
     var pontos = req.body.pontosServer;
@@ -112,7 +112,7 @@ function cadastrarPontuacao(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrarPontuacao(idUsuario, pontos, percentual)
+        usuarioModel.Pontuacao(idUsuario, pontos, percentual)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -130,8 +130,8 @@ function cadastrarPontuacao(req, res) {
     }
 }
 
-function listarPontuacao(req, res) {
-    usuarioModel.listarPontuacao()
+function listarPontos(req, res) {
+    usuarioModel.listarPontos()
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
@@ -147,11 +147,49 @@ function listarPontuacao(req, res) {
         );
 }
 
+function votos(req, res) {
+    usuarioModel.votos()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+
+function quantidade_usuarios(req, res) {
+    usuarioModel.quantidade_usuarios()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+
 module.exports = {
     listar,
     entrar,
     cadastrar,
-    cadastrarPontuacao,
-    listarPontuacao,
+    Pontuacao,
+    votos,
+    quantidade_usuarios,
+    listarPontos,
     testar
 }

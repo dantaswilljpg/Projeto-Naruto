@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/imgs/logo naruto.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/scrolldash.css">
     <link rel="stylesheet" href="../css/dashboard-media.css">
     <link rel="stylesheet" href="../css/sidebar.css">
 
@@ -17,7 +16,7 @@
     <title>Dashboard Média</title>
 </head>
 
-<body onload="obterDadosGrafico">
+<body onload="obterDadosGrafico(),contarUsu()">
     <div id="dashboard-container">
         <nav class=navbar" id="nav">
             <img src="../assets/imgs/logo naruto.png" href="index.html" class="logo-naruto">
@@ -52,8 +51,8 @@
             <div class="home">
                 <div class="container">
                     <div class="card">
-                        <span>Média do quiz:</span>
-                        <div id="media">51.92%</div>
+                        <span>Número de usuaríos:</span>
+                        <div id="numero_de_usuarios"></div>
                     </div>
                     <div class="card">
                         <!-- <span>Questão mais acertada:</span>
@@ -68,15 +67,26 @@
 
 
 <script>
+
+
+function contarUsu() {
+        fetch("/usuarios/quantidade_usuarios", {
+            method: "get"
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                resposta.json().then((json) => {
+                    console.log(json)
+                    numero_de_usuarios.innerHTML = `${json[0].qtdUsu}`
+                })
+            }
+        })
+    }
+
+    
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     let proximaAtualizacao;
 
-    window.onload = obterDadosGraficos();
-
-    function obterDadosGraficos() {
-        obterDadosGrafico(1)
-    }
 
 
 
