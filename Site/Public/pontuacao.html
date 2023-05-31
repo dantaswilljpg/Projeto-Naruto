@@ -63,6 +63,7 @@
                             <th width="10%">Jogador</th>
                             <th width="10%">Pontuação</th>
                             <th width="10%">Percentual</th>
+                             <th width="10%">Avaliação</th>
                         </tr>
                     </thead>
                 </table>
@@ -93,11 +94,12 @@
                         var publicacao = resposta[contador];
                         // criando e manipulando elementos do HTML via JavaScript
 
-
+                           console.log(publicacao)
                         // // cria um novo elemento div
                         // e dá à ele conteúdo
                         var tdNome = document.createElement("td");
                         var tdpontuacao = document.createElement("td");
+                        var tdAvaliacao = document.createElement("td");
                         var tdpercentualPontuacao = document.createElement("td");
                         var tableTr = document.createElement("tr");
                         var hr = document.createElement("hr");
@@ -105,17 +107,21 @@
                         tdNome.className = "text"
                         tdpontuacao.className = "text"
                         tdpercentualPontuacao.className = "text"
+                        tdAvaliacao.className = "text"
 
+                       
                         tdNome.innerHTML = `${publicacao.nome}`;
                         tdpontuacao.innerHTML = `${publicacao.pontuacao}pts.`;
                         tdpercentualPontuacao.innerHTML = `${publicacao.percentualPontuacao}%`;
-
+                        tdAvaliacao.innerHTML = `${publicacao.avaliacao}`;
+            
 
                         // (APPENDCHILD) Cria um novo elemento de parágrafo e adiciona-o ao final do documento
 
                         tableTr.appendChild(tdNome);
                         tableTr.appendChild(tdpontuacao);
                         tableTr.appendChild(tdpercentualPontuacao);
+                        tableTr.appendChild(tdAvaliacao);
                         table.appendChild(tableTr);
                     }
 

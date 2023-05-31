@@ -24,7 +24,7 @@
     text-align: center;
     font-size: 3rem;
     color: #fff;
-    background-color: #ff4500;
+    background-color: #ff450099;
     font-weight: 400;
 
 }
@@ -42,15 +42,16 @@
 
 }
 
+
 .table-container {
     width: 41.8vw;
-    height: 75.5vh;
+    height: 60.5vh;
     color: #FFF;
     margin-top: 120px;
     border-radius: 5px;
-    border: 6px solid #000000;
+    border: 3px solid #000000;
     margin-left: 140px;
-    box-shadow: 4px 4px 0px #000000;
+    box-shadow: 4px 4px 0px #00000033;
     overflow: hidden scroll;
 }
 
@@ -60,7 +61,7 @@
 
 
 .table-container::-webkit-scrollbar-thumb {
-    background: #ff4500;
+    background: #ff450099;
     border-radius: 20px;
     width: 7px;
 
@@ -68,7 +69,7 @@
 
 
 .title {
-    background-color: #ff4500;
+    background-color: #ff450099;
     height: 30px;
     color: #fff;
     font-size: 26px;

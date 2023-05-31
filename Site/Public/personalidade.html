@@ -28,11 +28,10 @@
                 </div>
                 <ul class="nav-list">
                     <li><a href="dashboard/dashabord-personagens-favoritos.html"><img class="icone-nav"
-                                src="assets/imgs/naruto-sign.png" alt="icone naruto"><span>Personagens
-                                favoritos</span></a></li>
+                                src="assets/imgs/naruto-sign.png" alt="icone naruto"><span>Personagens favoritos</span></a></li>
 
                     <li><a href="dashboard/dashboard-média-quiz.html"><img class="icone-nav"
-                                src="assets/imgs/icone-anime.png" alt="icone naruto"><span>Média quiz</span></a></li>
+                                src="assets/imgs/icone-anime.png" alt="icone naruto"><span>Média  quiz</span></a></li>
 
                     <li class="pag-atual"><a href="personalidade.html"><img class="icone-nav"
                                 src="assets/imgs/itachi-uchiha.png" alt="icone naruto"><span>Personalidade</span></a>
@@ -245,7 +244,8 @@
     var msg = '';
     var radios = [];
     var respostascorretas = ["Se tornar hokage ", "Habilidade ocular", "Esforçado, melhor da turma", "Kakashi Hatake", "Começa atacando", "Rock Lee", "Jiraya Sama", "Tentaria trazer de volta"];
-
+    var idUsuario = sessionStorage.ID_USUARIO;
+    console.log(sessionStorage.ID_USUARIO)
 
 
     Swal.fire({
@@ -326,9 +326,9 @@
                 imageUrl: 'assets/imgs/gif-naruto.gif',
                 imageWidth: 3000,
                 background: '#000',
-                color: '#FFF',
-                confirmButtonText: 'triste!',
-                confirmButtonText: 'dattebayo!',
+                 color: '#FFF',
+                 confirmButtonText: 'triste!',
+                 confirmButtonText: 'dattebayo!',
                 title: 'Responda todas questões 😠...!',
 
             });
@@ -343,22 +343,22 @@
             percentual = Usuario / respostascorretas.length * 100;
 
             if (Usuario == 0 || Usuario <= 3) {
-                imageUrl: 'assets/imgs/gif-triste.gif',
+                imageUrl: 'assets/imgs/gif-cadastro-sasuke.gif',
                     msg = ` 
-                           Sua personalidade é semelhante com a de sasuke uchiha
+                          Semelhante com a de sasuke uchiha
                            
                         `;
             } else if (Usuario >= 4 || Usuario <= 6) {
-                imageUrl: 'assets/imgs/gif-apaixonado.gif',
+                imageUrl: 'assets/imgs/gif-cadastro-naruto.gif',
                     msg = ` 
-                            Sua personalidade é semelhante  com a de Naruto Uzumaki 
+                           Semelhante  com a de Naruto Uzumaki 
                            
                         `;
             }
             else {
-                imageUrl: 'assets/imgs/gif-apaixonado.gif',
+                imageUrl: 'assets/imgs/gif-cadastro-kakashi.gif',
                     msg = `
-                            Sua personalidade é semelhante com a de Kakashi Hatake
+                           Semelhante com a de Kakashi Hatake
                             
                         `;
             }
@@ -381,12 +381,12 @@
                 if (resposta.ok) {
                     Swal.fire({
 
-                        imageUrl: 'assets/imgs/gif-quiz.gif',
+                        imageUrl: 'assets/imgs/gif-personalidade.gif',
                         imageWidth: 3000,
+                        title: 'Sua personalidade é semelhante:',
                         background: '#000',
+                        confirmButtonText: 'DATTEBAYO!',
                         color: '#FFF',
-                        confirmButtonText: 'dattebayo!',
-                        title: 'Quiz finalizado',
                         html: msg,
                     }).then((result) => {
                         setTimeout(function () {

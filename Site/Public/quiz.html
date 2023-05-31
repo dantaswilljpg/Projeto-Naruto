@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao3" value="Shukaku">
-                                    <span class="text"> b) Shukaku</span>
+                                    <span class="text"> b) Kyubi</span>
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao3" value="matatabi">
@@ -144,7 +144,7 @@
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao5" value="Selo ceifero da vida">
-                                    <span class="text">b) Selo ceifero da vida</span>
+                                    <span class="text">b) Selo Ceifero da vida</span>
                                 </div>
                                 <div class="opcao">
                                     <input type="radio" name="opcao5" value="Selo Ceifeiro do inferno">
@@ -335,6 +335,9 @@ function sair() {
         }
     }
 
+    // QuerySelectorAll - Recebe um argumento de string contendo um seletor CSS
+    //  e retorna um objeto NodeList representando os elementos do documento que correspondem ao seletor
+
     function FinalizarQuiz() {
         radios = document.querySelectorAll("input[type='radio']:checked");
         if (radios.length < respostascorretas.length) {
@@ -397,7 +400,7 @@ function sair() {
                         color: '#FFF',
                         html: msg,
                     }).then((result) => {
-                        setTimeout(function () {
+                        setTimeout (function () {
                             window.location = "pontuacao.html";
                         }, 1000);
                     })

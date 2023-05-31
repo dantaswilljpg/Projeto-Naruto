@@ -63,7 +63,7 @@
 }
 
 .card span {
-    font-size: 3rem;
+    font-size: 1.68rem;
     font-weight: 700;
     margin-left: 50px;
     text-shadow:
@@ -75,18 +75,12 @@
 }
 
 
-#media {
-    font-size: 3rem;
-    font-weight: 800;
+
+#numero_de_usuarios{
+    font-size:6rem;
     margin-right: 100px;
-    text-shadow:
-        -1px -1px 0px #000000,
-        -1px 1px 0px #000000,
-        1px -1px 0px #000000,
-        1px 0px 0px #000000;
-}
-
-
+    }
+    
 
 .card #img_fav {
     display: flex;
@@ -101,16 +95,9 @@
 }
 
 .card img {
-    border-radius: 100%;
-    width: 220px;
-    height: 140px;
-    border: 2px #ff4500 solid;
+    width: 280px;
+    height: 240px;
 }
-
-#numero_de_usuarios{
-font-size:7rem;
-}
-
 
 
 .grafico {

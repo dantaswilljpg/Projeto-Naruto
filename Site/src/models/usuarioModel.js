@@ -48,7 +48,25 @@ function Pontuacao(idUsuario, pontos, percentual) {
 function listarPontos() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listarPontuacao()");
     var instrucao = `
-    SELECT nome, pontuacao, percentualPontuacao FROM Pontuacao JOIN usuario ON fkUsuario = idUsuario ORDER BY  percentualPontuacao  DESC;;
+    SELECT
+    usuario.nome ,
+    Pontuacao.pontuacao,
+    Pontuacao.percentualPontuacao , 
+     CASE
+     WHEN percentualPontuacao = 100 THEN 'Muito Bom'
+     WHEN percentualPontuacao =75 THEN 'Foi bem'
+     WHEN percentualPontuacao =50 THEN 'Mediano'
+      WHEN percentualPontuacao =37.5 THEN 'Foi mal'
+    WHEN percentualPontuacao =25 THEN 'Péssimo'
+    WHEN percentualPontuacao =12.5 THEN 'Horrível'
+     END AS avaliacao
+     FROM Pontuacao
+     join usuario ON fkUsuario = idUsuario ORDER BY  percentualPontuacao  DESC;
+    
+    ;
+
+
+;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
