@@ -236,16 +236,19 @@
     document.getElementById('finalizar').style.display = 'none';
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
+
+   
+    var nome = sessionStorage.NOME_USUARIO;
     var Usuario = 0;
     var anterior = 0;
     var proxima = 0;
     var pontos = 0;
     var percentual = 0;
     var msg = '';
+    var img = '';
     var radios = [];
     var respostascorretas = ["Se tornar hokage ", "Habilidade ocular", "Esforçado, melhor da turma", "Kakashi Hatake", "Começa atacando", "Rock Lee", "Jiraya Sama", "Tentaria trazer de volta"];
-    var idUsuario = sessionStorage.ID_USUARIO;
-    console.log(sessionStorage.ID_USUARIO)
+
 
 
     Swal.fire({
@@ -343,47 +346,19 @@
             percentual = Usuario / respostascorretas.length * 100;
 
             if (Usuario == 0 || Usuario <= 3) {
-                imageUrl: 'assets/imgs/gif-cadastro-sasuke.gif',
-                    msg = ` 
-                          Semelhante com a de sasuke uchiha
-                           
-                        `;
-            } else if (Usuario >= 4 || Usuario <= 6) {
-                imageUrl: 'assets/imgs/gif-cadastro-naruto.gif',
-                    msg = ` 
-                           Semelhante  com a de Naruto Uzumaki 
-                           
-                        `;
+                img = 'assets/imgs/gif-cadastro-sasuke.gif';
+                    msg = ` ${nome}, sua  personalidade é  semelhante com a de sasuke uchiha `;
+            } else if (Usuario >4  || Usuario <= 6) {
+                img = 'assets/imgs/gif-cadastro-naruto.gif';
+                    msg = ` ${nome},  sua personalidade é Semelhante  com a de Naruto Uzumaki `;
             }
             else {
-                imageUrl: 'assets/imgs/gif-cadastro-kakashi.gif',
-                    msg = `
-                           Semelhante com a de Kakashi Hatake
-                            
-                        `;
+                img = 'assets/imgs/gif-cadastro-kakashi.gif';
+                    msg = ` ${nome}, sua personalidade  é  Semelhante com a de Kakashi Hatake  `;
             }
-            fetch("/usuarios/Pontuacao", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    // crie um atributo que recebe o valor recuperado aqui
-                    // Agora vá para o arquivo routes/usuario.j
-                    idUsuarioServer: idUsuario,
-                    pontosServer: pontos,
-                    percentualServer: percentual.toFixed(2)
-                })
-            }).then(function (resposta) {
-
-                console.log("resposta: ", resposta);
-
-                if (resposta.ok) {
                     Swal.fire({
-
-                        imageUrl: 'assets/imgs/gif-personalidade.gif',
-                        imageWidth: 3000,
-                        title: 'Sua personalidade é semelhante:',
+                        imageUrl: img,
+                        imageWidth: 400,
                         background: '#000',
                         confirmButtonText: 'DATTEBAYO!',
                         color: '#FFF',
@@ -393,14 +368,8 @@
                             // window.location = "pontuacao.html";
                         }, 1000);
                     })
-                } else {
-                    throw ("Houve um erro ao tentar realizar o cadastro!");
-                }
-            }).catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-            });
 
-            return false;
         }
+
     }
 </script>

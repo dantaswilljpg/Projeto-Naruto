@@ -16,7 +16,6 @@
     <script src="../app.js"></script>
     <!-- Sweet alert -->
 </head>
-
 <body>
     <div class="banner-quiz">
         <div id="container">
@@ -252,16 +251,20 @@ function sair() {
     document.getElementById('finalizar').style.display = 'none';
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
+
+    var idUsuarioVar = Number(sessionStorage.ID_USUARIO);
+    console.log(sessionStorage.ID_USUARIO)
+    var nome = sessionStorage.NOME_USUARIO;
     var Usuario = 0;
     var anterior = 0;
     var proxima = 0;
+    var img = '';
     var pontos = 0;
     var percentual = 0;
     var msg = '';
     var radios = [];
-    var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo ceifeiro da morte", "Jutsu multiclone das Sombras", "Fugaku Uchiha", "Minato Namikaze"];
-    var idUsuario = sessionStorage.ID_USUARIO;
-    console.log(sessionStorage.ID_USUARIO)
+    var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo Ceifeiro da morte", "Jutsu multiclone das Sombras", "Fugaku Uchiha", "Minato Namikaze"];
+  
 
 
     Swal.fire({
@@ -360,16 +363,14 @@ function sair() {
             pontos = Usuario * 10;
             percentual = Usuario / respostascorretas.length * 100;
 
-            if (Usuario == 0 || Usuario <= 4) {
-                imageUrl: 'assets/imgs/gif-triste.gif',
-                    msg = ` <span class="text"> 
-                            Poderia ter sido melhor <b>${idUsuario}</b> 😔😔, sua pontuação foi de
+            if (Usuario == 0 || Usuario <= 5) {
+                img= 'assets/imgs/gif-treinando.gif',
+                    msg = `${nome}, Poderia ter sido melhor, continue treinando que você será um excelente Jounin.</b> 😔😔Sua pontuação foi de
                             <b>${pontos}</b> pontos, que equivale à <b>${percentual.toFixed(2)}%</b> do Quiz
                         </span>`;
             } else {
-                imageUrl: 'assets/imgs/gif-apaixonado.gif',
-                    msg = ` <span class="text">
-                            PARÁBENS  <b>${idUsuario}</b> 🥳🥳, você é FÃ NÚMERO 1 DE NARUTO e sua pontuação foi de
+                img= 'assets/imgs/gif-felizao.gif',
+                    msg = ` ${nome}, PARÁBENS você é FÃ NÚMERO 1 DE NARUTO, você será um excelente hokage 🥳🥳.Sua pontuação foi de
                             <b>${pontos}</b> pontos, que equivale à<b> ${percentual.toFixed(2)}%</b> do Quiz
                         </span>`;
             }
@@ -381,7 +382,7 @@ function sair() {
                 body: JSON.stringify({
                     // crie um atributo que recebe o valor recuperado aqui
                     // Agora vá para o arquivo routes/usuario.j
-                    idUsuarioServer: idUsuario,
+                    idUsuarioServer: idUsuarioVar,
                     pontosServer: pontos,
                     percentualServer: percentual.toFixed(2)
                 })
@@ -391,16 +392,14 @@ function sair() {
 
                 if (resposta.ok) {
                     Swal.fire({
-
-                        imageUrl: 'assets/imgs/gif-personalidade.gif',
-                        imageWidth: 3000,
-                        title: 'Quiz finalizado',
+                        imageUrl: img,
+                        imageWidth: 400,
                         background: '#000',
                         confirmButtonText: 'DATTEBAYO!',
                         color: '#FFF',
                         html: msg,
                     }).then((result) => {
-                        setTimeout (function () {
+                        setTimeout(function () {
                             window.location = "pontuacao.html";
                         }, 1000);
                     })
