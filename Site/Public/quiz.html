@@ -100,11 +100,11 @@
                                     <span class="text">a) Raposa de nove caudas</span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao3" value="Shukaku">
+                                    <input type="radio" name="opcao3" value="Kyubi">
                                     <span class="text"> b) Kyubi</span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao3" value="matatabi">
+                                    <input type="radio" name="opcao3" value="Matatabi">
                                     <span class="text">c) Matatabi</span>
                                 </div>
                                 <div class="opcao">
@@ -163,7 +163,7 @@
                                     <span class="text">a) Jutsu Clone das Sombras</span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao6" value="Jutsu multiclone das Sombras">
+                                    <input type="radio" name="opcao6" value="Jutsu Multiclone das Sombras">
                                     <span class="text">b) Jutsu Multiclone das Sombras</span>
                                 </div>
                                 <div class="opcao">
@@ -263,7 +263,7 @@ function sair() {
     var percentual = 0;
     var msg = '';
     var radios = [];
-    var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo Ceifeiro da morte", "Jutsu multiclone das Sombras", "Fugaku Uchiha", "Minato Namikaze"];
+    var respostascorretas = ["Sasuke Uchiha", "Naruto Uzumaki", "Raposa de nove caudas", "220 episódios", "Selo Ceifeiro da morte", "Jutsu Multiclone das Sombras", "Fugaku Uchiha", "Minato Namikaze"];
   
 
 
@@ -273,7 +273,7 @@ function sair() {
         title: 'Bem-vindo ao Quiz de Naruto Clássico, boa sorte😄...!',
         html: 'Feito por: Will Dantas - 1ADS A',
         confirmButtonText: 'DATTEBAYO!',
-        background: '#000',
+        background: '#ff4500',
         color: '#FFF',
     })
 
@@ -347,7 +347,7 @@ function sair() {
             Swal.fire({
                 imageUrl: 'assets/imgs/gif-naruto.gif',
                 imageWidth: 3000,
-                background: '#000',
+                background: '#ff4500',
                 color: '#FFF',
                 confirmButtonText: 'DATTEBAYO!',
                 title: 'Responda todas questões 😠...!',
@@ -355,8 +355,8 @@ function sair() {
             });
         } else {
             Usuario = 0;
-            for (var index = 0; index < radios.length; index++) {
-                if (respostascorretas.indexOf(radios[index].value) >= 0) {
+            for (var contador = 0; contador < radios.length; contador++) {
+                if (respostascorretas.indexOf(radios[contador].value) >= 0) {
                     Usuario++;
                 }
             }
@@ -394,7 +394,7 @@ function sair() {
                     Swal.fire({
                         imageUrl: img,
                         imageWidth: 400,
-                        background: '#000',
+                        background: '#FF4500',
                         confirmButtonText: 'DATTEBAYO!',
                         color: '#FFF',
                         html: msg,

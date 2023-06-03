@@ -18,7 +18,7 @@
     align-items: start;
     background:
         linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),
-        url(../assets/imgs/banner-pontuação.png);
+        url(../assets/imgs/personalidade.png);
     background-size: cover;
     margin-left: 15%;
     height: 100vh;
@@ -53,8 +53,8 @@
     color: #ffffff;
     background-color: #151515;
     box-shadow: 7px 7px 7px #000000;
-    width: 612px;
-    height: 180px;
+    width: 502px;
+    height: 120px;
     text-shadow:
         -1px -1px 0px #000000,
         -1px 1px 0px #000000,
@@ -63,7 +63,7 @@
 }
 
 .card span {
-    font-size: 1.68rem;
+    font-size: 1.22rem;
     font-weight: 700;
     margin-left: 50px;
     text-shadow:
@@ -77,10 +77,11 @@
 
 
 #numero_de_usuarios{
-    font-size:6rem;
+    font-size:2.12rem;
     margin-right: 100px;
     }
     
+   
 
 .card #img_fav {
     display: flex;
@@ -95,8 +96,8 @@
 }
 
 .card img {
-    width: 280px;
-    height: 240px;
+    width: 100px;
+    height: 100px;
 }
 
 
@@ -105,7 +106,7 @@
     justify-content: center;
     width: 45vw;
     height: 22.5vw;
-    margin-left: 48%;
+    margin-left: 68%;
     background-color: #151515;
     border-radius: 6px;
     box-shadow: 7px 7px 7px #000000;

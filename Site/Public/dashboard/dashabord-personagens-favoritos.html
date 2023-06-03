@@ -59,7 +59,7 @@
                     </div>
                     <div class="card1">
                         <!-- <span>Segundo Personagem mais escolhido:Sasuke Uchiha<br><br>Votos:2</span> -->
-                        <!-- <div id="img_fav"><img src="../assets/imgs/card-falas-sasuke.jpg"></div> -->
+                        <!-- <div id="img_fav"><img src="../assets/imgs/gif-cadastro-sasuke.jpg"></div> -->
                     </div>
                     <div class="grafico" id="grafico_personagem"><canvas id="myChart"></canvas></div>
                 </div>
@@ -82,25 +82,20 @@ function contarVotoPersonagem() {
                 resposta.json().then((json) => {
                     console.log(json)
                     if (json[0].idPersonagem == 1) {
-                        img_fav.innerHTML = `<img src="../assets/imgs/card-falas-naruto.jpg">`
+                        img_fav.innerHTML = `<img src="../assets/imgs/gif-cadastro-naruto.gif">`
                     } else if (json[0].idPersonagem == 2) {
-                        img_fav.innerHTML = `<img src="../assets/imgs/card-falas-sasuke.jpg">`
+                        img_fav.innerHTML = `<img src="../assets/imgs/gif-cadastro-sasuke.gif">`
                     } else if (json[0].idPersonagem == 3) {
-                        img_fav.innerHTML = ` <img src="../assets/imgs/card-falas-kakashi.jpg">`
+                        img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-kakashi.gif">`
                     } else if (json[0].idPersonagem == 4) {
-                        img_fav.innerHTML = ` <img src="../assets/imgs/card-falas-itachi.jpg">`
+                        img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-itachi.gif">`
                     } else if (json[0].idPersonagem == 5) {
-                        img_fav.innerHTML = ` <img src="../assets/imgs/card-falas-gaara.jpg">`
+                        img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-gaara.gif">`
                     } else if (json[0].idPersonagem == 6) {
-                        img_fav.innerHTML = ` <img src="../assets/imgs/card-falas-neji.jpg">`
-                    } else if (json[0].idPersonagem == 7) {
-                        img_fav.innerHTML = ` <img src="../assets/imgs/card-falas-jiraya.jpg">`
-                    } else if (json[0].idPersonagem == 8) {
-                        img_fav.innerHTML = ` <img src="../assets/imgs/card-falas-rock.jpg">`
-                    } else if (json[0].idPersonagem == 9) {
-                        img_fav.innerHTML = ` <img src="../assets/imgs/card-falas-sakura.jpg">`
+                        img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-neji.gif">`
                     } else {
-                        img_fav.innerHTML = ` <img src="../assets/imgs/card-falas-hinata.jpg">`
+                        (json[0].idPersonagem == 7) 
+                        img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-jiraya.gif">`
                     }
                 })
             }
@@ -157,7 +152,7 @@ function contarVotoPersonagem() {
                 {
                     yAxisID: 'y-totalpersonagens',
                     label: 'Personagem Favorito',
-                    backgroundColor: ['#FF1493', '#FFFF00', '#FF4500', '#00FF00', '#4B0082', '#0000FF', '#FFF', '#ADD8e6', '#FF007F', '#008000'],
+                    backgroundColor: ['orangered','blue','black','red','white','yellow'],
                     fill: true,
                     data: []
                 }
