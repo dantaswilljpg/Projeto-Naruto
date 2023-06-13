@@ -97,11 +97,9 @@
 }
 
 .div-footer img{
-    width: 5vw;
-    height: 10vh;
+    width: 3vw;
+    height: 5vh;
 }
-
-
 
 
 
@@ -113,7 +111,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10vh;
     height: 10vh;
     background-color: #ff4500;
     border-top: 3px solid #ff4500;
@@ -203,7 +200,7 @@ footer .div-footer img:hover {
 }
 
 .div-footer img{
-    width: 5vw;
-    height: 10vh;
+    width: 3vw;
+    height: 5vh;
     margin-left: 30%;
 }

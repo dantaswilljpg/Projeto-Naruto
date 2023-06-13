@@ -21,7 +21,7 @@ body {
 
 /*BANNER*/
 .banner {
-  height: 100vh;
+  height: 96vh;
   /* As unidades vh e vw significam viewport, sendo a primeira para altura e a segunda para largura. Isso significa que elas utilizam o tamanho total da viewport, tamanho total do layout do pc*/
   background-image: url(../assets/imgs/banner-land-page.png);
   background-size: cover;
@@ -424,9 +424,9 @@ li {
 }
 
 .sobre-mim .box-sobre img {
-  width: 25vw;
-  height: 48vh;
-  margin-top: 60px;
+  width: 24.8vw;
+  height: 45vh;
+  margin-top: 155px;
   border-radius: 100%;
   align-self: center;
   box-shadow: 8px 8px 8px #000000;

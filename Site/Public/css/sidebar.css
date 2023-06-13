@@ -39,16 +39,17 @@ nav img {
     max-width: 12vw;
 }
 
-.texto-user {
+.texto-user span {
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 #b_usuario {
     align-self: center;
+    font-size: 2rem;
 }
 
 .nav-list {

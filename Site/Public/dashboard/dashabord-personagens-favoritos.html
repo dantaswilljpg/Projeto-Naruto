@@ -30,7 +30,7 @@
             <ul class="nav-list">
                 <li><a href="../personalidade.html"><img class="icone-nav" src="../assets/imgs/itachi-uchiha.png"
                             alt="icone anime">
-                        <span>Personalidade</span></a>
+                        <span>MBTnInja</span></a>
                 </li>
                 <li><a href="dashboard-média-quiz.html"><img class="icone-nav" src="../assets/imgs/logo naruto.png"
                             alt="icone anime">
@@ -40,6 +40,7 @@
                             alt="icone anime">
                         <span>Quiz</span></a>
                 </li>
+                
                 <li class="pag-atual"><a href="dashabord-personagens-favoritos.html"><img class="icone-nav"
                             src="../assets/imgs/sasuke-uchiha.png" alt="icone anime">
                         <span>Personagens favoritos</span></a>
@@ -71,6 +72,7 @@
 
 <script>
 
+  
 
 
 
@@ -93,14 +95,19 @@ function contarVotoPersonagem() {
                         img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-gaara.gif">`
                     } else if (json[0].idPersonagem == 6) {
                         img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-neji.gif">`
-                    } else {
-                        (json[0].idPersonagem == 7) 
+                    } else if (json[0].idPersonagem == 7) {
                         img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-jiraya.gif">`
+                    } else {
+                        (json[0].idPersonagem == 8) 
+                        img_fav.innerHTML = ` <img src="../assets/imgs/gif-cadastro-rock.gif">`
                     }
                 })
             }
         })
     }
+
+
+    
 
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO
@@ -152,7 +159,7 @@ function contarVotoPersonagem() {
                 {
                     yAxisID: 'y-totalpersonagens',
                     label: 'Personagem Favorito',
-                    backgroundColor: ['orangered','blue','black','red','white','yellow'],
+                    backgroundColor: ['orangered','blue','black','red','white','yellow','green'],
                     fill: true,
                     data: []
                 }
@@ -255,6 +262,8 @@ function contarVotoPersonagem() {
         }
 
     }
+
+
 
 
 </script>

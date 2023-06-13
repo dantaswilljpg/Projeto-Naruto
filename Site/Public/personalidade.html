@@ -34,12 +34,13 @@
                                 src="assets/imgs/icone-anime.png" alt="icone naruto"><span>Média  quiz</span></a></li>
 
                     <li class="pag-atual"><a href="personalidade.html"><img class="icone-nav"
-                                src="assets/imgs/itachi-uchiha.png" alt="icone naruto"><span>Personalidade</span></a>
+                                src="assets/imgs/itachi-uchiha.png" alt="icone naruto"><span>MBTnInja</span></a>
                     </li>
                     <li><a href="quiz.html"><img class="icone-nav" src="assets/imgs/kakashi-hatake.png"
                                 alt="icone kakashi">
                             <span>Quiz</span></a>
                     </li>
+                    
                     <li><a href="pontuacao.html"><img class="icone-nav" src="assets/imgs/sasuke-uchiha.png"
                                 alt="icone sasuke"><span>Pontuações</span></a>
                     </li>
@@ -79,7 +80,7 @@
                                     <span class="text">a) Super força</span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao2" value="Habilidade ocular ">
+                                    <input type="radio" name="opcao2" value="Habilidade ocular">
                                     <span class="text">b) Habilidade ocular </span>
                                 </div>
                                 <div class="opcao">
@@ -96,7 +97,7 @@
                             <h1>3-Como aluno você:</h1>
                             <div class="resp">
                                 <div class="opcao">
-                                    <input type="radio" name="opcao3" value="Esforçado,melhor da turma ">
+                                    <input type="radio" name="opcao3" value="Esforçado,melhor da turma">
                                     <span class="text">a) Esforçado, melhor da turma </span>
                                 </div>
                                 <div class="opcao">
@@ -105,7 +106,7 @@
                                     <span class="text"> b) É extrovertido, não se importa com estudos </span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao3" value="Não ligo para estudos ">
+                                    <input type="radio" name="opcao3" value="Não ligo para estudos">
                                     <span class="text">c) Não ligo para estudos </span>
                                 </div>
                                 <div class="opcao">
@@ -168,7 +169,7 @@
                                     <span class="text">b) Rock Lee</span>
                                 </div>
                                 <div class="opcao">
-                                    <input type="radio" name="opcao6" value="Naruto Uzumaki ">
+                                    <input type="radio" name="opcao6" value="Naruto Uzumaki">
                                     <span class="text">c) Naruto Uzumaki </span>
                                 </div>
                                 <div class="opcao">
@@ -231,13 +232,12 @@
 
 </html>
 
+
 <script>
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     document.getElementById('anterior').style.display = 'none';
     document.getElementById('finalizar').style.display = 'none';
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-
-   
     var nome = sessionStorage.NOME_USUARIO;
     var Usuario = 0;
     var anterior = 0;
@@ -253,12 +253,13 @@
 
     Swal.fire({
         imageUrl: 'assets/imgs/gif-personalidade.gif',
-        imageWidth: 1000,
+        imageWidth:610,
+        imageHeight:270,
         background: '#FF4500',
         color: '#FFF',
         confirmButtonText: 'dattebayo!',
+        confirmButtonColor: '#00f',
         title: 'Vamos ver com qual personalidade dos personagens de naruto você se identifica, boa sorte😄...!',
-        html: 'Feito por: Will Dantas - 1ADS A',
     })
 
     function AntQuestao() {
@@ -321,7 +322,8 @@
             document.getElementById('finalizar').style.display = 'block';
         }
     }
-
+// QuerySelectorAll - Recebe um argumento de string contendo um seletor CSS
+    //  e retorna um objeto NodeList representando os elementos do documento que correspondem ao seletor
     function FinalizarQuiz() {
         radios = document.querySelectorAll("input[type='radio']:checked");
         if (radios.length < respostascorretas.length) {
@@ -330,15 +332,15 @@
                 imageWidth: 3000,
                 background: '#FF4500',
                  color: '#FFF',
-                 confirmButtonText: 'triste!',
                  confirmButtonText: 'dattebayo!',
+                 confirmButtonColor: '#00f',
                 title: 'Responda todas questões 😠...!',
 
             });
         } else {
             Usuario = 0;
-            for (var index = 0; index < radios.length; index++) {
-                if (respostascorretas.indexOf(radios[index].value) >= 0) {
+            for (var contador = 0; contador < radios.length; contador++) {
+                if (respostascorretas.indexOf(radios[contador].value) >= 0) {
                     Usuario++;
                 }
             }
@@ -348,7 +350,7 @@
             if (Usuario == 0 || Usuario <= 3) {
                 img = 'assets/imgs/gif-cadastro-sasuke.gif';
                     msg = ` ${nome}, sua  personalidade é  semelhante com a de sasuke uchiha `;
-            } else if (Usuario >4  || Usuario <= 6) {
+            } else if (Usuario > 4  || Usuario <= 6) {
                 img = 'assets/imgs/gif-cadastro-naruto.gif';
                     msg = ` ${nome},  sua personalidade é Semelhante  com a de Naruto Uzumaki `;
             }
@@ -361,6 +363,7 @@
                         imageWidth: 400,
                         background: '#FF4500',
                         confirmButtonText: 'DATTEBAYO!',
+                        confirmButtonColor: '#00f',
                         color: '#FFF',
                         html: msg,
                     }).then((result) => {

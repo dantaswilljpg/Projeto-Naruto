@@ -31,7 +31,7 @@
             <ul class="nav-list">
                 <li><a href="personalidade.html"><img class="icone-nav" src="assets/imgs/icone-ninja.png" alt="
                             icone naruto">
-                        <span>Personalidade</span></a>
+                        <span>MBTnInja</span></a>
                 </li>
                 <li><a href="dashboard/dashboard-média-quiz.html"><img class="icone-nav"
                             src="assets/imgs/icone-anime.png" alt="icone sasuke"><span>Média quiz</span></a></li>
@@ -40,7 +40,6 @@
                 <li><a href="dashboard/dashabord-personagens-favoritos.html"><img class="icone-nav"
                             src="assets/imgs/sasuke-uchiha.png" alt="icone sasuke"><span>Personagens
                             favoritos</span></a></li>
-
 
                 <li><a href="quiz.html"><img class="icone-nav" src="assets/imgs/kakashi-hatake.png" alt="icone sasuke">
                         <span>Quiz</span></a>
@@ -78,6 +77,20 @@
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    
+    Swal.fire({
+        imageUrl: 'assets/imgs/naruto.gif',
+        imageWidth:650,
+        imageHeight:270,
+        title: 'Parábens, veja sua pontuação do quiz, você já tem a vontade do fogo 😄!',
+        confirmButtonText: 'dattebayo!',
+        confirmButtonColor: '#00f',
+        background: '#ff4500',
+        color: '#FFF',
+    })
+
+
 
     function updatePontos() {
         //aguardar();

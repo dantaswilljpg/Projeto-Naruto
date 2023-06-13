@@ -54,9 +54,10 @@
                         <option value="2">Uchiha Sasuke</option>
                         <option value="3">Hatake Kakashi</option>
                         <option value="4">Uchiha Itachi</option>
-                        <option value="5">Gaara Deserto</option>
+                        <option value="5">Gaara do Deserto</option>
                         <option value="6">Neji Hyugaa</option>
                         <option value="7">Jiraya Sama</option>
+                        <option value="8">Rock Lee</option>
                     </select>
                 </div>
                 <button onclick="cadastrar()">cadastrar</button>
@@ -109,8 +110,10 @@
         img_personagem.className = ""
         var num_personagem = personagem_naruto.value;
 
+        
+        //O classList.add simplesmente identifica a classe 'naruto' e acessar a lista de classes de um elemento
         if (num_personagem == 1) {
-            img_personagem.classList.add("naruto") //O classList.add simplesmente identifica a classe 'naruto' e atribui os gifs de acordo com o gif_persoangem
+            img_personagem.classList.add("naruto") 
         } else if (num_personagem == 2) {
             img_personagem.classList.add("sasuke")
         } else if (num_personagem == 3) {
@@ -121,8 +124,10 @@
             img_personagem.classList.add("gaara")
         } else if (num_personagem == 6) {
             img_personagem.classList.add("neji")
-        } else {
+        } else if (num_personagem == 7) {
             img_personagem.classList.add("jiraya")
+        } else {
+            img_personagem.classList.add("rock")
         }
     }
 
@@ -147,7 +152,7 @@
             finalizarAguardar();
             return false;
         }
-        else if (nomeVar.length < 3) {
+        else if (nomeVar.length <3) {
             swal("Ops", "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 3 caracteres 😠", "warning")
         }
         else if (emailVar.indexOf("gmail") == -1 && emailVar.indexOf("@") == -1 && emailVar.indexOf(".com") == -1 && emailVar.length < 10) {
@@ -180,7 +185,7 @@
 
                 if (resposta.ok) {
                     //cardErro.style.display = "block";
-                    swal("Parábens", "Cadastro realizado com sucesso redirecionando a tela de login 😄...!", "success");
+                    swal("Parábens", "Cadastro realizado,redirecionando a tela de login 😄!", "success");
 
 
                     setTimeout(() => {

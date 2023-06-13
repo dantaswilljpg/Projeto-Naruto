@@ -13,7 +13,6 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-    <script src="../app.js"></script>
     <!-- Sweet alert -->
 </head>
 <body>
@@ -35,16 +34,17 @@
                     </li>
                     <li><a href="personalidade.html"><img class="icone-nav" src="assets/imgs/icone-anime.png"" alt="
                                 icone anime">
-                            <span>Personalidade</span></a>
+                            <span>MBTnInja</span></a>
                     </li>
                     <li><a href="pontuacao.html"><img class="icone-nav" src="assets/imgs/naruto-sign.png"
                                 alt="icone bandana"><span>Pontuações</span></a>
                     </li>
+                    
                     <li class="pag-atual"><a href="quiz.html"><img class="icone-nav" src="assets/imgs/logo naruto.png"
                                 alt="icone hinata"><span>Quiz</span></a>
                     </li>
                 </ul>
-                <button onclick="sair()">Sair</button>
+                <a href="../login.html"><button>SAIR</button></a>
             </nav>
             <div class="quiz">
                 <div class="list-naruto">
@@ -138,7 +138,7 @@
                             <h1>5-Que jutsu impediu o Orochimaru de usar jutsu ?</h1>
                             <div class="resp">
                                 <div class="opcao">
-                                    <input type="radio" name="opcao5" value="Selo ceifeiro da morte">
+                                    <input type="radio" name="opcao5" value="Selo Ceifeiro da morte">
                                     <span class="text">a) Selo Ceifeiro da morte</span>
                                 </div>
                                 <div class="opcao">
@@ -232,26 +232,10 @@
 
 <script>
 
-function sair() {
-        location.href = "login.html";
-        Swal.fire({
-        imageUrl: 'assets/imgs/gif-sobre.gif',
-        imageWidth: 1000,
-        title: 'Obrigado pela visita😄...!',
-        html: 'Feito por: Will Dantas - 1ADS A',
-        confirmButtonText: 'DATTEBAYO!',
-        background: '#000',
-        color: '#FFF',
-    })
-        console.log('historia')
-    }
 
-
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     document.getElementById('anterior').style.display = 'none';
     document.getElementById('finalizar').style.display = 'none';
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-
     var idUsuarioVar = Number(sessionStorage.ID_USUARIO);
     console.log(sessionStorage.ID_USUARIO)
     var nome = sessionStorage.NOME_USUARIO;
@@ -269,18 +253,19 @@ function sair() {
 
     Swal.fire({
         imageUrl: 'assets/imgs/gif-quiz1.gif',
-        imageWidth: 1000,
-        title: 'Bem-vindo ao Quiz de Naruto Clássico, boa sorte😄...!',
-        html: 'Feito por: Will Dantas - 1ADS A',
+        imageWidth:650,
+        imageHeight:270,
+        title: 'Bem-vindo ao Quiz de Naruto Clássico😄!',
         confirmButtonText: 'DATTEBAYO!',
+        confirmButtonColor: '#00f',
         background: '#ff4500',
         color: '#FFF',
     })
 
+
     function AntQuestao() {
         anterior--;
         proxima = anterior
-
         if (anterior == 6) {
             questao8.style.display = "none";
             questao7.style.display = "flex";
@@ -338,7 +323,7 @@ function sair() {
         }
     }
 
-    // QuerySelectorAll - Recebe um argumento de string contendo um seletor CSS
+    // QuerySelectorAll - Recebe um argumento de string contendo um seletor 
     //  e retorna um objeto NodeList representando os elementos do documento que correspondem ao seletor
 
     function FinalizarQuiz() {
@@ -350,6 +335,7 @@ function sair() {
                 background: '#ff4500',
                 color: '#FFF',
                 confirmButtonText: 'DATTEBAYO!',
+                confirmButtonColor: '#00f',
                 title: 'Responda todas questões 😠...!',
 
             });
@@ -396,6 +382,7 @@ function sair() {
                         imageWidth: 400,
                         background: '#FF4500',
                         confirmButtonText: 'DATTEBAYO!',
+                        confirmButtonColor: '#00f',
                         color: '#FFF',
                         html: msg,
                     }).then((result) => {

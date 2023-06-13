@@ -25,10 +25,6 @@
 }
 
 
-.home {
-    display: flex;
-    width: 85vw;
-}
 
 .container {
     display: grid;

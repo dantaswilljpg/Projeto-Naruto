@@ -1,5 +1,6 @@
 CREATE DATABASE naruto_projeto_individual;
 
+
 USE naruto_projeto_individual;
 
 
@@ -15,8 +16,8 @@ INSERT INTO Personagem VALUES
 (NULL,'Uchiha Itachi'),
 (NULL,'Gaara Deserto'),
 (NULL,'Neji Hyugaa'),
-(NULL,'Jiraya Sama');
-
+(NULL,'Jiraya Sama'),
+(NULL,'Rock Lee');
 
 CREATE TABLE Usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
@@ -39,8 +40,9 @@ CREATE TABLE Pontuacao (
 
 
 SELECT * FROM Usuario;
-SELECT * FROM  Pontuacao;
 SELECT * FROM Personagem;
+SELECT * FROM  Pontuacao;
+
 
 
 -- média do quiz de todo usuarios
@@ -57,7 +59,6 @@ SELECT nome, pontuacao,  percentualPontuacao FROM Pontuacao JOIN usuario ON fkUs
 -- SELECT (DASHBOARD) PEGAR PERSONAGEM FAVORITOS DE CADA USUARIO
 SELECT COUNT(Usuario.fkPersonagem) as voto, Personagem.nomePersonagem AS personagem 
 FROM Usuario JOIN Personagem ON  personagem.idPersonagem = usuario.fkPersonagem group by usuario.fkPersonagem;
-
 
 -- LISTAR PONTOS, WHEN define a condição que deverá ser testada pelo comando,
 -- já  a expressão THEN indica o resultado que será obtido caso a condição seja cumprida. Caso nenhuma condição seja atendida, então o resultado será aquele indicado pela cláusula ELSE.
@@ -77,4 +78,4 @@ WHEN percentualPontuacao =12.5 THEN 'Horrível'
 WHEN percentualPontuacao =0 THEN 'Cabeça oca'
  END AS avaliacao
  FROM Pontuacao
- join usuario ON fkUsuario = idUsuario ORDER BY  percentualPontuacao  DESC;
+ join usuario ON fkUsuario = id Usuario ORDER BY  percentualPontuacao  DESC;
